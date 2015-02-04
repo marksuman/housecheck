@@ -411,6 +411,7 @@
 				4DA4FDD51A81D02300489556 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DA4FDD61A81D02300489556 /* Build configuration list for PBXNativeTarget "CheckItTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				4DA4FDD81A81D02300489556 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
