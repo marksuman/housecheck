@@ -420,6 +420,7 @@
 				4DE854241A832137002CC5D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DE854251A832137002CC5D4 /* Build configuration list for PBXNativeTarget "CheckItTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +429,7 @@
 				4DE854271A832137002CC5D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
