@@ -59,7 +59,7 @@
                                 <items>
                                     <barButtonItem title="Settings" id="5l8-fo-33c"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="wc4-7r-NYa"/>
-                                    <barButtonItem title=" " style="plain" id="nPS-Gx-uUx">
+                                    <barButtonItem style="plain" id="nPS-Gx-uUx">
                                         <button key="customView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CEq-ND-flB">
                                             <rect key="frame" x="250" y="7" width="200" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
