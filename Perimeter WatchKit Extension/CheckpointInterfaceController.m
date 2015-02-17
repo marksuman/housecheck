@@ -1,29 +1,25 @@
 //
-//  InterfaceController.m
-//  Perimeter WatchKit Extension
+//  CheckpointInterfaceController.m
+//  CheckIt
 //
-//  Created by Mark Suman on 2/16/15.
+//  Created by Mark Suman on 2/17/15.
 //  Copyright (c) 2015 Sub-Saharan. All rights reserved.
 //
 
-#import "InterfaceController.h"
 #import "CheckpointInterfaceController.h"
 
-@interface InterfaceController()
+
+@interface CheckpointInterfaceController()
 
 @end
 
 
-@implementation InterfaceController
+@implementation CheckpointInterfaceController
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     
-    Checkpoint *frontDoor = [[Checkpoint alloc] init];
-    frontDoor.info = [NSMutableDictionary dictionaryWithDictionary:@{@"name":@"Front Door"}];
-
     // Configure interface objects here.
-    [WKInterfaceController reloadRootControllersWithNames:@[@"door1"] contexts:@[frontDoor]]
 }
 
 - (void)willActivate {

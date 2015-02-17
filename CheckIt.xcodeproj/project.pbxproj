@@ -15,6 +15,9 @@
 		4DB605B31A92E93100AE185C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB605B11A92E93100AE185C /* Interface.storyboard */; };
 		4DB605B51A92E93100AE185C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB605B41A92E93100AE185C /* Images.xcassets */; };
 		4DB605B81A92E93100AE185C /* Perimeter WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4DB605981A92E93100AE185C /* Perimeter WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4DB605C31A93860B00AE185C /* CheckpointInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605C21A93860B00AE185C /* CheckpointInterfaceController.m */; };
+		4DB605C71A93874100AE185C /* Checkpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605C61A93874100AE185C /* Checkpoint.m */; };
+		4DB605C81A93874100AE185C /* Checkpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605C61A93874100AE185C /* Checkpoint.m */; };
 		4DE854021A832137002CC5D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE854011A832137002CC5D4 /* main.m */; };
 		4DE854051A832137002CC5D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE854041A832137002CC5D4 /* AppDelegate.m */; };
 		4DE854081A832137002CC5D4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE854071A832137002CC5D4 /* FirstViewController.m */; };
@@ -78,6 +81,10 @@
 		4DB605B01A92E93100AE185C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DB605B21A92E93100AE185C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		4DB605B41A92E93100AE185C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4DB605C11A93860B00AE185C /* CheckpointInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckpointInterfaceController.h; sourceTree = "<group>"; };
+		4DB605C21A93860B00AE185C /* CheckpointInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckpointInterfaceController.m; sourceTree = "<group>"; };
+		4DB605C51A93874100AE185C /* Checkpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Checkpoint.h; sourceTree = "<group>"; };
+		4DB605C61A93874100AE185C /* Checkpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Checkpoint.m; sourceTree = "<group>"; };
 		4DE853FC1A832137002CC5D4 /* CheckIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE854001A832137002CC5D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DE854011A832137002CC5D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -125,6 +132,8 @@
 			children = (
 				4DB6059D1A92E93100AE185C /* InterfaceController.h */,
 				4DB6059E1A92E93100AE185C /* InterfaceController.m */,
+				4DB605C11A93860B00AE185C /* CheckpointInterfaceController.h */,
+				4DB605C21A93860B00AE185C /* CheckpointInterfaceController.m */,
 				4DB605A01A92E93100AE185C /* NotificationController.h */,
 				4DB605A11A92E93100AE185C /* NotificationController.m */,
 				4DB605A31A92E93100AE185C /* GlanceController.h */,
@@ -165,6 +174,8 @@
 		4DB605C01A92EF7E00AE185C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4DB605C51A93874100AE185C /* Checkpoint.h */,
+				4DB605C61A93874100AE185C /* Checkpoint.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -398,7 +409,9 @@
 			files = (
 				4DB605A21A92E93100AE185C /* NotificationController.m in Sources */,
 				4DB6059F1A92E93100AE185C /* InterfaceController.m in Sources */,
+				4DB605C81A93874100AE185C /* Checkpoint.m in Sources */,
 				4DB605A51A92E93100AE185C /* GlanceController.m in Sources */,
+				4DB605C31A93860B00AE185C /* CheckpointInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +421,7 @@
 			files = (
 				4DE8540B1A832137002CC5D4 /* SecondViewController.m in Sources */,
 				4DE854051A832137002CC5D4 /* AppDelegate.m in Sources */,
+				4DB605C71A93874100AE185C /* Checkpoint.m in Sources */,
 				4DE854081A832137002CC5D4 /* FirstViewController.m in Sources */,
 				4DE854021A832137002CC5D4 /* main.m in Sources */,
 			);
