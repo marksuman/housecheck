@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DB6059F1A92E93100AE185C /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6059E1A92E93100AE185C /* InterfaceController.m */; };
+		4DB605A21A92E93100AE185C /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605A11A92E93100AE185C /* NotificationController.m */; };
+		4DB605A51A92E93100AE185C /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605A41A92E93100AE185C /* GlanceController.m */; };
+		4DB605A71A92E93100AE185C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB605A61A92E93100AE185C /* Images.xcassets */; };
+		4DB605AB1A92E93100AE185C /* Perimeter WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 4DB605AA1A92E93100AE185C /* Perimeter WatchKit App.app */; };
+		4DB605B31A92E93100AE185C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB605B11A92E93100AE185C /* Interface.storyboard */; };
+		4DB605B51A92E93100AE185C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB605B41A92E93100AE185C /* Images.xcassets */; };
+		4DB605B81A92E93100AE185C /* Perimeter WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4DB605981A92E93100AE185C /* Perimeter WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4DE854021A832137002CC5D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE854011A832137002CC5D4 /* main.m */; };
 		4DE854051A832137002CC5D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE854041A832137002CC5D4 /* AppDelegate.m */; };
 		4DE854081A832137002CC5D4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE854071A832137002CC5D4 /* FirstViewController.m */; };
@@ -18,6 +26,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4DB605AC1A92E93100AE185C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DE853F41A832137002CC5D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DB605A91A92E93100AE185C;
+			remoteInfo = "Perimeter WatchKit App";
+		};
+		4DB605B61A92E93100AE185C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DE853F41A832137002CC5D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DB605971A92E93100AE185C;
+			remoteInfo = "Perimeter WatchKit Extension";
+		};
 		4DE854191A832137002CC5D4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4DE853F41A832137002CC5D4 /* Project object */;
@@ -27,7 +49,35 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4DB605BF1A92E93100AE185C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4DB605B81A92E93100AE185C /* Perimeter WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4DB605981A92E93100AE185C /* Perimeter WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Perimeter WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DB6059B1A92E93100AE185C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DB6059C1A92E93100AE185C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		4DB6059D1A92E93100AE185C /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		4DB6059E1A92E93100AE185C /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		4DB605A01A92E93100AE185C /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		4DB605A11A92E93100AE185C /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		4DB605A31A92E93100AE185C /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		4DB605A41A92E93100AE185C /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		4DB605A61A92E93100AE185C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4DB605AA1A92E93100AE185C /* Perimeter WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Perimeter WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DB605B01A92E93100AE185C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DB605B21A92E93100AE185C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		4DB605B41A92E93100AE185C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4DE853FC1A832137002CC5D4 /* CheckIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE854001A832137002CC5D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DE854011A832137002CC5D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,6 +96,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4DB605951A92E93100AE185C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DE853F91A832137002CC5D4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,11 +120,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DB605991A92E93100AE185C /* Perimeter WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4DB6059D1A92E93100AE185C /* InterfaceController.h */,
+				4DB6059E1A92E93100AE185C /* InterfaceController.m */,
+				4DB605A01A92E93100AE185C /* NotificationController.h */,
+				4DB605A11A92E93100AE185C /* NotificationController.m */,
+				4DB605A31A92E93100AE185C /* GlanceController.h */,
+				4DB605A41A92E93100AE185C /* GlanceController.m */,
+				4DB605A61A92E93100AE185C /* Images.xcassets */,
+				4DB6059A1A92E93100AE185C /* Supporting Files */,
+			);
+			path = "Perimeter WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		4DB6059A1A92E93100AE185C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DB6059B1A92E93100AE185C /* Info.plist */,
+				4DB6059C1A92E93100AE185C /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4DB605AE1A92E93100AE185C /* Perimeter WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				4DB605B11A92E93100AE185C /* Interface.storyboard */,
+				4DB605B41A92E93100AE185C /* Images.xcassets */,
+				4DB605AF1A92E93100AE185C /* Supporting Files */,
+			);
+			path = "Perimeter WatchKit App";
+			sourceTree = "<group>";
+		};
+		4DB605AF1A92E93100AE185C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DB605B01A92E93100AE185C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4DB605C01A92EF7E00AE185C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		4DE853F31A832137002CC5D4 = {
 			isa = PBXGroup;
 			children = (
 				4DE853FE1A832137002CC5D4 /* CheckIt */,
 				4DE8541B1A832137002CC5D4 /* CheckItTests */,
+				4DB605991A92E93100AE185C /* Perimeter WatchKit Extension */,
+				4DB605AE1A92E93100AE185C /* Perimeter WatchKit App */,
 				4DE853FD1A832137002CC5D4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +185,8 @@
 			children = (
 				4DE853FC1A832137002CC5D4 /* CheckIt.app */,
 				4DE854181A832137002CC5D4 /* CheckItTests.xctest */,
+				4DB605981A92E93100AE185C /* Perimeter WatchKit Extension.appex */,
+				4DB605AA1A92E93100AE185C /* Perimeter WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +194,7 @@
 		4DE853FE1A832137002CC5D4 /* CheckIt */ = {
 			isa = PBXGroup;
 			children = (
+				4DB605C01A92EF7E00AE185C /* Model */,
 				4DE854031A832137002CC5D4 /* AppDelegate.h */,
 				4DE854041A832137002CC5D4 /* AppDelegate.m */,
 				4DE854061A832137002CC5D4 /* FirstViewController.h */,
@@ -127,6 +238,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4DB605971A92E93100AE185C /* Perimeter WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DB605BE1A92E93100AE185C /* Build configuration list for PBXNativeTarget "Perimeter WatchKit Extension" */;
+			buildPhases = (
+				4DB605941A92E93100AE185C /* Sources */,
+				4DB605951A92E93100AE185C /* Frameworks */,
+				4DB605961A92E93100AE185C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DB605AD1A92E93100AE185C /* PBXTargetDependency */,
+			);
+			name = "Perimeter WatchKit Extension";
+			productName = "Perimeter WatchKit Extension";
+			productReference = 4DB605981A92E93100AE185C /* Perimeter WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		4DB605A91A92E93100AE185C /* Perimeter WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DB605BD1A92E93100AE185C /* Build configuration list for PBXNativeTarget "Perimeter WatchKit App" */;
+			buildPhases = (
+				4DB605A81A92E93100AE185C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Perimeter WatchKit App";
+			productName = "Perimeter WatchKit App";
+			productReference = 4DB605AA1A92E93100AE185C /* Perimeter WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		4DE853FB1A832137002CC5D4 /* CheckIt */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DE854221A832137002CC5D4 /* Build configuration list for PBXNativeTarget "CheckIt" */;
@@ -134,10 +278,12 @@
 				4DE853F81A832137002CC5D4 /* Sources */,
 				4DE853F91A832137002CC5D4 /* Frameworks */,
 				4DE853FA1A832137002CC5D4 /* Resources */,
+				4DB605BF1A92E93100AE185C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4DB605B71A92E93100AE185C /* PBXTargetDependency */,
 			);
 			name = CheckIt;
 			productName = CheckIt;
@@ -171,6 +317,12 @@
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Sub-Saharan";
 				TargetAttributes = {
+					4DB605971A92E93100AE185C = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					4DB605A91A92E93100AE185C = {
+						CreatedOnToolsVersion = 6.2;
+					};
 					4DE853FB1A832137002CC5D4 = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -195,11 +347,31 @@
 			targets = (
 				4DE853FB1A832137002CC5D4 /* CheckIt */,
 				4DE854171A832137002CC5D4 /* CheckItTests */,
+				4DB605971A92E93100AE185C /* Perimeter WatchKit Extension */,
+				4DB605A91A92E93100AE185C /* Perimeter WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4DB605961A92E93100AE185C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DB605AB1A92E93100AE185C /* Perimeter WatchKit App.app in Resources */,
+				4DB605A71A92E93100AE185C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DB605A81A92E93100AE185C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DB605B31A92E93100AE185C /* Interface.storyboard in Resources */,
+				4DB605B51A92E93100AE185C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DE853FA1A832137002CC5D4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,6 +392,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4DB605941A92E93100AE185C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DB605A21A92E93100AE185C /* NotificationController.m in Sources */,
+				4DB6059F1A92E93100AE185C /* InterfaceController.m in Sources */,
+				4DB605A51A92E93100AE185C /* GlanceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DE853F81A832137002CC5D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -242,6 +424,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4DB605AD1A92E93100AE185C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DB605A91A92E93100AE185C /* Perimeter WatchKit App */;
+			targetProxy = 4DB605AC1A92E93100AE185C /* PBXContainerItemProxy */;
+		};
+		4DB605B71A92E93100AE185C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DB605971A92E93100AE185C /* Perimeter WatchKit Extension */;
+			targetProxy = 4DB605B61A92E93100AE185C /* PBXContainerItemProxy */;
+		};
 		4DE8541A1A832137002CC5D4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4DE853FB1A832137002CC5D4 /* CheckIt */;
@@ -250,6 +442,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		4DB605B11A92E93100AE185C /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DB605B21A92E93100AE185C /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		4DE8540C1A832137002CC5D4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -269,6 +469,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4DB605B91A92E93100AE185C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Perimeter WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4DB605BA1A92E93100AE185C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Perimeter WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		4DB605BB1A92E93100AE185C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Perimeter_WatchKit_Extension;
+				INFOPLIST_FILE = "Perimeter WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		4DB605BC1A92E93100AE185C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = Perimeter_WatchKit_Extension;
+				INFOPLIST_FILE = "Perimeter WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		4DE854201A832137002CC5D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -404,6 +658,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4DB605BD1A92E93100AE185C /* Build configuration list for PBXNativeTarget "Perimeter WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DB605BB1A92E93100AE185C /* Debug */,
+				4DB605BC1A92E93100AE185C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4DB605BE1A92E93100AE185C /* Build configuration list for PBXNativeTarget "Perimeter WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DB605B91A92E93100AE185C /* Debug */,
+				4DB605BA1A92E93100AE185C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		4DE853F71A832137002CC5D4 /* Build configuration list for PBXProject "CheckIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
