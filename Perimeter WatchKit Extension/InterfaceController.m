@@ -21,9 +21,18 @@
     
     Checkpoint *frontDoor = [[Checkpoint alloc] init];
     frontDoor.info = [NSMutableDictionary dictionaryWithDictionary:@{@"name":@"Front Door"}];
+    
+    Checkpoint *garageDoor = [[Checkpoint alloc] init];
+    garageDoor.info = [NSMutableDictionary dictionaryWithDictionary:@{@"name":@"Garage Door"}];
 
     // Configure interface objects here.
-    [WKInterfaceController reloadRootControllersWithNames:@[@"door1"] contexts:@[frontDoor]]
+    if ([[context objectForKey:@"skipReload"] boolValue]) {
+        // We reloaded the order of the pages already and this is just being displayed for reals now
+    }
+    else {
+        // This is the first run. We want to set up the correct order of the pages
+        [WKInterfaceController reloadRootControllersWithNames:@[@"Home",@"Checkpoint1",@"Checkpoint2"] contexts:@[@{@"skipReload":[NSNumber numberWithBool:YES]},frontDoor,garageDoor]];
+    }
 }
 
 - (void)willActivate {

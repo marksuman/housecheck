@@ -35,7 +35,7 @@
             <objects>
                 <controller identifier="Checkpoint2" title="Checkpoint2" id="Hce-vi-FFw" customClass="CheckpointInterfaceController"/>
             </objects>
-            <point key="canvasLocation" x="578" y="347"/>
+            <point key="canvasLocation" x="586" y="347"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">

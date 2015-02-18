@@ -20,6 +20,12 @@
     [super awakeWithContext:context];
     
     // Configure interface objects here.
+    
+    self.checkpoint = (Checkpoint *)context;
+    
+    if (self.checkpoint) {
+        [self setTitle:[self.checkpoint.info objectForKey:@"name"]];
+    }
 }
 
 - (void)willActivate {

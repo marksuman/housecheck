@@ -8,7 +8,10 @@
 
 #import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
+#import "Checkpoint.h"
 
 @interface CheckpointInterfaceController : WKInterfaceController
+
+@property (nonatomic, strong) Checkpoint *checkpoint;
 
 @end
