@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D2E6F741A95A13600E3867B /* 179-notepad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E6F731A95A13600E3867B /* 179-notepad@2x.png */; };
+		4D2E6F761A95AA5D00E3867B /* 84-lightbulb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E6F751A95AA5D00E3867B /* 84-lightbulb@2x.png */; };
 		4DB6059F1A92E93100AE185C /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6059E1A92E93100AE185C /* InterfaceController.m */; };
 		4DB605A21A92E93100AE185C /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605A11A92E93100AE185C /* NotificationController.m */; };
 		4DB605A51A92E93100AE185C /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605A41A92E93100AE185C /* GlanceController.m */; };
@@ -67,6 +69,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D2E6F731A95A13600E3867B /* 179-notepad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "179-notepad@2x.png"; sourceTree = "<group>"; };
+		4D2E6F751A95AA5D00E3867B /* 84-lightbulb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "84-lightbulb@2x.png"; sourceTree = "<group>"; };
 		4DB605981A92E93100AE185C /* Perimeter WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Perimeter WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB6059B1A92E93100AE185C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DB6059C1A92E93100AE185C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -127,9 +131,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D2E6F721A95A10D00E3867B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E6F751A95AA5D00E3867B /* 84-lightbulb@2x.png */,
+				4D2E6F731A95A13600E3867B /* 179-notepad@2x.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		4DB605991A92E93100AE185C /* Perimeter WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				4D2E6F721A95A10D00E3867B /* Assets */,
 				4DB6059D1A92E93100AE185C /* InterfaceController.h */,
 				4DB6059E1A92E93100AE185C /* InterfaceController.m */,
 				4DB605C11A93860B00AE185C /* CheckpointInterfaceController.h */,
@@ -371,6 +385,8 @@
 			files = (
 				4DB605AB1A92E93100AE185C /* Perimeter WatchKit App.app in Resources */,
 				4DB605A71A92E93100AE185C /* Images.xcassets in Resources */,
+				4D2E6F761A95AA5D00E3867B /* 84-lightbulb@2x.png in Resources */,
+				4D2E6F741A95A13600E3867B /* 179-notepad@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,6 +695,7 @@
 				4DB605BC1A92E93100AE185C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DB605BE1A92E93100AE185C /* Build configuration list for PBXNativeTarget "Perimeter WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -687,6 +704,7 @@
 				4DB605BA1A92E93100AE185C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DE853F71A832137002CC5D4 /* Build configuration list for PBXProject "CheckIt" */ = {
 			isa = XCConfigurationList;

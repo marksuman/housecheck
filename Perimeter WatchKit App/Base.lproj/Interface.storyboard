@@ -23,19 +23,57 @@
         <scene sceneID="INB-BC-qg4">
             <objects>
                 <controller identifier="Checkpoint1" title="Checkpoint1" id="6yD-HR-YAN" customClass="CheckpointInterfaceController">
+                    <items>
+                        <group width="1" alignment="center" verticalAlignment="center" id="Z8G-Tu-tgY">
+                            <items>
+                                <imageView alignment="left" verticalAlignment="center" id="y6u-LJ-VkC"/>
+                            </items>
+                        </group>
+                    </items>
                     <connections>
-                        <segue destination="Hce-vi-FFw" kind="relationship" relationship="nextPage" id="Ybm-hx-BtG"/>
+                        <outlet property="typeImage" destination="y6u-LJ-VkC" id="9Em-j7-CZQ"/>
+                        <segue destination="3aA-4E-P8x" kind="relationship" relationship="nextPage" id="Qtc-bK-NYK"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="427" y="347"/>
+            <point key="canvasLocation" x="420" y="347"/>
         </scene>
         <!--Checkpoint2-->
-        <scene sceneID="6eQ-wg-MGZ">
+        <scene sceneID="n5C-BZ-F0h">
             <objects>
-                <controller identifier="Checkpoint2" title="Checkpoint2" id="Hce-vi-FFw" customClass="CheckpointInterfaceController"/>
+                <controller identifier="Checkpoint2" title="Checkpoint2" id="3aA-4E-P8x" customClass="CheckpointInterfaceController">
+                    <items>
+                        <group width="1" alignment="center" verticalAlignment="center" id="k9S-lr-1Bs">
+                            <items>
+                                <imageView alignment="left" verticalAlignment="center" id="0YZ-3E-j1E"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="typeImage" destination="0YZ-3E-j1E" id="g3E-kv-B1R"/>
+                        <segue destination="E6S-za-JLz" kind="relationship" relationship="nextPage" id="CTv-Ij-wXd"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="586" y="347"/>
+        </scene>
+        <!--Checkpoint3-->
+        <scene sceneID="Q7Z-Zx-nT0">
+            <objects>
+                <controller identifier="Checkpoint3" title="Checkpoint3" id="E6S-za-JLz" customClass="CheckpointInterfaceController">
+                    <items>
+                        <group width="1" alignment="center" verticalAlignment="center" id="hNa-yc-rL5">
+                            <items>
+                                <imageView alignment="left" verticalAlignment="center" id="J2w-4n-dNG"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="typeImage" destination="J2w-4n-dNG" id="d3Z-nd-ja7"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="750" y="347"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">

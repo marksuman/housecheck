@@ -37,7 +37,7 @@
     }
     else {
         // This is the first run. We want to set up the correct order of the pages
-        [WKInterfaceController reloadRootControllersWithNames:@[@"Home",@"Checkpoint1",@"Checkpoint2"] contexts:@[@{@"skipReload":[NSNumber numberWithBool:YES]},frontDoor,garageDoor]];
+        [WKInterfaceController reloadRootControllersWithNames:@[@"Home",@"Checkpoint1",@"Checkpoint2",@"Checkpoint3"] contexts:@[@{@"skipReload":[NSNumber numberWithBool:YES]},frontDoor,porchLights,garageDoor]];
     }
 }
 
