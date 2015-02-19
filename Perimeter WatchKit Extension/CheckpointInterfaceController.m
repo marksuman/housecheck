@@ -24,7 +24,7 @@
     self.checkpoint = (Checkpoint *)context;
     
     if (self.checkpoint) {
-        [self setTitle:[self.checkpoint.info objectForKey:@"name"]];
+        [self setTitle:self.checkpoint.name];
     }
 }
 

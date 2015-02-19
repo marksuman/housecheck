@@ -20,10 +20,16 @@
     [super awakeWithContext:context];
     
     Checkpoint *frontDoor = [[Checkpoint alloc] init];
-    frontDoor.info = [NSMutableDictionary dictionaryWithDictionary:@{@"name":@"Front Door"}];
+    frontDoor.name = @"Front Door";
+    frontDoor.type = CheckpointTypeDoor;
     
     Checkpoint *garageDoor = [[Checkpoint alloc] init];
-    garageDoor.info = [NSMutableDictionary dictionaryWithDictionary:@{@"name":@"Garage Door"}];
+    garageDoor.name = @"Garage Door";
+    garageDoor.type = CheckpointTypeDoor;
+    
+    Checkpoint *porchLights = [[Checkpoint alloc] init];
+    porchLights.name = @"Porch Lights";
+    porchLights.type = CheckpointTypeLight;
 
     // Configure interface objects here.
     if ([[context objectForKey:@"skipReload"] boolValue]) {
