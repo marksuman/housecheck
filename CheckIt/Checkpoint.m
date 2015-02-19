@@ -31,6 +31,23 @@ NSString * const CheckpointStatusNegative = @"negative";
     return self;
 }
 
+- (BOOL)isTypeDoor {
+    return [self.type isEqualToString:CheckpointTypeDoor];
+}
+
+- (BOOL)isTypeLight {
+    return [self.type isEqualToString:CheckpointTypeLight];
+}
+
+- (BOOL)isStatusPositive {
+    return [self.status isEqualToString:CheckpointStatusPositive];
+}
+
+- (BOOL)isStatusNegative {
+    return [self.status isEqualToString:CheckpointStatusNegative];
+}
+
+
 - (NSString *)statusString {
     // This should be overriden by subclass
     NSString *statusString = @"Unchecked";

@@ -28,7 +28,7 @@
     
     if (self.checkpoint) {
         [self setTitle:self.checkpoint.name];
-        [self.typeImage setImage:[self image]];
+        [self.typeImage setImage:[UIImage imageNamed:[self typeImageNameForCheckpoint:self.checkpoint]]];
         [self.statusLabel setText:self.checkpoint.statusString];
     }
 }
@@ -45,18 +45,39 @@
     [super didDeactivate];
 }
 
-- (UIImage *)image {
-    NSParameterAssert(self.checkpoint);
-    
-    UIImage *image = nil;
+- (NSString *)typeImageNameForCheckpoint:(Checkpoint *)checkpoint {
     if ([self.checkpoint.type isEqualToString:CheckpointTypeDoor]) {
-        image = [UIImage imageNamed:@"179-notepad"];
+        return @"179-notepad";
     }
     else if ([self.checkpoint.type isEqualToString:CheckpointTypeLight]) {
-        image = [UIImage imageNamed:@"84-lightbulb"];
+        return @"84-lightbulb";
     }
     
-    return image;
+    return nil;
+}
+
+- (NSString *)statusImageNameForCheckpoint:(Checkpoint *)checkpoint {
+    if (checkpoint.isStatusPositive) {
+        return [self positiveStatusImageNameForCheckpoint:checkpoint];
+    }
+    else if (checkpoint.isStatusNegative) {
+        return [self negativeStatusImageNameForCheckpoint:checkpoint];
+    }
+    else {
+        return @"circle-questionmark";
+    }
+}
+
+- (NSString *)positiveStatusImageNameForCheckpoint:(Checkpoint *)checkpoint {
+    // If we want, we could customize the positive image based on checkpoint type
+    // For now we'll just show a default
+    return @"19-circle-check";
+}
+
+- (NSString *)negativeStatusImageNameForCheckpoint:(Checkpoint *)checkpoint {
+    // If we want, we could customize the negative image based on checkpoint type
+    // For now we'll just show a default
+    return @"circle-x";
 }
 
 @end

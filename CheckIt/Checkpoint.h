@@ -36,6 +36,15 @@ extern NSString * const CheckpointStatusNegative;
 @property (nonatomic) NSString *type;
 @property (nonatomic) NSString *status;
 
+// Type BOOLs
+@property (nonatomic, readonly) BOOL isTypeDoor;
+@property (nonatomic, readonly) BOOL isTypeLight;
+
+// Status BOOLs
+@property (nonatomic, readonly) BOOL isStatusPositive;
+@property (nonatomic, readonly) BOOL isStatusNegative;
+
+
 // Temp property
 @property (nonatomic, strong) NSMutableDictionary *info;
 
