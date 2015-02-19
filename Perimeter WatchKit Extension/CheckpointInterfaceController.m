@@ -12,6 +12,7 @@
 @interface CheckpointInterfaceController()
 
 @property (nonatomic, weak) IBOutlet WKInterfaceImage *typeImage;
+@property (nonatomic, weak) IBOutlet WKInterfaceLabel *statusLabel;
 
 @end
 
@@ -24,9 +25,11 @@
     // Configure interface objects here.
     
     self.checkpoint = (Checkpoint *)context;
+    
     if (self.checkpoint) {
         [self setTitle:self.checkpoint.name];
         [self.typeImage setImage:[self image]];
+        [self.statusLabel setText:self.checkpoint.statusString];
     }
 }
 
@@ -43,17 +46,14 @@
 }
 
 - (UIImage *)image {
+    NSParameterAssert(self.checkpoint);
+    
     UIImage *image = nil;
-    switch (self.checkpoint.type) {
-        case CheckpointTypeDoor:
-            image = [UIImage imageNamed:@"179-notepad"];
-            break;
-        case CheckpointTypeLight:
-            image = [UIImage imageNamed:@"84-lightbulb"];
-            break;
-            
-        default:
-            break;
+    if ([self.checkpoint.type isEqualToString:CheckpointTypeDoor]) {
+        image = [UIImage imageNamed:@"179-notepad"];
+    }
+    else if ([self.checkpoint.type isEqualToString:CheckpointTypeLight]) {
+        image = [UIImage imageNamed:@"84-lightbulb"];
     }
     
     return image;

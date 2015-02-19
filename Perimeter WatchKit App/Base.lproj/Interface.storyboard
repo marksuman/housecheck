@@ -27,10 +27,13 @@
                         <group width="1" alignment="center" verticalAlignment="center" id="Z8G-Tu-tgY">
                             <items>
                                 <imageView alignment="left" verticalAlignment="center" id="y6u-LJ-VkC"/>
+                                <label alignment="right" verticalAlignment="center" text="Label" id="6CL-LS-a5N"/>
                             </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                         </group>
                     </items>
                     <connections>
+                        <outlet property="statusLabel" destination="6CL-LS-a5N" id="YQ7-2T-F7Y"/>
                         <outlet property="typeImage" destination="y6u-LJ-VkC" id="9Em-j7-CZQ"/>
                         <segue destination="3aA-4E-P8x" kind="relationship" relationship="nextPage" id="Qtc-bK-NYK"/>
                     </connections>
