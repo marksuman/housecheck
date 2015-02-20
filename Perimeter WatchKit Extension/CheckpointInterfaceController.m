@@ -12,6 +12,7 @@
 @interface CheckpointInterfaceController()
 
 @property (nonatomic, weak) IBOutlet WKInterfaceImage *typeImage;
+@property (nonatomic, weak) IBOutlet WKInterfaceImage *statusImage;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *statusLabel;
 
 @end
@@ -27,9 +28,7 @@
     self.checkpoint = (Checkpoint *)context;
     
     if (self.checkpoint) {
-        [self setTitle:self.checkpoint.name];
-        [self.typeImage setImage:[UIImage imageNamed:[self typeImageNameForCheckpoint:self.checkpoint]]];
-        [self.statusLabel setText:self.checkpoint.statusString];
+        [self updateInterfaceElements];
     }
 }
 
@@ -43,6 +42,18 @@
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
+}
+
+- (void)updateInterfaceElements {
+    [self setTitle:self.checkpoint.name];
+    [self.typeImage setImage:[UIImage imageNamed:[self typeImageNameForCheckpoint:self.checkpoint]]];
+    [self.statusImage setImage:[UIImage imageNamed:[self statusImageNameForCheckpoint:self.checkpoint]]];
+    [self.statusLabel setText:self.checkpoint.statusString];
+}
+
+- (IBAction)buttonAction:(id)sender {
+    [self.checkpoint toggleStatus];
+    [self updateInterfaceElements];
 }
 
 - (NSString *)typeImageNameForCheckpoint:(Checkpoint *)checkpoint {

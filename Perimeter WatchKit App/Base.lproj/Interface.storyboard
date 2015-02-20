@@ -24,22 +24,38 @@
             <objects>
                 <controller identifier="Checkpoint1" title="Checkpoint1" id="6yD-HR-YAN" customClass="CheckpointInterfaceController">
                     <items>
-                        <group width="1" alignment="center" verticalAlignment="center" id="Z8G-Tu-tgY">
-                            <items>
-                                <imageView alignment="left" verticalAlignment="center" id="y6u-LJ-VkC"/>
-                                <label alignment="right" verticalAlignment="center" text="Label" id="6CL-LS-a5N"/>
-                            </items>
-                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
-                        </group>
+                        <button alignment="left" id="47E-W6-kcz">
+                            <group key="contentGroup" width="134" height="151" alignment="left" id="hkz-xT-z6a">
+                                <items>
+                                    <group width="136" height="149" alignment="left" verticalAlignment="center" id="VEd-Et-vAH">
+                                        <items>
+                                            <imageView width="56" height="56" alignment="left" verticalAlignment="center" id="y6u-LJ-VkC"/>
+                                            <group width="75" height="145.5" alignment="right" verticalAlignment="center" layout="vertical" id="Z8G-Tu-tgY">
+                                                <items>
+                                                    <imageView width="56" height="56" alignment="center" verticalAlignment="center" id="Bnc-1C-xA3"/>
+                                                    <label width="55" height="34.5" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="6CL-LS-a5N"/>
+                                                </items>
+                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                            </group>
+                                        </items>
+                                        <edgeInsets key="margins" left="5" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                </items>
+                            </group>
+                            <connections>
+                                <action selector="buttonAction:" destination="6yD-HR-YAN" id="Ozj-sJ-9pW"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
+                        <outlet property="statusImage" destination="Bnc-1C-xA3" id="lM4-tQ-Wtj"/>
                         <outlet property="statusLabel" destination="6CL-LS-a5N" id="YQ7-2T-F7Y"/>
                         <outlet property="typeImage" destination="y6u-LJ-VkC" id="9Em-j7-CZQ"/>
                         <segue destination="3aA-4E-P8x" kind="relationship" relationship="nextPage" id="Qtc-bK-NYK"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="420" y="347"/>
+            <point key="canvasLocation" x="420" y="371"/>
         </scene>
         <!--Checkpoint2-->
         <scene sceneID="n5C-BZ-F0h">

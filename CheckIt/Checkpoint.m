@@ -50,15 +50,30 @@ NSString * const CheckpointStatusNegative = @"negative";
 
 - (NSString *)statusString {
     // This should be overriden by subclass
-    NSString *statusString = @"Unchecked";
+    NSString *statusString = @"---";
     
     if ([self.status isEqualToString:CheckpointStatusPositive]) {
-        statusString = @"Positive";
+        statusString = @"Good";
     }
     else if ([self.status isEqualToString:CheckpointStatusNegative]) {
-        statusString = @"Negative";
+        statusString = @"Bad";
     }
     return statusString;
+}
+
+- (void)toggleStatus {
+    // Move the status to the next one
+    // Unknown -> Positive -> Negative
+    if (self.isStatusPositive) {
+        self.status = CheckpointStatusNegative;
+    }
+    else if (self.isStatusNegative) {
+        self.status = CheckpointStatusUnknown;
+    }
+    else {
+        // The status is currently unknown
+        self.status = CheckpointStatusPositive;
+    }
 }
 
 @end

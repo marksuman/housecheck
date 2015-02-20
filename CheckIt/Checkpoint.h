@@ -49,5 +49,6 @@ extern NSString * const CheckpointStatusNegative;
 @property (nonatomic, strong) NSMutableDictionary *info;
 
 - (NSString *)statusString;
+- (void)toggleStatus;
 
 @end
