@@ -19,10 +19,10 @@
             </objects>
             <point key="canvasLocation" x="235" y="178"/>
         </scene>
-        <!--Perimeter-->
+        <!--Checkpoint1-->
         <scene sceneID="INB-BC-qg4">
             <objects>
-                <controller identifier="Checkpoint1" title="Perimeter" id="6yD-HR-YAN" customClass="CheckpointInterfaceController">
+                <controller identifier="Checkpoint1" id="6yD-HR-YAN" customClass="CheckpointInterfaceController">
                     <items>
                         <button alignment="left" id="47E-W6-kcz">
                             <group key="contentGroup" width="134" height="151" alignment="left" layout="vertical" id="hkz-xT-z6a">
@@ -60,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="288" y="405"/>
         </scene>
-        <!--Perimeter-->
+        <!--Checkpoint2-->
         <scene sceneID="C2G-RK-VOh">
             <objects>
-                <controller identifier="Checkpoint2" title="Perimeter" id="1wA-SN-vdR" customClass="CheckpointInterfaceController">
+                <controller identifier="Checkpoint2" id="1wA-SN-vdR" customClass="CheckpointInterfaceController">
                     <items>
                         <button alignment="left" id="HAs-9W-KiJ">
                             <group key="contentGroup" width="134" height="151" alignment="left" layout="vertical" id="kyD-er-LDn">
@@ -101,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="454" y="405"/>
         </scene>
-        <!--Perimeter-->
+        <!--Checkpoint3-->
         <scene sceneID="ljl-rY-Puu">
             <objects>
-                <controller identifier="Checkpoint3" title="Perimeter" id="Io7-vR-llK" customClass="CheckpointInterfaceController">
+                <controller identifier="Checkpoint3" id="Io7-vR-llK" customClass="CheckpointInterfaceController">
                     <items>
                         <button alignment="left" id="6NB-MY-SxF">
                             <group key="contentGroup" width="134" height="151" alignment="left" layout="vertical" id="QTP-vc-t2Y">
