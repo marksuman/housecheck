@@ -17,30 +17,33 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="235" y="347"/>
+            <point key="canvasLocation" x="235" y="178"/>
         </scene>
-        <!--Checkpoint1-->
+        <!--Perimeter-->
         <scene sceneID="INB-BC-qg4">
             <objects>
-                <controller identifier="Checkpoint1" title="Checkpoint1" id="6yD-HR-YAN" customClass="CheckpointInterfaceController">
+                <controller identifier="Checkpoint1" title="Perimeter" id="6yD-HR-YAN" customClass="CheckpointInterfaceController">
                     <items>
                         <button alignment="left" id="47E-W6-kcz">
-                            <group key="contentGroup" width="134" height="151" alignment="left" id="hkz-xT-z6a">
+                            <group key="contentGroup" width="134" height="151" alignment="left" layout="vertical" id="hkz-xT-z6a">
                                 <items>
-                                    <group width="136" height="149" alignment="left" verticalAlignment="center" id="VEd-Et-vAH">
+                                    <label width="55" height="34.5" alignment="center" text="Label" textAlignment="center" id="6CL-LS-a5N">
+                                        <variation key="device=watch38mm" width="135"/>
+                                        <variation key="device=watch42mm" height="34.5" width="151"/>
+                                    </label>
+                                    <group width="136" height="112" alignment="center" verticalAlignment="center" id="VEd-Et-vAH">
                                         <items>
                                             <imageView width="56" height="56" alignment="left" verticalAlignment="center" id="y6u-LJ-VkC"/>
-                                            <group width="75" height="145.5" alignment="right" verticalAlignment="center" layout="vertical" id="Z8G-Tu-tgY">
-                                                <items>
-                                                    <imageView width="56" height="56" alignment="center" verticalAlignment="center" id="Bnc-1C-xA3"/>
-                                                    <label width="55" height="34.5" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="6CL-LS-a5N"/>
-                                                </items>
-                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
-                                            </group>
+                                            <imageView width="56" height="56" alignment="right" verticalAlignment="center" id="Bnc-1C-xA3"/>
                                         </items>
-                                        <edgeInsets key="margins" left="5" right="0.0" top="0.0" bottom="0.0"/>
+                                        <edgeInsets key="margins" left="10" right="10" top="0.0" bottom="0.0"/>
+                                        <variation key="device=watch38mm">
+                                            <edgeInsets key="margins" left="4" right="4" top="0.0" bottom="0.0"/>
+                                        </variation>
+                                        <variation key="device=watch42mm" height="93" width="151"/>
                                     </group>
                                 </items>
+                                <variation key="device=watch42mm" height="174" width="156"/>
                             </group>
                             <connections>
                                 <action selector="buttonAction:" destination="6yD-HR-YAN" id="Ozj-sJ-9pW"/>
@@ -51,48 +54,92 @@
                         <outlet property="statusImage" destination="Bnc-1C-xA3" id="lM4-tQ-Wtj"/>
                         <outlet property="statusLabel" destination="6CL-LS-a5N" id="YQ7-2T-F7Y"/>
                         <outlet property="typeImage" destination="y6u-LJ-VkC" id="9Em-j7-CZQ"/>
-                        <segue destination="3aA-4E-P8x" kind="relationship" relationship="nextPage" id="Qtc-bK-NYK"/>
+                        <segue destination="1wA-SN-vdR" kind="relationship" relationship="nextPage" id="KYX-5O-T3K"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="420" y="371"/>
+            <point key="canvasLocation" x="288" y="405"/>
         </scene>
-        <!--Checkpoint2-->
-        <scene sceneID="n5C-BZ-F0h">
+        <!--Perimeter-->
+        <scene sceneID="C2G-RK-VOh">
             <objects>
-                <controller identifier="Checkpoint2" title="Checkpoint2" id="3aA-4E-P8x" customClass="CheckpointInterfaceController">
+                <controller identifier="Checkpoint2" title="Perimeter" id="1wA-SN-vdR" customClass="CheckpointInterfaceController">
                     <items>
-                        <group width="1" alignment="center" verticalAlignment="center" id="k9S-lr-1Bs">
-                            <items>
-                                <imageView alignment="left" verticalAlignment="center" id="0YZ-3E-j1E"/>
-                            </items>
-                        </group>
+                        <button alignment="left" id="HAs-9W-KiJ">
+                            <group key="contentGroup" width="134" height="151" alignment="left" layout="vertical" id="kyD-er-LDn">
+                                <items>
+                                    <label width="55" height="34.5" alignment="center" text="Label" textAlignment="center" id="05H-Cl-eQO">
+                                        <variation key="device=watch38mm" width="135"/>
+                                        <variation key="device=watch42mm" height="34.5" width="151"/>
+                                    </label>
+                                    <group width="136" height="112" alignment="center" verticalAlignment="center" id="FH3-al-UkQ">
+                                        <items>
+                                            <imageView width="56" height="56" alignment="left" verticalAlignment="center" id="wPQ-fN-yCE"/>
+                                            <imageView width="56" height="56" alignment="right" verticalAlignment="center" id="T9n-DF-TNK"/>
+                                        </items>
+                                        <edgeInsets key="margins" left="10" right="10" top="0.0" bottom="0.0"/>
+                                        <variation key="device=watch38mm">
+                                            <edgeInsets key="margins" left="4" right="4" top="0.0" bottom="0.0"/>
+                                        </variation>
+                                        <variation key="device=watch42mm" height="93" width="151"/>
+                                    </group>
+                                </items>
+                                <variation key="device=watch42mm" height="174" width="156"/>
+                            </group>
+                            <connections>
+                                <action selector="buttonAction:" destination="1wA-SN-vdR" id="w9s-OO-ERW"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
-                        <outlet property="typeImage" destination="0YZ-3E-j1E" id="g3E-kv-B1R"/>
-                        <segue destination="E6S-za-JLz" kind="relationship" relationship="nextPage" id="CTv-Ij-wXd"/>
+                        <outlet property="statusImage" destination="T9n-DF-TNK" id="uSO-3R-FHC"/>
+                        <outlet property="statusLabel" destination="05H-Cl-eQO" id="6wO-ln-YSz"/>
+                        <outlet property="typeImage" destination="wPQ-fN-yCE" id="Uhy-Xw-zcx"/>
+                        <segue destination="Io7-vR-llK" kind="relationship" relationship="nextPage" id="VlI-Hq-L1A"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="586" y="347"/>
+            <point key="canvasLocation" x="454" y="405"/>
         </scene>
-        <!--Checkpoint3-->
-        <scene sceneID="Q7Z-Zx-nT0">
+        <!--Perimeter-->
+        <scene sceneID="ljl-rY-Puu">
             <objects>
-                <controller identifier="Checkpoint3" title="Checkpoint3" id="E6S-za-JLz" customClass="CheckpointInterfaceController">
+                <controller identifier="Checkpoint3" title="Perimeter" id="Io7-vR-llK" customClass="CheckpointInterfaceController">
                     <items>
-                        <group width="1" alignment="center" verticalAlignment="center" id="hNa-yc-rL5">
-                            <items>
-                                <imageView alignment="left" verticalAlignment="center" id="J2w-4n-dNG"/>
-                            </items>
-                        </group>
+                        <button alignment="left" id="6NB-MY-SxF">
+                            <group key="contentGroup" width="134" height="151" alignment="left" layout="vertical" id="QTP-vc-t2Y">
+                                <items>
+                                    <label width="55" height="34.5" alignment="center" text="Label" textAlignment="center" id="ZRT-0a-cVz">
+                                        <variation key="device=watch38mm" width="135"/>
+                                        <variation key="device=watch42mm" height="34.5" width="151"/>
+                                    </label>
+                                    <group width="136" height="112" alignment="center" verticalAlignment="center" id="rQp-Tq-FNi">
+                                        <items>
+                                            <imageView width="56" height="56" alignment="left" verticalAlignment="center" id="QpK-ic-hBy"/>
+                                            <imageView width="56" height="56" alignment="right" verticalAlignment="center" id="Qnh-Dd-x4d"/>
+                                        </items>
+                                        <edgeInsets key="margins" left="10" right="10" top="0.0" bottom="0.0"/>
+                                        <variation key="device=watch38mm">
+                                            <edgeInsets key="margins" left="4" right="4" top="0.0" bottom="0.0"/>
+                                        </variation>
+                                        <variation key="device=watch42mm" height="93" width="151"/>
+                                    </group>
+                                </items>
+                                <variation key="device=watch42mm" height="174" width="156"/>
+                            </group>
+                            <connections>
+                                <action selector="buttonAction:" destination="Io7-vR-llK" id="BRG-qm-D8e"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
-                        <outlet property="typeImage" destination="J2w-4n-dNG" id="d3Z-nd-ja7"/>
+                        <outlet property="statusImage" destination="Qnh-Dd-x4d" id="L4L-cW-34n"/>
+                        <outlet property="statusLabel" destination="ZRT-0a-cVz" id="U3D-Do-lYg"/>
+                        <outlet property="typeImage" destination="QpK-ic-hBy" id="i5D-9N-xuP"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="750" y="347"/>
+            <point key="canvasLocation" x="620" y="405"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
