@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
-        <!--Perimeter-->
+        <!--Sleep Safe-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="Dashboard" title="Perimeter" id="AgC-eL-Hgc" customClass="InterfaceController">
+                <controller identifier="Dashboard" title="Sleep Safe" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
                         <label alignment="center" verticalAlignment="center" text="1/4" id="whp-9f-a8A"/>
                     </items>
