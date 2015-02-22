@@ -32,10 +32,10 @@
         [rootControllerNames addObject:@"Dashboard"];
         [contexts addObject:@{@"skipReload":[NSNumber numberWithBool:YES]}];
         
-        for (NSInteger i=0; i < [[[CheckpointManager defaultManager] checkpoints] count]; i++) {
+        for (Checkpoint *checkpoint in [[CheckpointManager defaultManager] checkpoints]) {
                 // Add a Checkpoint interface with the index appended to it
-                [rootControllerNames addObject:[NSString stringWithFormat:@"Checkpoint%ld",i+1]];
-            [contexts addObject:[[[CheckpointManager defaultManager] checkpoints] objectAtIndex:i]];
+            [rootControllerNames addObject:[NSString stringWithFormat:@"Checkpoint"]];
+            [contexts addObject:checkpoint];
         }
         // This is the first run. We want to set up the correct order of the pages
         [WKInterfaceController reloadRootControllersWithNames:rootControllerNames contexts:contexts];
