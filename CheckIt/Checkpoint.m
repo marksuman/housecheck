@@ -50,7 +50,7 @@ NSString * const CheckpointStatusNegative = @"negative";
 
 - (NSString *)statusString {
     // This should be overriden by subclass
-    NSString *statusString = @"---";
+    NSString *statusString = @"Not Checked";
     
     if ([self.status isEqualToString:CheckpointStatusPositive]) {
         statusString = @"Good";

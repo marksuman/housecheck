@@ -45,6 +45,7 @@
 }
 
 - (void)updateInterfaceElements {
+    [self setTitle:self.checkpoint.statusString];
     [self.typeImage setImage:[UIImage imageNamed:[self typeImageNameForCheckpoint:self.checkpoint]]];
     [self.statusImage setImage:[UIImage imageNamed:[self statusImageNameForCheckpoint:self.checkpoint]]];
     [self.statusLabel setText:self.checkpoint.name];
