@@ -15,4 +15,7 @@
 
 + (CheckpointManager *)defaultManager;
 
+// Queries
+- (NSInteger)countOfPositiveCheckpoints;
+
 @end

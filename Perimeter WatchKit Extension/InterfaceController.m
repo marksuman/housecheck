@@ -12,6 +12,8 @@
 
 @interface InterfaceController()
 
+@property (nonatomic, weak) IBOutlet WKInterfaceLabel *summaryLabel;
+
 @end
 
 
@@ -23,6 +25,10 @@
     // Configure interface objects here.
     if ([[context objectForKey:@"skipReload"] boolValue]) {
         // We reloaded the order of the pages already and this is just being displayed for reals now
+        // Go ahead and set it up
+        
+        [self setTitle:@"Sleep Safe"];
+        [self updateInterfaceElements];
     }
     else {
         NSMutableArray *rootControllerNames = [NSMutableArray array];
@@ -45,11 +51,19 @@
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+    
+    [self updateInterfaceElements];
 }
 
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
+}
+
+- (void)updateInterfaceElements {
+    CheckpointManager *checkpointManager = [CheckpointManager defaultManager];
+    
+    [self.summaryLabel setText:[NSString stringWithFormat:@"%ld/%ld",[checkpointManager countOfPositiveCheckpoints],checkpointManager.checkpoints.count]];
 }
 
 @end

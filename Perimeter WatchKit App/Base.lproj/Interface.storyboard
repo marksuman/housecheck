@@ -5,19 +5,20 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
-        <!--Sleep Safe-->
+        <!--Dashboard-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="Dashboard" title="Sleep Safe" id="AgC-eL-Hgc" customClass="InterfaceController">
+                <controller identifier="Dashboard" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <label alignment="center" verticalAlignment="center" text="1/4" id="whp-9f-a8A"/>
+                        <label width="80" alignment="center" verticalAlignment="center" text="1/4" textAlignment="center" id="whp-9f-a8A"/>
                     </items>
                     <connections>
+                        <outlet property="summaryLabel" destination="whp-9f-a8A" id="Ev1-nd-h1f"/>
                         <segue destination="6yD-HR-YAN" kind="relationship" relationship="nextPage" id="v9G-Ov-E8m"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="235" y="349"/>
+            <point key="canvasLocation" x="235" y="238"/>
         </scene>
         <!--Checkpoint-->
         <scene sceneID="INB-BC-qg4">

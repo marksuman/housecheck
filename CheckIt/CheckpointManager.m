@@ -52,4 +52,12 @@ static CheckpointManager *defaultManager;
     [self.checkpoints addObject:porchLights];
 }
 
+- (NSInteger)countOfPositiveCheckpoints {
+    NSInteger count = 0;
+    for (Checkpoint *checkpoint in self.checkpoints) {
+        count += checkpoint.isStatusPositive ? 1 : 0;
+    }
+    return count;
+}
+
 @end
