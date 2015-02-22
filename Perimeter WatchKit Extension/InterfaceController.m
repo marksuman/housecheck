@@ -8,6 +8,7 @@
 
 #import "InterfaceController.h"
 #import "CheckpointInterfaceController.h"
+#import "CheckpointManager.h"
 
 @interface InterfaceController()
 
@@ -18,26 +19,26 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-    
-    Checkpoint *frontDoor = [[Checkpoint alloc] init];
-    frontDoor.name = @"Front Door";
-    frontDoor.type = CheckpointTypeDoor;
-    
-    Checkpoint *garageDoor = [[Checkpoint alloc] init];
-    garageDoor.name = @"Garage Door";
-    garageDoor.type = CheckpointTypeDoor;
-    
-    Checkpoint *porchLights = [[Checkpoint alloc] init];
-    porchLights.name = @"Porch Lights";
-    porchLights.type = CheckpointTypeLight;
 
     // Configure interface objects here.
     if ([[context objectForKey:@"skipReload"] boolValue]) {
         // We reloaded the order of the pages already and this is just being displayed for reals now
     }
     else {
+        NSMutableArray *rootControllerNames = [NSMutableArray array];
+        NSMutableArray *contexts = [NSMutableArray array];
+        
+        // Add the Dashboard controller
+        [rootControllerNames addObject:@"Dashboard"];
+        [contexts addObject:@{@"skipReload":[NSNumber numberWithBool:YES]}];
+        
+        for (NSInteger i=0; i < [[[CheckpointManager defaultManager] checkpoints] count]; i++) {
+                // Add a Checkpoint interface with the index appended to it
+                [rootControllerNames addObject:[NSString stringWithFormat:@"Checkpoint%ld",i+1]];
+            [contexts addObject:[[[CheckpointManager defaultManager] checkpoints] objectAtIndex:i]];
+        }
         // This is the first run. We want to set up the correct order of the pages
-        [WKInterfaceController reloadRootControllersWithNames:@[@"Home",@"Checkpoint1",@"Checkpoint2",@"Checkpoint3"] contexts:@[@{@"skipReload":[NSNumber numberWithBool:YES]},frontDoor,porchLights,garageDoor]];
+        [WKInterfaceController reloadRootControllersWithNames:rootControllerNames contexts:contexts];
     }
 }
 
