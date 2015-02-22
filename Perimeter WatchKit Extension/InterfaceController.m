@@ -66,6 +66,10 @@
     [self.summaryLabel setText:[NSString stringWithFormat:@"%ld/%ld",[checkpointManager countOfPositiveCheckpoints],checkpointManager.checkpoints.count]];
 }
 
+- (IBAction)addCheckpointMenuItemTapped:(id)sender {
+    
+}
+
 @end
 
 

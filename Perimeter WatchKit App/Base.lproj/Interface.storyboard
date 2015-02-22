@@ -12,6 +12,15 @@
                     <items>
                         <label width="80" alignment="center" verticalAlignment="center" text="1/4" textAlignment="center" id="whp-9f-a8A"/>
                     </items>
+                    <menu key="menu" id="ldx-uk-ZsN">
+                        <items>
+                            <menuItem title="Add a Checkpoint" icon="add" id="byx-B2-vQs">
+                                <connections>
+                                    <action selector="addCheckpointMenuItemTapped:" destination="AgC-eL-Hgc" id="iTp-hu-hf8"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="summaryLabel" destination="whp-9f-a8A" id="Ev1-nd-h1f"/>
                         <segue destination="6yD-HR-YAN" kind="relationship" relationship="nextPage" id="v9G-Ov-E8m"/>
