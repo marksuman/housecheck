@@ -58,7 +58,56 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="401" y="349"/>
+            <point key="canvasLocation" x="401" y="238"/>
+        </scene>
+        <!--AddBeginning-->
+        <scene sceneID="xa7-mF-tXf">
+            <objects>
+                <controller identifier="AddBeginning" id="ONd-PD-WaS">
+                    <items>
+                        <label alignment="left" text="Pick a checkpoint" id="15R-Qv-0NP"/>
+                        <label alignment="left" text="Give it a name" id="zBq-ol-HST"/>
+                    </items>
+                    <connections>
+                        <segue destination="yLU-jj-cmN" kind="relationship" relationship="nextPage" id="fHa-C5-vjT"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="465"/>
+        </scene>
+        <!--AddCheckpoint-->
+        <scene sceneID="vrE-rd-PTV">
+            <objects>
+                <controller identifier="AddCheckpoint" id="yLU-jj-cmN">
+                    <items>
+                        <button alignment="left" id="Ncp-hN-dZE">
+                            <group key="contentGroup" width="134" height="151" alignment="left" layout="vertical" id="qIp-6W-SU4">
+                                <items>
+                                    <label width="55" height="34.5" alignment="center" text="Label" textAlignment="center" id="Qt5-k4-zag">
+                                        <variation key="device=watch38mm" width="135"/>
+                                        <variation key="device=watch42mm" height="34.5" width="151"/>
+                                    </label>
+                                    <group width="136" height="112" alignment="center" verticalAlignment="center" layout="vertical" id="c9p-rt-O7c">
+                                        <items>
+                                            <imageView width="56" height="56" alignment="center" verticalAlignment="center" id="YRd-nb-1fw"/>
+                                            <label alignment="center" verticalAlignment="bottom" text="Label" id="pp9-kC-ctQ">
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                        </items>
+                                        <edgeInsets key="margins" left="10" right="10" top="0.0" bottom="0.0"/>
+                                        <variation key="device=watch38mm">
+                                            <edgeInsets key="margins" left="4" right="4" top="0.0" bottom="0.0"/>
+                                        </variation>
+                                        <variation key="device=watch42mm" height="93" width="151"/>
+                                    </group>
+                                </items>
+                                <variation key="device=watch42mm" height="174" width="156"/>
+                            </group>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="401" y="465"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
