@@ -78,7 +78,7 @@
         <!--AddCheckpoint-->
         <scene sceneID="vrE-rd-PTV">
             <objects>
-                <controller identifier="AddCheckpoint" id="yLU-jj-cmN">
+                <controller identifier="AddCheckpoint" id="yLU-jj-cmN" customClass="AddCheckpointInterfaceController">
                     <items>
                         <button alignment="left" id="Ncp-hN-dZE">
                             <group key="contentGroup" width="134" height="151" alignment="left" layout="vertical" id="qIp-6W-SU4">
