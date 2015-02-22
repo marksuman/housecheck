@@ -24,6 +24,10 @@
 		4DB605C31A93860B00AE185C /* CheckpointInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605C21A93860B00AE185C /* CheckpointInterfaceController.m */; };
 		4DB605C71A93874100AE185C /* Checkpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605C61A93874100AE185C /* Checkpoint.m */; };
 		4DB605C81A93874100AE185C /* Checkpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605C61A93874100AE185C /* Checkpoint.m */; };
+		4DCFD5A71A98DF3B003A768B /* libFlurry_6.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCFD5A61A98DF3B003A768B /* libFlurry_6.2.0.a */; };
+		4DCFD5A81A98DF3B003A768B /* libFlurry_6.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCFD5A61A98DF3B003A768B /* libFlurry_6.2.0.a */; };
+		4DCFD5AC1A98E8CF003A768B /* CheckpointManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCFD5AB1A98E8CF003A768B /* CheckpointManager.m */; };
+		4DCFD5AD1A98E8CF003A768B /* CheckpointManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCFD5AB1A98E8CF003A768B /* CheckpointManager.m */; };
 		4DE854021A832137002CC5D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE854011A832137002CC5D4 /* main.m */; };
 		4DE854051A832137002CC5D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE854041A832137002CC5D4 /* AppDelegate.m */; };
 		4DE854081A832137002CC5D4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE854071A832137002CC5D4 /* FirstViewController.m */; };
@@ -97,6 +101,10 @@
 		4DB605C21A93860B00AE185C /* CheckpointInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckpointInterfaceController.m; sourceTree = "<group>"; };
 		4DB605C51A93874100AE185C /* Checkpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Checkpoint.h; sourceTree = "<group>"; };
 		4DB605C61A93874100AE185C /* Checkpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Checkpoint.m; sourceTree = "<group>"; };
+		4DCFD5A51A98DF3B003A768B /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Flurry.h; path = External/Flurry.h; sourceTree = "<group>"; };
+		4DCFD5A61A98DF3B003A768B /* libFlurry_6.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_6.2.0.a; path = External/libFlurry_6.2.0.a; sourceTree = "<group>"; };
+		4DCFD5AA1A98E8CF003A768B /* CheckpointManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckpointManager.h; sourceTree = "<group>"; };
+		4DCFD5AB1A98E8CF003A768B /* CheckpointManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckpointManager.m; sourceTree = "<group>"; };
 		4DE853FC1A832137002CC5D4 /* CheckIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE854001A832137002CC5D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DE854011A832137002CC5D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -119,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DCFD5A81A98DF3B003A768B /* libFlurry_6.2.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DCFD5A71A98DF3B003A768B /* libFlurry_6.2.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,8 +212,19 @@
 			children = (
 				4DB605C51A93874100AE185C /* Checkpoint.h */,
 				4DB605C61A93874100AE185C /* Checkpoint.m */,
+				4DCFD5AA1A98E8CF003A768B /* CheckpointManager.h */,
+				4DCFD5AB1A98E8CF003A768B /* CheckpointManager.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		4DCFD5A41A98DF1C003A768B /* External */ = {
+			isa = PBXGroup;
+			children = (
+				4DCFD5A51A98DF3B003A768B /* Flurry.h */,
+				4DCFD5A61A98DF3B003A768B /* libFlurry_6.2.0.a */,
+			);
+			name = External;
 			sourceTree = "<group>";
 		};
 		4DE853F31A832137002CC5D4 = {
@@ -213,6 +234,7 @@
 				4DE8541B1A832137002CC5D4 /* CheckItTests */,
 				4DB605991A92E93100AE185C /* Perimeter WatchKit Extension */,
 				4DB605AE1A92E93100AE185C /* Perimeter WatchKit App */,
+				4DCFD5A41A98DF1C003A768B /* External */,
 				4DE853FD1A832137002CC5D4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -442,6 +464,7 @@
 				4DB605A21A92E93100AE185C /* NotificationController.m in Sources */,
 				4DB6059F1A92E93100AE185C /* InterfaceController.m in Sources */,
 				4DB605C81A93874100AE185C /* Checkpoint.m in Sources */,
+				4DCFD5AD1A98E8CF003A768B /* CheckpointManager.m in Sources */,
 				4DB605A51A92E93100AE185C /* GlanceController.m in Sources */,
 				4DB605C31A93860B00AE185C /* CheckpointInterfaceController.m in Sources */,
 			);
@@ -454,6 +477,7 @@
 				4DE8540B1A832137002CC5D4 /* SecondViewController.m in Sources */,
 				4DE854051A832137002CC5D4 /* AppDelegate.m in Sources */,
 				4DB605C71A93874100AE185C /* Checkpoint.m in Sources */,
+				4DCFD5AC1A98E8CF003A768B /* CheckpointManager.m in Sources */,
 				4DE854081A832137002CC5D4 /* FirstViewController.m in Sources */,
 				4DE854021A832137002CC5D4 /* main.m in Sources */,
 			);
@@ -524,6 +548,10 @@
 				);
 				INFOPLIST_FILE = "Perimeter WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External",
+				);
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SKIP_INSTALL = YES;
 			};
@@ -534,6 +562,10 @@
 			buildSettings = {
 				INFOPLIST_FILE = "Perimeter WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External",
+				);
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SKIP_INSTALL = YES;
 			};
@@ -653,6 +685,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CheckIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -663,6 +699,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CheckIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
