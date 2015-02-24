@@ -11,7 +11,6 @@
 
 @interface AddCheckpointInterfaceController()
 
-@property (nonatomic, weak) IBOutlet WKInterfaceLabel *nameLabel;
 @property (nonatomic, weak) IBOutlet WKInterfaceImage *typeImage;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *typeLabel;
 @property (nonatomic, weak) NSString *type;

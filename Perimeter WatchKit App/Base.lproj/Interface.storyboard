@@ -92,10 +92,6 @@
                         <button alignment="left" id="Ncp-hN-dZE">
                             <group key="contentGroup" width="134" height="151" alignment="left" layout="vertical" id="qIp-6W-SU4">
                                 <items>
-                                    <label width="55" height="34.5" alignment="center" text="Label" textAlignment="center" id="Qt5-k4-zag">
-                                        <variation key="device=watch38mm" width="135"/>
-                                        <variation key="device=watch42mm" height="34.5" width="151"/>
-                                    </label>
                                     <group width="136" height="112" alignment="center" verticalAlignment="center" layout="vertical" id="c9p-rt-O7c">
                                         <items>
                                             <imageView width="56" height="56" alignment="center" verticalAlignment="center" id="YRd-nb-1fw"/>
@@ -118,7 +114,6 @@
                         </button>
                     </items>
                     <connections>
-                        <outlet property="nameLabel" destination="Qt5-k4-zag" id="q1a-QE-BHv"/>
                         <outlet property="typeImage" destination="YRd-nb-1fw" id="hrc-Rw-q4Y"/>
                         <outlet property="typeLabel" destination="pp9-kC-ctQ" id="o66-Ch-nZW"/>
                     </connections>
