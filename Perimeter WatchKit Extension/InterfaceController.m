@@ -67,7 +67,7 @@
 }
 
 - (IBAction)addCheckpointMenuItemTapped:(id)sender {
-    
+    [self presentControllerWithNames:@[@"AddBeginning",@"AddCheckpoint"] contexts:@[@"",@""]];
 }
 
 @end
