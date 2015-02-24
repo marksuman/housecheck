@@ -76,4 +76,28 @@ NSString * const CheckpointStatusNegative = @"negative";
     }
 }
 
+
+#pragma mark - Interface Variants
++ (NSString *)imageNameForCheckpointType:(NSString *)checkpointType {
+    if ([checkpointType isEqualToString:CheckpointTypeDoor]) {
+        return @"179-notepad";
+    }
+    else if ([checkpointType isEqualToString:CheckpointTypeLight]) {
+        return @"84-lightbulb";
+    }
+    
+    return nil;
+}
+
++ (NSString *)typeStringForCheckpointType:(NSString *)checkpointType {
+    if ([checkpointType isEqualToString:CheckpointTypeDoor]) {
+        return @"Door";
+    }
+    else if ([checkpointType isEqualToString:CheckpointTypeLight]) {
+        return @"Light";
+    }
+    
+    return @"Other";
+}
+
 @end

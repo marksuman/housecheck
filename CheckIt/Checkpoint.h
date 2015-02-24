@@ -44,11 +44,14 @@ extern NSString * const CheckpointStatusNegative;
 @property (nonatomic, readonly) BOOL isStatusPositive;
 @property (nonatomic, readonly) BOOL isStatusNegative;
 
-
 // Temp property
 @property (nonatomic, strong) NSMutableDictionary *info;
 
 - (NSString *)statusString;
 - (void)toggleStatus;
+
+// Interface Variants
++ (NSString *)imageNameForCheckpointType:(NSString *)checkpointType;
++ (NSString *)typeStringForCheckpointType:(NSString *)checkpointType;
 
 @end
