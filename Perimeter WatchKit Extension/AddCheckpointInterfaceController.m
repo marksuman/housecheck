@@ -7,9 +7,14 @@
 //
 
 #import "AddCheckpointInterfaceController.h"
-
+#import "Checkpoint.h"
 
 @interface AddCheckpointInterfaceController()
+
+@property (nonatomic, weak) IBOutlet WKInterfaceLabel *nameLabel;
+@property (nonatomic, weak) IBOutlet WKInterfaceImage *typeImage;
+@property (nonatomic, weak) IBOutlet WKInterfaceLabel *typeLabel;
+@property (nonatomic, weak) NSString *type;
 
 @end
 
@@ -20,6 +25,9 @@
     [super awakeWithContext:context];
     
     // Configure interface objects here.
+    self.type = [context objectForKey:@"type"];
+    [self.typeImage setImage:[UIImage imageNamed:[Checkpoint imageNameForCheckpointType:self.type]]];
+    [self.typeLabel setText:@"Door"];
 }
 
 - (void)willActivate {

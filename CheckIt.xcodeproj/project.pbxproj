@@ -173,14 +173,14 @@
 				4DB6059E1A92E93100AE185C /* InterfaceController.m */,
 				4DB605C11A93860B00AE185C /* CheckpointInterfaceController.h */,
 				4DB605C21A93860B00AE185C /* CheckpointInterfaceController.m */,
+				4D5C952C1A99A6A000007C04 /* AddCheckpointInterfaceController.h */,
+				4D5C952D1A99A6A000007C04 /* AddCheckpointInterfaceController.m */,
 				4DB605A01A92E93100AE185C /* NotificationController.h */,
 				4DB605A11A92E93100AE185C /* NotificationController.m */,
 				4DB605A31A92E93100AE185C /* GlanceController.h */,
 				4DB605A41A92E93100AE185C /* GlanceController.m */,
 				4DB605A61A92E93100AE185C /* Images.xcassets */,
 				4DB6059A1A92E93100AE185C /* Supporting Files */,
-				4D5C952C1A99A6A000007C04 /* AddCheckpointInterfaceController.h */,
-				4D5C952D1A99A6A000007C04 /* AddCheckpointInterfaceController.m */,
 			);
 			path = "Perimeter WatchKit Extension";
 			sourceTree = "<group>";

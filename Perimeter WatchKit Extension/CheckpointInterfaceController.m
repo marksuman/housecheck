@@ -46,7 +46,7 @@
 
 - (void)updateInterfaceElements {
     [self setTitle:self.checkpoint.statusString];
-    [self.typeImage setImage:[UIImage imageNamed:[self typeImageNameForCheckpoint:self.checkpoint]]];
+    [self.typeImage setImage:[UIImage imageNamed:[Checkpoint imageNameForCheckpointType:self.checkpoint.type]]];
     [self.statusImage setImage:[UIImage imageNamed:[self statusImageNameForCheckpoint:self.checkpoint]]];
     [self.statusLabel setText:self.checkpoint.name];
 }
@@ -54,17 +54,6 @@
 - (IBAction)buttonAction:(id)sender {
     [self.checkpoint toggleStatus];
     [self updateInterfaceElements];
-}
-
-- (NSString *)typeImageNameForCheckpoint:(Checkpoint *)checkpoint {
-    if ([self.checkpoint.type isEqualToString:CheckpointTypeDoor]) {
-        return @"179-notepad";
-    }
-    else if ([self.checkpoint.type isEqualToString:CheckpointTypeLight]) {
-        return @"84-lightbulb";
-    }
-    
-    return nil;
 }
 
 - (NSString *)statusImageNameForCheckpoint:(Checkpoint *)checkpoint {

@@ -74,8 +74,8 @@
             <objects>
                 <controller identifier="AddBeginning" id="ONd-PD-WaS">
                     <items>
-                        <label alignment="left" text="Pick a checkpoint" id="15R-Qv-0NP"/>
-                        <label alignment="left" text="Give it a name" id="zBq-ol-HST"/>
+                        <label alignment="left" verticalAlignment="center" text="Pick a checkpoint" id="15R-Qv-0NP"/>
+                        <label alignment="left" verticalAlignment="center" text="Give it a name" id="zBq-ol-HST"/>
                     </items>
                     <connections>
                         <segue destination="yLU-jj-cmN" kind="relationship" relationship="nextPage" id="fHa-C5-vjT"/>
@@ -114,6 +114,11 @@
                             </group>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="nameLabel" destination="Qt5-k4-zag" id="q1a-QE-BHv"/>
+                        <outlet property="typeImage" destination="YRd-nb-1fw" id="hrc-Rw-q4Y"/>
+                        <outlet property="typeLabel" destination="pp9-kC-ctQ" id="o66-Ch-nZW"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="401" y="465"/>
