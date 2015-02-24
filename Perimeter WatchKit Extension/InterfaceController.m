@@ -13,6 +13,8 @@
 @interface InterfaceController()
 
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *summaryLabel;
+@property (nonatomic, strong) NSMutableArray *rootControllerNames;
+@property (nonatomic, strong) NSMutableArray *rootControllerContexts;
 
 @end
 
@@ -27,24 +29,27 @@
         // We reloaded the order of the pages already and this is just being displayed for reals now
         // Go ahead and set it up
         
+        self.rootControllerNames = [context objectForKey:@"rootControllerNames"];
+        self.rootControllerContexts = [context objectForKey:@"rootControllerContexts"];
+        
         [self setTitle:@"Sleep Safe"];
         [self updateInterfaceElements];
     }
     else {
-        NSMutableArray *rootControllerNames = [NSMutableArray array];
-        NSMutableArray *contexts = [NSMutableArray array];
+        self.rootControllerNames = [NSMutableArray array];
+        self.rootControllerContexts = [NSMutableArray array];
         
         // Add the Dashboard controller
-        [rootControllerNames addObject:@"Dashboard"];
-        [contexts addObject:@{@"skipReload":[NSNumber numberWithBool:YES]}];
+        [self.rootControllerNames addObject:@"Dashboard"];
+        [self.rootControllerContexts addObject:@{@"skipReload":[NSNumber numberWithBool:YES],@"rootControllerNames":self.rootControllerNames,@"rootControllerContexts":self.rootControllerContexts}];
         
         for (Checkpoint *checkpoint in [[CheckpointManager defaultManager] checkpoints]) {
                 // Add a Checkpoint interface with the index appended to it
-            [rootControllerNames addObject:[NSString stringWithFormat:@"Checkpoint"]];
-            [contexts addObject:checkpoint];
+            [self.rootControllerNames addObject:[NSString stringWithFormat:@"Checkpoint"]];
+            [self.rootControllerContexts addObject:checkpoint];
         }
         // This is the first run. We want to set up the correct order of the pages
-        [WKInterfaceController reloadRootControllersWithNames:rootControllerNames contexts:contexts];
+        [WKInterfaceController reloadRootControllersWithNames:self.rootControllerNames contexts:self.rootControllerContexts];
     }
 }
 
@@ -63,7 +68,36 @@
 - (void)updateInterfaceElements {
     CheckpointManager *checkpointManager = [CheckpointManager defaultManager];
     
-    [self.summaryLabel setText:[NSString stringWithFormat:@"%ld/%ld",[checkpointManager countOfPositiveCheckpoints],checkpointManager.checkpoints.count]];
+    BOOL shouldReloadInterfaceControllers = NO;
+    // Check if there are more checkpoints than there are checkpoint interfaces. If so, add new interfaces for the checkpoints.
+    // Subtract 1 because the first context is for the Dashboard, which throws off the count here.
+    if (self.rootControllerContexts.count - 1 < checkpointManager.checkpoints.count) {
+        for (Checkpoint *checkpoint in checkpointManager.checkpoints) {
+            if ([self.rootControllerContexts containsObject:checkpoint] == NO) {
+                // This one is new. Add it to the rootController arrays. Flag for reload.
+                [self.rootControllerNames addObject:@"Checkpoint"];
+                [self.rootControllerContexts addObject:checkpoint];
+                shouldReloadInterfaceControllers = YES;
+                
+                // We only allow for adding one at a time right now, so go ahead and break the loop
+                // (Currently this should already be the last item in the array, so this break isn't totally necessary.)
+                break;
+            }
+            else {
+                continue;
+            }
+        }
+    }
+    
+    // If we have added something new, reload the root controllers
+    if (shouldReloadInterfaceControllers) {
+        [WKInterfaceController reloadRootControllersWithNames:self.rootControllerNames contexts:self.rootControllerContexts];
+    }
+    else {
+        // Nothing was new, so go ahead and update the current screen
+        [self.summaryLabel setText:[NSString stringWithFormat:@"%ld/%ld",[checkpointManager countOfPositiveCheckpoints],
+                                    checkpointManager.checkpoints.count]];
+    }
 }
 
 - (IBAction)addCheckpointMenuItemTapped:(id)sender {
