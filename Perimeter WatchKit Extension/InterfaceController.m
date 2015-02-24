@@ -46,7 +46,7 @@
         for (Checkpoint *checkpoint in [[CheckpointManager defaultManager] checkpoints]) {
                 // Add a Checkpoint interface with the index appended to it
             [self.rootControllerNames addObject:[NSString stringWithFormat:@"Checkpoint"]];
-            [self.rootControllerContexts addObject:checkpoint];
+            [self.rootControllerContexts addObject:@{@"checkpoint":checkpoint}];
         }
         // This is the first run. We want to set up the correct order of the pages
         [WKInterfaceController reloadRootControllersWithNames:self.rootControllerNames contexts:self.rootControllerContexts];
@@ -73,10 +73,15 @@
     // Subtract 1 because the first context is for the Dashboard, which throws off the count here.
     if (self.rootControllerContexts.count - 1 < checkpointManager.checkpoints.count) {
         for (Checkpoint *checkpoint in checkpointManager.checkpoints) {
-            if ([self.rootControllerContexts containsObject:checkpoint] == NO) {
+            NSMutableArray *rootControllerCheckpoints = [NSMutableArray arrayWithCapacity:self.rootControllerContexts.count -1];
+            for (NSInteger i=1; i<self.rootControllerContexts.count; i++ ) {
+                [rootControllerCheckpoints addObject:[[self.rootControllerContexts objectAtIndex:i] objectForKey:@"checkpoint"]];
+            }
+            
+            if ([rootControllerCheckpoints containsObject:checkpoint] == NO) {
                 // This one is new. Add it to the rootController arrays. Flag for reload.
                 [self.rootControllerNames addObject:@"Checkpoint"];
-                [self.rootControllerContexts addObject:checkpoint];
+                [self.rootControllerContexts addObject:@{@"checkpoint":checkpoint,@"becomeCurrent":[NSNumber numberWithBool:YES]}];
                 shouldReloadInterfaceControllers = YES;
                 
                 // We only allow for adding one at a time right now, so go ahead and break the loop

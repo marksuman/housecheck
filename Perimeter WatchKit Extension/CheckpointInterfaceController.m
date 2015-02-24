@@ -14,6 +14,7 @@
 @property (nonatomic, weak) IBOutlet WKInterfaceImage *typeImage;
 @property (nonatomic, weak) IBOutlet WKInterfaceImage *statusImage;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *statusLabel;
+@property (nonatomic) BOOL becomeCurrent;
 
 @end
 
@@ -25,10 +26,14 @@
     
     // Configure interface objects here.
     
-    self.checkpoint = (Checkpoint *)context;
+    self.checkpoint = (Checkpoint *)[context objectForKey:@"checkpoint"];
+    self.becomeCurrent = [[context objectForKey:@"becomeCurrent"] boolValue];
     
     if (self.checkpoint) {
         [self updateInterfaceElements];
+        if (self.becomeCurrent) {
+            [self becomeCurrentPage];
+        }
     }
 }
 
