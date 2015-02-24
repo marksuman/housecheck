@@ -7,7 +7,7 @@
 //
 
 #import "AddCheckpointInterfaceController.h"
-#import "Checkpoint.h"
+#import "CheckpointManager.h"
 
 @interface AddCheckpointInterfaceController()
 
@@ -38,6 +38,15 @@
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
+}
+
+- (IBAction)tappedInterface:(id)sender {
+    Checkpoint *checkpoint = [[Checkpoint alloc] init];
+    checkpoint.name = @"My Door";
+    checkpoint.type = self.type;
+    
+    [[CheckpointManager defaultManager] addCheckpoint:checkpoint];
+    [self dismissController];
 }
 
 @end

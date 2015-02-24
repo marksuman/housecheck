@@ -112,6 +112,9 @@
                                 </items>
                                 <variation key="device=watch42mm" height="174" width="156"/>
                             </group>
+                            <connections>
+                                <action selector="tappedInterface:" destination="yLU-jj-cmN" id="AyN-rd-9iL"/>
+                            </connections>
                         </button>
                     </items>
                     <connections>

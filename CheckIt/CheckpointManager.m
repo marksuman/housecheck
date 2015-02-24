@@ -52,6 +52,16 @@ static CheckpointManager *defaultManager;
     [self.checkpoints addObject:porchLights];
 }
 
+#pragma mark - Updates
+
+- (void)addCheckpoint:(Checkpoint *)checkpoint {
+    @synchronized (self.checkpoints) {
+        [self.checkpoints addObject:checkpoint];
+    }
+}
+
+#pragma mark - Queries
+
 - (NSInteger)countOfPositiveCheckpoints {
     NSInteger count = 0;
     for (Checkpoint *checkpoint in self.checkpoints) {
