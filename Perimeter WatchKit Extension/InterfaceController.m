@@ -46,7 +46,8 @@
         for (Checkpoint *checkpoint in [[CheckpointManager defaultManager] checkpoints]) {
                 // Add a Checkpoint interface with the index appended to it
             [self.rootControllerNames addObject:[NSString stringWithFormat:@"Checkpoint"]];
-            [self.rootControllerContexts addObject:@{@"checkpoint":checkpoint}];
+            NSMutableDictionary *contextDictionary = [NSMutableDictionary dictionaryWithObjects:@[checkpoint] forKeys:@[@"checkpoint"]];
+            [self.rootControllerContexts addObject:contextDictionary];
         }
         // This is the first run. We want to set up the correct order of the pages
         [WKInterfaceController reloadRootControllersWithNames:self.rootControllerNames contexts:self.rootControllerContexts];
@@ -75,13 +76,20 @@
         for (Checkpoint *checkpoint in checkpointManager.checkpoints) {
             NSMutableArray *rootControllerCheckpoints = [NSMutableArray arrayWithCapacity:self.rootControllerContexts.count -1];
             for (NSInteger i=1; i<self.rootControllerContexts.count; i++ ) {
-                [rootControllerCheckpoints addObject:[[self.rootControllerContexts objectAtIndex:i] objectForKey:@"checkpoint"]];
+                NSMutableDictionary *context = [self.rootControllerContexts objectAtIndex:i];
+                [rootControllerCheckpoints addObject:[context objectForKey:@"checkpoint"]];
+                
+                // Clear out any stale becomeCurrent flags
+                if ([[context objectForKey:@"becomeCurrent"] boolValue]) {
+                    [context removeObjectForKey:@"becomeCurrent"];
+                }
             }
             
             if ([rootControllerCheckpoints containsObject:checkpoint] == NO) {
                 // This one is new. Add it to the rootController arrays. Flag for reload.
                 [self.rootControllerNames addObject:@"Checkpoint"];
-                [self.rootControllerContexts addObject:@{@"checkpoint":checkpoint,@"becomeCurrent":[NSNumber numberWithBool:YES]}];
+                NSMutableDictionary *contextDictionary = [NSMutableDictionary dictionaryWithObjects:@[checkpoint,[NSNumber numberWithBool:YES]] forKeys:@[@"checkpoint",@"becomeCurrent"]];
+                [self.rootControllerContexts addObject:contextDictionary];
                 shouldReloadInterfaceControllers = YES;
                 
                 // We only allow for adding one at a time right now, so go ahead and break the loop

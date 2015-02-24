@@ -33,6 +33,7 @@
         [self updateInterfaceElements];
         if (self.becomeCurrent) {
             [self becomeCurrentPage];
+            self.becomeCurrent = NO;
         }
     }
 }
