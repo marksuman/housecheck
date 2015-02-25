@@ -62,7 +62,11 @@
                     </items>
                     <menu key="menu" id="fFr-ur-t9v">
                         <items>
-                            <menuItem title="Rename" icon="info" id="SLn-Qa-SFb"/>
+                            <menuItem title="Rename" icon="info" id="SLn-Qa-SFb">
+                                <connections>
+                                    <action selector="renameMenuItemTapped:" destination="6yD-HR-YAN" id="hL7-PW-OSI"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Delete" icon="decline" id="eIh-Hi-Ia2"/>
                         </items>
                     </menu>

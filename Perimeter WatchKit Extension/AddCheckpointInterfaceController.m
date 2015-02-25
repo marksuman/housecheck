@@ -41,7 +41,7 @@
 
 - (IBAction)tappedInterface:(id)sender {
     // Prompt the user to pick a name for the checkpoint
-    [self presentTextInputControllerWithSuggestions:@[@"Front Door",@"Back Door",@"Garage Door",@"Side Door",@"Pet Door"] allowedInputMode:WKTextInputModePlain completion:^(NSArray *results) {
+    [self presentTextInputControllerWithSuggestions:[Checkpoint nameSuggestionsForCheckpointType:self.type] allowedInputMode:WKTextInputModePlain completion:^(NSArray *results) {
         
         // If there is a name, create a checkpoint and dismiss the modal
         if (results && results.count > 0) {

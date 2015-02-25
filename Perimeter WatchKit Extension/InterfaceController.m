@@ -114,7 +114,7 @@
 }
 
 - (IBAction)addCheckpointMenuItemTapped:(id)sender {
-    [self presentControllerWithNames:@[@"AddBeginning",@"AddCheckpoint"] contexts:@[@"",@{@"type":CheckpointTypeDoor}]];
+    [self presentControllerWithNames:@[@"AddCheckpoint",@"AddCheckpoint"] contexts:@[@{@"type":CheckpointTypeDoor},@{@"type":CheckpointTypeLight}]];
 }
 
 @end
