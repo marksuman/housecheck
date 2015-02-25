@@ -26,7 +26,7 @@
     // Configure interface objects here.
     self.type = [context objectForKey:@"type"];
     [self.typeImage setImage:[UIImage imageNamed:[Checkpoint imageNameForCheckpointType:self.type]]];
-    [self.typeLabel setText:@"Door"];
+    [self.typeLabel setText:[Checkpoint typeStringForCheckpointType:self.type]];
 }
 
 - (void)willActivate {
@@ -40,12 +40,21 @@
 }
 
 - (IBAction)tappedInterface:(id)sender {
-    Checkpoint *checkpoint = [[Checkpoint alloc] init];
-    checkpoint.name = @"My Door";
-    checkpoint.type = self.type;
-    
-    [[CheckpointManager defaultManager] addCheckpoint:checkpoint];
-    [self dismissController];
+    // Prompt the user to pick a name for the checkpoint
+    [self presentTextInputControllerWithSuggestions:@[@"Front Door",@"Back Door",@"Garage Door",@"Side Door",@"Pet Door"] allowedInputMode:WKTextInputModePlain completion:^(NSArray *results) {
+        
+        // If there is a name, create a checkpoint and dismiss the modal
+        if (results && results.count > 0) {
+            Checkpoint *checkpoint = [[Checkpoint alloc] init];
+            checkpoint.name = [results objectAtIndex:0];
+            checkpoint.type = self.type;
+            
+            [[CheckpointManager defaultManager] addCheckpoint:checkpoint];
+            [self dismissController];
+        }
+        
+        // The user canceled the text input, so do nothing
+    }];
 }
 
 @end
