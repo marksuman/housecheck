@@ -60,6 +60,12 @@
                             </connections>
                         </button>
                     </items>
+                    <menu key="menu" id="fFr-ur-t9v">
+                        <items>
+                            <menuItem title="Rename" icon="info" id="SLn-Qa-SFb"/>
+                            <menuItem title="Delete" icon="decline" id="eIh-Hi-Ia2"/>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="statusImage" destination="Bnc-1C-xA3" id="lM4-tQ-Wtj"/>
                         <outlet property="statusLabel" destination="6CL-LS-a5N" id="YQ7-2T-F7Y"/>
@@ -68,21 +74,6 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="401" y="238"/>
-        </scene>
-        <!--AddBeginning-->
-        <scene sceneID="xa7-mF-tXf">
-            <objects>
-                <controller identifier="AddBeginning" id="ONd-PD-WaS">
-                    <items>
-                        <label alignment="left" verticalAlignment="center" text="Pick a checkpoint" id="15R-Qv-0NP"/>
-                        <label alignment="left" verticalAlignment="center" text="Give it a name" id="zBq-ol-HST"/>
-                    </items>
-                    <connections>
-                        <segue destination="yLU-jj-cmN" kind="relationship" relationship="nextPage" id="fHa-C5-vjT"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="235" y="465"/>
         </scene>
         <!--AddCheckpoint-->
         <scene sceneID="vrE-rd-PTV">
@@ -119,7 +110,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="401" y="465"/>
+            <point key="canvasLocation" x="235" y="459"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
