@@ -8,7 +8,7 @@
 
 #import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
-#import "Checkpoint.h"
+#import "CheckpointManager.h"
 
 @interface CheckpointInterfaceController : WKInterfaceController
 

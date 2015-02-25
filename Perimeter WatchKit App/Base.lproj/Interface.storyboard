@@ -67,7 +67,11 @@
                                     <action selector="renameMenuItemTapped:" destination="6yD-HR-YAN" id="hL7-PW-OSI"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Delete" icon="decline" id="eIh-Hi-Ia2"/>
+                            <menuItem title="Delete" icon="decline" id="eIh-Hi-Ia2">
+                                <connections>
+                                    <action selector="deleteMenuItemTapped:" destination="6yD-HR-YAN" id="hRH-5q-rOt"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                     <connections>

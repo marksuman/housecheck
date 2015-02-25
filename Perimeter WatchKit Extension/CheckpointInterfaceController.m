@@ -15,6 +15,7 @@
 @property (nonatomic, weak) IBOutlet WKInterfaceImage *statusImage;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *statusLabel;
 @property (nonatomic) BOOL becomeCurrent;
+@property (nonatomic, copy) void (^deleteAndReloadInterfaceBlock)();
 
 @end
 
@@ -28,6 +29,7 @@
     
     self.checkpoint = (Checkpoint *)[context objectForKey:@"checkpoint"];
     self.becomeCurrent = [[context objectForKey:@"becomeCurrent"] boolValue];
+    self.deleteAndReloadInterfaceBlock = [context objectForKey:@"deleteAndReloadInterfaceBlock"];
     
     if (self.checkpoint) {
         [self updateInterfaceElements];
@@ -80,7 +82,13 @@
 }
 
 - (IBAction)deleteMenuItemTapped:(id)sender {
+    // Order matters in this method
     
+    // Reload the interface
+    self.deleteAndReloadInterfaceBlock();
+    
+    // Then delete the object from the data store.
+    [[CheckpointManager defaultManager] removeCheckpoint:self.checkpoint];
 }
 
 

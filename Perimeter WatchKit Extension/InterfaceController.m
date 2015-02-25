@@ -46,7 +46,11 @@
         for (Checkpoint *checkpoint in [[CheckpointManager defaultManager] checkpoints]) {
                 // Add a Checkpoint interface with the index appended to it
             [self.rootControllerNames addObject:[NSString stringWithFormat:@"Checkpoint"]];
-            NSMutableDictionary *contextDictionary = [NSMutableDictionary dictionaryWithObjects:@[checkpoint] forKeys:@[@"checkpoint"]];
+            void (^deleteAndReloadInterfaceBlock)() = ^() {
+                [self deleteInterfaceForCheckpoint:checkpoint];
+                [self reloadRootInterfaceControllers];
+            };
+            NSMutableDictionary *contextDictionary = [NSMutableDictionary dictionaryWithObjects:@[checkpoint,deleteAndReloadInterfaceBlock] forKeys:@[@"checkpoint",@"deleteAndReloadInterfaceBlock"]];
             [self.rootControllerContexts addObject:contextDictionary];
         }
         // This is the first run. We want to set up the correct order of the pages
@@ -74,6 +78,7 @@
     // Subtract 1 because the first context is for the Dashboard, which throws off the count here.
     if (self.rootControllerContexts.count - 1 < checkpointManager.checkpoints.count) {
         for (Checkpoint *checkpoint in checkpointManager.checkpoints) {
+            // Build a temporary array of the checkpoints that created the interface controllers
             NSMutableArray *rootControllerCheckpoints = [NSMutableArray arrayWithCapacity:self.rootControllerContexts.count -1];
             for (NSInteger i=1; i<self.rootControllerContexts.count; i++ ) {
                 NSMutableDictionary *context = [self.rootControllerContexts objectAtIndex:i];
@@ -85,6 +90,7 @@
                 }
             }
             
+            // Use that temporary array and check if it containts the checkpoint in question
             if ([rootControllerCheckpoints containsObject:checkpoint] == NO) {
                 // This one is new. Add it to the rootController arrays. Flag for reload.
                 [self.rootControllerNames addObject:@"Checkpoint"];
@@ -104,7 +110,7 @@
     
     // If we have added something new, reload the root controllers
     if (shouldReloadInterfaceControllers) {
-        [WKInterfaceController reloadRootControllersWithNames:self.rootControllerNames contexts:self.rootControllerContexts];
+        [self reloadRootInterfaceControllers];
     }
     else {
         // Nothing was new, so go ahead and update the current screen
@@ -115,6 +121,33 @@
 
 - (IBAction)addCheckpointMenuItemTapped:(id)sender {
     [self presentControllerWithNames:@[@"AddCheckpoint",@"AddCheckpoint"] contexts:@[@{@"type":CheckpointTypeDoor},@{@"type":CheckpointTypeLight}]];
+}
+
+- (void)reloadRootInterfaceControllers {
+    [WKInterfaceController reloadRootControllersWithNames:self.rootControllerNames contexts:self.rootControllerContexts];
+}
+
+- (void)deleteInterfaceForCheckpoint:(Checkpoint *)checkpoint {
+    // Find the CheckpointInterfaceController with this checkpoint
+    // Using that index, remove the interface controller name
+    // and the interface controller context from the arrays
+    
+    // We can use 0 as an index because that is the dashboard index
+    NSInteger deletionIndex = 0;
+    
+    for (NSInteger i=1; i<self.rootControllerContexts.count; i++ ) {
+        NSMutableDictionary *context = [self.rootControllerContexts objectAtIndex:i];
+        if (checkpoint == [context objectForKey:@"checkpoint"]) {
+            deletionIndex = i;
+            break;
+        }
+    }
+    
+    // Delete that index from the arrays
+    if (deletionIndex > 0) {
+        [self.rootControllerNames removeObjectAtIndex:deletionIndex];
+        [self.rootControllerContexts removeObjectAtIndex:deletionIndex];
+    }
 }
 
 @end
