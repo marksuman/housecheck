@@ -100,4 +100,16 @@ NSString * const CheckpointStatusNegative = @"negative";
     return @"Other";
 }
 
++ (NSArray *)nameSuggestionsForCheckpointType:(NSString *)checkpointType {
+    NSArray *nameArray = @[];
+    if ([checkpointType isEqualToString:CheckpointTypeDoor]) {
+        nameArray = @[@"Front Door",@"Back Door",@"Garage Door",@"Side Door",@"Pet Door"];
+    }
+    else if ([checkpointType isEqualToString:CheckpointTypeLight]) {
+        nameArray = @[@"Front Porch",@"Back Porch",@"Front Yard",@"Backyard",@"Downstairs",@"Upstairs"];
+    }
+    
+    return nameArray;
+}
+
 @end

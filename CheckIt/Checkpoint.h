@@ -53,5 +53,6 @@ extern NSString * const CheckpointStatusNegative;
 // Interface Variants
 + (NSString *)imageNameForCheckpointType:(NSString *)checkpointType;
 + (NSString *)typeStringForCheckpointType:(NSString *)checkpointType;
++ (NSArray *)nameSuggestionsForCheckpointType:(NSString *)checkpointType;
 
 @end
