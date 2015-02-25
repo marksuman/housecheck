@@ -17,6 +17,7 @@
 
 // Updates
 - (void)addCheckpoint:(Checkpoint *)checkpoint;
+- (void)removeCheckpoint:(Checkpoint *)checkpoint;
 
 
 // Queries

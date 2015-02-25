@@ -60,6 +60,12 @@ static CheckpointManager *defaultManager;
     }
 }
 
+- (void)removeCheckpoint:(Checkpoint *)checkpoint {
+    @synchronized (self.checkpoints) {
+        [self.checkpoints removeObject:checkpoint];
+    }
+}
+
 #pragma mark - Queries
 
 - (NSInteger)countOfPositiveCheckpoints {
