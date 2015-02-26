@@ -26,7 +26,6 @@
 		4DB605C71A93874100AE185C /* Checkpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605C61A93874100AE185C /* Checkpoint.m */; };
 		4DB605C81A93874100AE185C /* Checkpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605C61A93874100AE185C /* Checkpoint.m */; };
 		4DCFD5A71A98DF3B003A768B /* libFlurry_6.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCFD5A61A98DF3B003A768B /* libFlurry_6.2.0.a */; };
-		4DCFD5A81A98DF3B003A768B /* libFlurry_6.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCFD5A61A98DF3B003A768B /* libFlurry_6.2.0.a */; };
 		4DCFD5AC1A98E8CF003A768B /* CheckpointManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCFD5AB1A98E8CF003A768B /* CheckpointManager.m */; };
 		4DCFD5AD1A98E8CF003A768B /* CheckpointManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCFD5AB1A98E8CF003A768B /* CheckpointManager.m */; };
 		4DE854021A832137002CC5D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE854011A832137002CC5D4 /* main.m */; };
@@ -110,7 +109,7 @@
 		4DCFD5A61A98DF3B003A768B /* libFlurry_6.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_6.2.0.a; path = External/libFlurry_6.2.0.a; sourceTree = "<group>"; };
 		4DCFD5AA1A98E8CF003A768B /* CheckpointManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckpointManager.h; sourceTree = "<group>"; };
 		4DCFD5AB1A98E8CF003A768B /* CheckpointManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckpointManager.m; sourceTree = "<group>"; };
-		4DE853FC1A832137002CC5D4 /* CheckIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DE853FC1A832137002CC5D4 /* Perimeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Perimeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE854001A832137002CC5D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DE854011A832137002CC5D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4DE854031A832137002CC5D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -122,7 +121,7 @@
 		4DE8540D1A832137002CC5D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DE8540F1A832137002CC5D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4DE854121A832137002CC5D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		4DE854181A832137002CC5D4 /* CheckItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DE854181A832137002CC5D4 /* PerimeterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerimeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE8541D1A832137002CC5D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DE8541E1A832137002CC5D4 /* CheckItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckItTests.m; sourceTree = "<group>"; };
 		4DEC04731A9ED7990086A86C /* House-Checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "House-Checked.png"; sourceTree = "<group>"; };
@@ -134,7 +133,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DCFD5A81A98DF3B003A768B /* libFlurry_6.2.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,8 +239,8 @@
 		4DE853F31A832137002CC5D4 = {
 			isa = PBXGroup;
 			children = (
-				4DE853FE1A832137002CC5D4 /* CheckIt */,
-				4DE8541B1A832137002CC5D4 /* CheckItTests */,
+				4DE853FE1A832137002CC5D4 /* Perimeter */,
+				4DE8541B1A832137002CC5D4 /* PerimeterTests */,
 				4DB605991A92E93100AE185C /* Perimeter WatchKit Extension */,
 				4DB605AE1A92E93100AE185C /* Perimeter WatchKit App */,
 				4DCFD5A41A98DF1C003A768B /* External */,
@@ -253,15 +251,15 @@
 		4DE853FD1A832137002CC5D4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4DE853FC1A832137002CC5D4 /* CheckIt.app */,
-				4DE854181A832137002CC5D4 /* CheckItTests.xctest */,
+				4DE853FC1A832137002CC5D4 /* Perimeter.app */,
+				4DE854181A832137002CC5D4 /* PerimeterTests.xctest */,
 				4DB605981A92E93100AE185C /* Perimeter WatchKit Extension.appex */,
 				4DB605AA1A92E93100AE185C /* Perimeter WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4DE853FE1A832137002CC5D4 /* CheckIt */ = {
+		4DE853FE1A832137002CC5D4 /* Perimeter */ = {
 			isa = PBXGroup;
 			children = (
 				4DB605C01A92EF7E00AE185C /* Model */,
@@ -276,6 +274,7 @@
 				4DE854111A832137002CC5D4 /* LaunchScreen.xib */,
 				4DE853FF1A832137002CC5D4 /* Supporting Files */,
 			);
+			name = Perimeter;
 			path = CheckIt;
 			sourceTree = "<group>";
 		};
@@ -288,12 +287,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4DE8541B1A832137002CC5D4 /* CheckItTests */ = {
+		4DE8541B1A832137002CC5D4 /* PerimeterTests */ = {
 			isa = PBXGroup;
 			children = (
 				4DE8541E1A832137002CC5D4 /* CheckItTests.m */,
 				4DE8541C1A832137002CC5D4 /* Supporting Files */,
 			);
+			name = PerimeterTests;
 			path = CheckItTests;
 			sourceTree = "<group>";
 		};
@@ -341,9 +341,9 @@
 			productReference = 4DB605AA1A92E93100AE185C /* Perimeter WatchKit App.app */;
 			productType = "com.apple.product-type.application.watchapp";
 		};
-		4DE853FB1A832137002CC5D4 /* CheckIt */ = {
+		4DE853FB1A832137002CC5D4 /* Perimeter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4DE854221A832137002CC5D4 /* Build configuration list for PBXNativeTarget "CheckIt" */;
+			buildConfigurationList = 4DE854221A832137002CC5D4 /* Build configuration list for PBXNativeTarget "Perimeter" */;
 			buildPhases = (
 				4DE853F81A832137002CC5D4 /* Sources */,
 				4DE853F91A832137002CC5D4 /* Frameworks */,
@@ -355,14 +355,14 @@
 			dependencies = (
 				4DB605B71A92E93100AE185C /* PBXTargetDependency */,
 			);
-			name = CheckIt;
+			name = Perimeter;
 			productName = CheckIt;
-			productReference = 4DE853FC1A832137002CC5D4 /* CheckIt.app */;
+			productReference = 4DE853FC1A832137002CC5D4 /* Perimeter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4DE854171A832137002CC5D4 /* CheckItTests */ = {
+		4DE854171A832137002CC5D4 /* PerimeterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4DE854251A832137002CC5D4 /* Build configuration list for PBXNativeTarget "CheckItTests" */;
+			buildConfigurationList = 4DE854251A832137002CC5D4 /* Build configuration list for PBXNativeTarget "PerimeterTests" */;
 			buildPhases = (
 				4DE854141A832137002CC5D4 /* Sources */,
 				4DE854151A832137002CC5D4 /* Frameworks */,
@@ -373,9 +373,9 @@
 			dependencies = (
 				4DE8541A1A832137002CC5D4 /* PBXTargetDependency */,
 			);
-			name = CheckItTests;
+			name = PerimeterTests;
 			productName = CheckItTests;
-			productReference = 4DE854181A832137002CC5D4 /* CheckItTests.xctest */;
+			productReference = 4DE854181A832137002CC5D4 /* PerimeterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -402,7 +402,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4DE853F71A832137002CC5D4 /* Build configuration list for PBXProject "CheckIt" */;
+			buildConfigurationList = 4DE853F71A832137002CC5D4 /* Build configuration list for PBXProject "Perimeter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -415,8 +415,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4DE853FB1A832137002CC5D4 /* CheckIt */,
-				4DE854171A832137002CC5D4 /* CheckItTests */,
+				4DE853FB1A832137002CC5D4 /* Perimeter */,
+				4DE854171A832137002CC5D4 /* PerimeterTests */,
 				4DB605971A92E93100AE185C /* Perimeter WatchKit Extension */,
 				4DB605A91A92E93100AE185C /* Perimeter WatchKit App */,
 			);
@@ -520,7 +520,7 @@
 		};
 		4DE8541A1A832137002CC5D4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4DE853FB1A832137002CC5D4 /* CheckIt */;
+			target = 4DE853FB1A832137002CC5D4 /* Perimeter */;
 			targetProxy = 4DE854191A832137002CC5D4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -735,7 +735,7 @@
 				);
 				INFOPLIST_FILE = CheckItTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PerimeterTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CheckIt.app/CheckIt";
 			};
 			name = Debug;
@@ -750,7 +750,7 @@
 				);
 				INFOPLIST_FILE = CheckItTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PerimeterTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CheckIt.app/CheckIt";
 			};
 			name = Release;
@@ -776,7 +776,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4DE853F71A832137002CC5D4 /* Build configuration list for PBXProject "CheckIt" */ = {
+		4DE853F71A832137002CC5D4 /* Build configuration list for PBXProject "Perimeter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4DE854201A832137002CC5D4 /* Debug */,
@@ -785,7 +785,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4DE854221A832137002CC5D4 /* Build configuration list for PBXNativeTarget "CheckIt" */ = {
+		4DE854221A832137002CC5D4 /* Build configuration list for PBXNativeTarget "Perimeter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4DE854231A832137002CC5D4 /* Debug */,
@@ -794,7 +794,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4DE854251A832137002CC5D4 /* Build configuration list for PBXNativeTarget "CheckItTests" */ = {
+		4DE854251A832137002CC5D4 /* Build configuration list for PBXNativeTarget "PerimeterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4DE854261A832137002CC5D4 /* Debug */,
