@@ -115,9 +115,28 @@
     }
     else {
         // Nothing was new, so go ahead and update the current screen
-        [self.summaryImage setImage:[UIImage imageNamed:@"House"]];
-        [self.summaryLabel setText:[NSString stringWithFormat:@"%ld/%ld",[checkpointManager countOfPositiveCheckpoints],
-                                    checkpointManager.checkpoints.count]];
+        
+        UIImage *summaryImage = nil;
+        NSString *summaryString = nil;
+        NSInteger positiveCount = [checkpointManager countOfPositiveCheckpoints];
+        if (positiveCount == checkpointManager.checkpoints.count) {
+            summaryImage = [UIImage imageNamed:@"House-Checked"];
+            
+            
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            dateFormatter.dateStyle = NSDateFormatterNoStyle;
+            dateFormatter.timeStyle = NSDateFormatterShortStyle;
+#warning This date should be changed to show the timestamp of when the checkpoints were completed
+            summaryString = [NSString stringWithFormat:@"Checked: %@",[dateFormatter stringFromDate:[NSDate date]]];
+        }
+        else {
+            summaryImage = [UIImage imageNamed:@"House"];
+            summaryString = [NSString stringWithFormat:@"%ld/%ld",positiveCount,
+                             checkpointManager.checkpoints.count];
+        }
+        
+        [self.summaryImage setImage:summaryImage];
+        [self.summaryLabel setText:summaryString];
     }
 }
 

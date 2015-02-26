@@ -15,7 +15,9 @@
                                 <imageView width="76" height="76" alignment="center" verticalAlignment="center" id="DGV-I5-v0C"/>
                                 <group width="1" height="50" alignment="center" verticalAlignment="bottom" layout="vertical" id="Z0E-82-jwh">
                                     <items>
-                                        <label width="128" alignment="center" verticalAlignment="center" text="1/4" textAlignment="center" id="whp-9f-a8A"/>
+                                        <label width="128" alignment="center" verticalAlignment="center" text="1/4" textAlignment="center" id="whp-9f-a8A">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
                                     </items>
                                 </group>
                             </items>
