@@ -95,7 +95,7 @@
             if ([rootControllerCheckpoints containsObject:checkpoint] == NO) {
                 // This one is new. Add it to the rootController arrays. Flag for reload.
                 [self.rootControllerNames addObject:@"Checkpoint"];
-                NSMutableDictionary *contextDictionary = [NSMutableDictionary dictionaryWithObjects:@[checkpoint,[NSNumber numberWithBool:YES]] forKeys:@[@"checkpoint",@"becomeCurrent"]];
+                NSMutableDictionary *contextDictionary = [NSMutableDictionary dictionaryWithObjects:@[checkpoint,[NSNumber numberWithBool:NO]] forKeys:@[@"checkpoint",@"becomeCurrent"]];
                 [self.rootControllerContexts addObject:contextDictionary];
                 shouldReloadInterfaceControllers = YES;
                 
