@@ -12,6 +12,7 @@
 @interface CheckpointInterfaceController()
 
 @property (nonatomic, weak) IBOutlet WKInterfaceImage *typeImage;
+@property (nonatomic, weak) IBOutlet WKInterfaceLabel *nameLabel;
 @property (nonatomic, weak) IBOutlet WKInterfaceImage *statusImage;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *statusLabel;
 @property (nonatomic) BOOL becomeCurrent;
@@ -53,10 +54,10 @@
 }
 
 - (void)updateInterfaceElements {
-    [self setTitle:self.checkpoint.statusString];
+    [self.nameLabel setText:self.checkpoint.name];
     [self.typeImage setImage:[UIImage imageNamed:[Checkpoint imageNameForCheckpointType:self.checkpoint.type]]];
     [self.statusImage setImage:[UIImage imageNamed:[self statusImageNameForCheckpoint:self.checkpoint]]];
-    [self.statusLabel setText:self.checkpoint.name];
+    [self.statusLabel setText:self.checkpoint.statusString];
 }
 
 #pragma mark - IBAction
