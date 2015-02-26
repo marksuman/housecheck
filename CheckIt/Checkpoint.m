@@ -53,10 +53,26 @@ NSString * const CheckpointStatusNegative = @"negative";
     NSString *statusString = @"Not Checked";
     
     if ([self.status isEqualToString:CheckpointStatusPositive]) {
-        statusString = @"Good";
+        if ([self.type isEqualToString:CheckpointTypeDoor]) {
+            statusString = @"Locked";
+        }
+        else if ([self.type isEqualToString:CheckpointTypeLight]) {
+            statusString = @"Light Off";
+        }
+        else {
+            statusString = @"Good";
+        }
     }
     else if ([self.status isEqualToString:CheckpointStatusNegative]) {
-        statusString = @"Bad";
+        if ([self.type isEqualToString:CheckpointTypeDoor]) {
+            statusString = @"Unlocked";
+        }
+        else if ([self.type isEqualToString:CheckpointTypeLight]) {
+            statusString = @"Light On";
+        }
+        else {
+            statusString = @"Bad";
+        }
     }
     return statusString;
 }
