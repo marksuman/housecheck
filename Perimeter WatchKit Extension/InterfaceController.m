@@ -12,6 +12,7 @@
 
 @interface InterfaceController()
 
+@property (nonatomic, weak) IBOutlet WKInterfaceImage *summaryImage;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *summaryLabel;
 @property (nonatomic, strong) NSMutableArray *rootControllerNames;
 @property (nonatomic, strong) NSMutableArray *rootControllerContexts;
@@ -73,9 +74,9 @@
 - (void)updateInterfaceElements {
     CheckpointManager *checkpointManager = [CheckpointManager defaultManager];
     
-    BOOL shouldReloadInterfaceControllers = NO;
     // Check if there are more checkpoints than there are checkpoint interfaces. If so, add new interfaces for the checkpoints.
     // Subtract 1 because the first context is for the Dashboard, which throws off the count here.
+    BOOL shouldReloadInterfaceControllers = NO;
     if (self.rootControllerContexts.count - 1 < checkpointManager.checkpoints.count) {
         for (Checkpoint *checkpoint in checkpointManager.checkpoints) {
             // Build a temporary array of the checkpoints that created the interface controllers
@@ -114,6 +115,7 @@
     }
     else {
         // Nothing was new, so go ahead and update the current screen
+        [self.summaryImage setImage:[UIImage imageNamed:@"House"]];
         [self.summaryLabel setText:[NSString stringWithFormat:@"%ld/%ld",[checkpointManager countOfPositiveCheckpoints],
                                     checkpointManager.checkpoints.count]];
     }
