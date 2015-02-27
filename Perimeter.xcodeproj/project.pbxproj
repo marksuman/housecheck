@@ -125,6 +125,8 @@
 		4DE8541D1A832137002CC5D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DE8541E1A832137002CC5D4 /* CheckItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckItTests.m; sourceTree = "<group>"; };
 		4DEC04731A9ED7990086A86C /* House-Checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "House-Checked.png"; sourceTree = "<group>"; };
+		4DEC04751A9F53F10086A86C /* Perimeter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Perimeter.entitlements; sourceTree = SOURCE_ROOT; };
+		4DEC04761A9F549F0086A86C /* Perimeter WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Perimeter WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		4DFA998B1A9E0C3100513530 /* House.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = House.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,6 +174,7 @@
 		4DB605991A92E93100AE185C /* Perimeter WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				4DEC04761A9F549F0086A86C /* Perimeter WatchKit Extension.entitlements */,
 				4D2E6F721A95A10D00E3867B /* Assets */,
 				4DB6059D1A92E93100AE185C /* InterfaceController.h */,
 				4DB6059E1A92E93100AE185C /* InterfaceController.m */,
@@ -262,6 +265,7 @@
 		4DE853FE1A832137002CC5D4 /* Perimeter */ = {
 			isa = PBXGroup;
 			children = (
+				4DEC04751A9F53F10086A86C /* Perimeter.entitlements */,
 				4DB605C01A92EF7E00AE185C /* Model */,
 				4DE854031A832137002CC5D4 /* AppDelegate.h */,
 				4DE854041A832137002CC5D4 /* AppDelegate.m */,
@@ -389,12 +393,24 @@
 				TargetAttributes = {
 					4DB605971A92E93100AE185C = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = EXJ43C2FGT;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					4DB605A91A92E93100AE185C = {
 						CreatedOnToolsVersion = 6.2;
 					};
 					4DE853FB1A832137002CC5D4 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = EXJ43C2FGT;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					4DE854171A832137002CC5D4 = {
 						CreatedOnToolsVersion = 6.2;
@@ -556,6 +572,9 @@
 		4DB605B91A92E93100AE185C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Perimeter WatchKit Extension/Perimeter WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -567,6 +586,7 @@
 					"$(PROJECT_DIR)/External",
 				);
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -574,6 +594,9 @@
 		4DB605BA1A92E93100AE185C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Perimeter WatchKit Extension/Perimeter WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Perimeter WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -581,6 +604,7 @@
 					"$(PROJECT_DIR)/External",
 				);
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -697,6 +721,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Perimeter.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CheckIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -704,6 +731,7 @@
 					"$(PROJECT_DIR)/External",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -711,6 +739,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Perimeter.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CheckIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -718,6 +749,7 @@
 					"$(PROJECT_DIR)/External",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
