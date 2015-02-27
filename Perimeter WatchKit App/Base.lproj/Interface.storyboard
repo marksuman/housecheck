@@ -56,9 +56,9 @@
                                     <group width="136" height="76" alignment="center" verticalAlignment="center" id="VEd-Et-vAH">
                                         <items>
                                             <imageView width="56" height="56" alignment="left" verticalAlignment="center" id="y6u-LJ-VkC"/>
-                                            <imageView width="56" height="56" alignment="right" verticalAlignment="center" id="Bnc-1C-xA3"/>
+                                            <imageView width="38" height="38" alignment="right" verticalAlignment="center" id="Bnc-1C-xA3"/>
                                         </items>
-                                        <edgeInsets key="margins" left="10" right="10" top="0.0" bottom="0.0"/>
+                                        <edgeInsets key="margins" left="10" right="15" top="0.0" bottom="0.0"/>
                                         <variation key="device=watch38mm">
                                             <edgeInsets key="margins" left="4" right="4" top="0.0" bottom="0.0"/>
                                         </variation>

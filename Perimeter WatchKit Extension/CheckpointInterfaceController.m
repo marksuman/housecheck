@@ -55,14 +55,20 @@
 
 - (void)updateInterfaceElements {
     [self.nameLabel setText:self.checkpoint.name];
-    [self.typeImage setImage:[UIImage imageNamed:[Checkpoint imageNameForCheckpointType:self.checkpoint.type]]];
-    [self.statusImage setImage:[UIImage imageNamed:[self statusImageNameForCheckpoint:self.checkpoint]]];
+    [self.typeImage setImageNamed:[Checkpoint imageNameForCheckpointType:self.checkpoint.type]];
+    [self.statusImage setImage:[UIImage animatedImageNamed:[self statusImageNameForCheckpoint:self.checkpoint] duration:0.5]];
+//    [self.statusImage setImage:[UIImage animatedImageNamed:@"check-to-x000" duration:0.5]];
     [self.statusLabel setText:self.checkpoint.statusString];
 }
 
 #pragma mark - IBAction
 
 - (IBAction)buttonAction:(id)sender {
+    [self.statusImage startAnimatingWithImagesInRange:NSMakeRange(0, 20) duration:0.2 repeatCount:1];
+    [self performSelector:@selector(completeButtonAction) withObject:nil afterDelay:0.2];
+}
+
+- (void)completeButtonAction {
     [self.checkpoint toggleStatus];
     [self updateInterfaceElements];
 }
@@ -103,20 +109,26 @@
         return [self negativeStatusImageNameForCheckpoint:checkpoint];
     }
     else {
-        return @"circle-questionmark";
+        return [self unknownStatusImageNameForCheckpoint:checkpoint];
     }
 }
 
 - (NSString *)positiveStatusImageNameForCheckpoint:(Checkpoint *)checkpoint {
     // If we want, we could customize the positive image based on checkpoint type
     // For now we'll just show a default
-    return @"19-circle-check";
+    return @"check-x";
 }
 
 - (NSString *)negativeStatusImageNameForCheckpoint:(Checkpoint *)checkpoint {
     // If we want, we could customize the negative image based on checkpoint type
     // For now we'll just show a default
-    return @"circle-x";
+    return @"x-question";
+}
+
+- (NSString *)unknownStatusImageNameForCheckpoint:(Checkpoint *)checkpoint {
+    // If we want, we could customize the unknown image based on checkpoint type
+    // For now we'll just show a default
+    return @"question-check";
 }
 
 @end
