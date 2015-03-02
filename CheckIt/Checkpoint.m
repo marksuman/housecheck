@@ -7,6 +7,7 @@
 //
 
 #import "Checkpoint.h"
+#import "CheckpointManager.h"
 
 @implementation Checkpoint
 
@@ -26,9 +27,23 @@ NSString * const CheckpointStatusNegative = @"negative";
     if (self) {
         self.type = CheckpointTypeUnknown;
         self.status = CheckpointStatusUnknown;
+        self.lastStatusDate = nil;
     }
     
     return self;
+}
+
+- (NSString *)status {
+    // The status is self-healing
+    // It checks to see if it is stale. If it is, it resets itself and sends you the reset status
+    if (self.lastStatusDate) {
+        NSTimeInterval statusLife = [[NSDate date] timeIntervalSinceDate:self.lastStatusDate];
+        if (statusLife >= [[CheckpointManager defaultManager] eventTTL]) {
+            [self resetStatus];
+        }
+    }
+    
+    return _status;
 }
 
 - (BOOL)isTypeDoor {
@@ -90,6 +105,17 @@ NSString * const CheckpointStatusNegative = @"negative";
         // The status is currently unknown
         self.status = CheckpointStatusPositive;
     }
+    
+    // Update the lastStatusDate
+    self.lastStatusDate = [NSDate date];
+}
+
+- (void)resetStatus {
+    // This method should usually be called when a status is read and it has passed the eventTTL
+    
+    // Reset the status and the lastStatusDate
+    self.status = CheckpointStatusUnknown;
+    self.lastStatusDate = nil;
 }
 
 

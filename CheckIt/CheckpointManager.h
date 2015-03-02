@@ -12,6 +12,7 @@
 @interface CheckpointManager : NSObject
 
 @property (nonatomic, strong) NSMutableArray *checkpoints;
+@property (nonatomic) NSTimeInterval eventTTL;
 
 + (CheckpointManager *)defaultManager;
 

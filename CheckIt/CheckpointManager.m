@@ -52,6 +52,16 @@ static CheckpointManager *defaultManager;
     [self.checkpoints addObject:porchLights];
 }
 
+- (NSTimeInterval)eventTTL {
+    // This is the amount of time that may pass until a checkpoint resets its status to unknown
+    
+    // 10 hours
+    return 36000.0;
+    
+    // Test value
+//    return 10.0;
+}
+
 #pragma mark - Updates
 
 - (void)addCheckpoint:(Checkpoint *)checkpoint {

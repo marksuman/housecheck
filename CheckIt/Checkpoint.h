@@ -35,6 +35,7 @@ extern NSString * const CheckpointStatusNegative;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic) NSString *type;
 @property (nonatomic) NSString *status;
+@property (nonatomic, strong) NSDate *lastStatusDate;
 
 // Type BOOLs
 @property (nonatomic, readonly) BOOL isTypeDoor;
@@ -49,6 +50,7 @@ extern NSString * const CheckpointStatusNegative;
 
 - (NSString *)statusString;
 - (void)toggleStatus;
+- (void)resetStatus;
 
 // Interface Variants
 + (NSString *)imageNameForCheckpointType:(NSString *)checkpointType;
