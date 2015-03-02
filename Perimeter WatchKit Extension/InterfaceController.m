@@ -33,7 +33,7 @@
         self.rootControllerNames = [context objectForKey:@"rootControllerNames"];
         self.rootControllerContexts = [context objectForKey:@"rootControllerContexts"];
         
-        [self setTitle:@"Perimeter"];
+        [self setTitle:@"HomeCheck"];
         [self updateInterfaceElements];
     }
     else {
