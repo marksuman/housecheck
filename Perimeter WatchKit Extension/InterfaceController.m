@@ -37,7 +37,7 @@
         self.rootControllerNames = [context objectForKey:@"rootControllerNames"];
         self.rootControllerContexts = [context objectForKey:@"rootControllerContexts"];
         
-        [self setTitle:@"HomeCheck"];
+        [self setTitle:@"HouseCheck"];
         [self updateInterfaceElements];
     }
     else {
