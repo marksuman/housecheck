@@ -15,6 +15,8 @@
 @property (nonatomic) NSTimeInterval eventTTL;
 
 + (CheckpointManager *)defaultManager;
+//- (NSURL *)dataURL;
+- (BOOL)save;
 
 // Updates
 - (void)addCheckpoint:(Checkpoint *)checkpoint;

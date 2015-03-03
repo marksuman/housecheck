@@ -96,6 +96,7 @@
     
     // Then delete the object from the data store.
     [[CheckpointManager defaultManager] removeCheckpoint:self.checkpoint];
+    [[CheckpointManager defaultManager] save];
 }
 
 

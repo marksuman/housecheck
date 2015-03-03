@@ -33,6 +33,36 @@ NSString * const CheckpointStatusNegative = @"negative";
     return self;
 }
 
+- (id)initWithInfo:(NSDictionary *)info {
+    self = [super init];
+    
+    if (self) {
+        self.name = [info objectForKey:@"name"];
+        self.type = [info objectForKey:@"type"];
+        self.status = [info objectForKey:@"status"];
+        self.lastStatusDate = [info objectForKey:@"lastStatusDate"];
+    }
+    
+    return self;
+}
+
+- (NSDictionary *)dictionaryVersion {
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+    
+    if (self.name) {
+        [dictionary setObject:self.name forKey:@"name"];
+    }
+    
+    [dictionary setObject:self.type forKey:@"type"];
+    [dictionary setObject:self.status forKey:@"status"];
+    
+    if (self.lastStatusDate) {
+        [dictionary setObject:self.lastStatusDate forKey:@"lastStatusDate"];
+    }
+    
+    return dictionary;
+}
+
 - (NSString *)status {
     // The status is self-healing
     // It checks to see if it is stale. If it is, it resets itself and sends you the reset status

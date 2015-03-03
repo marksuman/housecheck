@@ -50,6 +50,7 @@
             checkpoint.type = self.type;
             
             [[CheckpointManager defaultManager] addCheckpoint:checkpoint];
+            [[CheckpointManager defaultManager] save];
             [self dismissController];
         }
         

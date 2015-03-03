@@ -30,26 +30,44 @@ static CheckpointManager *defaultManager;
     return self;
 }
 
+- (NSURL *)dataURL {
+    return [[[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.com.marksuman.Perimeter"] URLByAppendingPathComponent:@"checkpointData.plist"];
+}
+
 - (void)loadCheckpoints {
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[[self dataURL] path]]) {
+        NSDictionary *dataInfo = [NSDictionary dictionaryWithContentsOfURL:[self dataURL]];
+        NSLog(@"Data Loaded: %@",dataInfo);
+        
+        for (NSDictionary *checkpointInfo in [dataInfo objectForKey:@"checkpoints"]) {
+            [self addCheckpoint:[[Checkpoint alloc] initWithInfo:checkpointInfo]];
+        }
+        
+        // This is probably backwards. Maybe we check for existence and load the info if it exists. If not, don't worry about creating a save file yet.
+        
+//        NSDictionary *dataDictionary = @{@"schemaVersion":[NSNumber numberWithInteger:1],@"checkpoints":@[]};
+//        [[self dataDictionary] writeToURL:[self dataURL] atomically:YES];
+    }
     
     // ---------
     // TEST DATA
     // ---------
-    Checkpoint *frontDoor = [[Checkpoint alloc] init];
-    frontDoor.name = @"Front Door";
-    frontDoor.type = CheckpointTypeDoor;
-    
-    Checkpoint *garageDoor = [[Checkpoint alloc] init];
-    garageDoor.name = @"Garage Door";
-    garageDoor.type = CheckpointTypeDoor;
-    
-    Checkpoint *porchLights = [[Checkpoint alloc] init];
-    porchLights.name = @"Porch Lights";
-    porchLights.type = CheckpointTypeLight;
-    
-    [self.checkpoints addObject:frontDoor];
-    [self.checkpoints addObject:garageDoor];
-    [self.checkpoints addObject:porchLights];
+//    Checkpoint *frontDoor = [[Checkpoint alloc] init];
+//    frontDoor.name = @"Front Door";
+//    frontDoor.type = CheckpointTypeDoor;
+//    
+//    Checkpoint *garageDoor = [[Checkpoint alloc] init];
+//    garageDoor.name = @"Garage Door";
+//    garageDoor.type = CheckpointTypeDoor;
+//    
+//    Checkpoint *porchLights = [[Checkpoint alloc] init];
+//    porchLights.name = @"Porch Lights";
+//    porchLights.type = CheckpointTypeLight;
+//    
+//    [self.checkpoints addObject:frontDoor];
+//    [self.checkpoints addObject:garageDoor];
+//    [self.checkpoints addObject:porchLights];
 }
 
 - (NSTimeInterval)eventTTL {
@@ -60,6 +78,20 @@ static CheckpointManager *defaultManager;
     
     // Test value
 //    return 10.0;
+}
+
+- (NSDictionary *)dataDictionary {
+    NSInteger schemaVersion = 1;
+    NSMutableArray *checkpointsInfoArray = [NSMutableArray arrayWithCapacity:self.checkpoints.count];
+    for (Checkpoint *checkpoint in self.checkpoints) {
+        [checkpointsInfoArray addObject:[checkpoint dictionaryVersion]];
+    }
+    
+    return @{@"schemaVersion":[NSNumber numberWithInteger:schemaVersion],@"checkpoints":checkpointsInfoArray};
+}
+
+- (BOOL)save {
+    return [[self dataDictionary] writeToURL:[self dataURL] atomically:YES];
 }
 
 #pragma mark - Updates
