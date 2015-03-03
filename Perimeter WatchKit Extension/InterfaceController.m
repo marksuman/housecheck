@@ -15,7 +15,11 @@
 @property (nonatomic, weak) IBOutlet WKInterfaceImage *summaryImage;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *summaryLabel;
 @property (nonatomic, strong) NSMutableArray *rootControllerNames;
+
+// todo: fix this bug when there are no checkpoints at launch due to adding a nil array to itself and getting garbage
 @property (nonatomic, strong) NSMutableArray *rootControllerContexts;
+//@property (nonatomic, strong) NSMutableDictionary *dashboardRootControllerContext;
+//@property (nonatomic, strong) NSMutableArray *checkpointRootControllerContexts;
 
 @end
 
