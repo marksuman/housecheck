@@ -46,13 +46,7 @@
         
         for (Checkpoint *checkpoint in [[CheckpointManager defaultManager] checkpoints]) {
                 // Add a Checkpoint interface with the index appended to it
-            [self.rootControllerNames addObject:[NSString stringWithFormat:@"Checkpoint"]];
-            void (^deleteAndReloadInterfaceBlock)() = ^() {
-                [self deleteInterfaceForCheckpoint:checkpoint];
-                [self reloadRootInterfaceControllers];
-            };
-            NSMutableDictionary *contextDictionary = [NSMutableDictionary dictionaryWithObjects:@[checkpoint,deleteAndReloadInterfaceBlock] forKeys:@[@"checkpoint",@"deleteAndReloadInterfaceBlock"]];
-            [self.rootControllerContexts addObject:contextDictionary];
+            [self addInterfaceForCheckpoint:checkpoint];
         }
         // This is the first run. We want to set up the correct order of the pages
         [WKInterfaceController reloadRootControllersWithNames:self.rootControllerNames contexts:self.rootControllerContexts];
@@ -94,9 +88,7 @@
             // Use that temporary array and check if it containts the checkpoint in question
             if ([rootControllerCheckpoints containsObject:checkpoint] == NO) {
                 // This one is new. Add it to the rootController arrays. Flag for reload.
-                [self.rootControllerNames addObject:@"Checkpoint"];
-                NSMutableDictionary *contextDictionary = [NSMutableDictionary dictionaryWithObjects:@[checkpoint,[NSNumber numberWithBool:NO]] forKeys:@[@"checkpoint",@"becomeCurrent"]];
-                [self.rootControllerContexts addObject:contextDictionary];
+                [self addInterfaceForCheckpoint:checkpoint];
                 shouldReloadInterfaceControllers = YES;
                 
                 // We only allow for adding one at a time right now, so go ahead and break the loop
@@ -138,6 +130,16 @@
         [self.summaryImage setImage:summaryImage];
         [self.summaryLabel setText:summaryString];
     }
+}
+
+- (void)addInterfaceForCheckpoint:(Checkpoint *)checkpoint {
+    [self.rootControllerNames addObject:[NSString stringWithFormat:@"Checkpoint"]];
+    void (^deleteAndReloadInterfaceBlock)() = ^() {
+        [self deleteInterfaceForCheckpoint:checkpoint];
+        [self reloadRootInterfaceControllers];
+    };
+    NSMutableDictionary *contextDictionary = [NSMutableDictionary dictionaryWithObjects:@[checkpoint,deleteAndReloadInterfaceBlock] forKeys:@[@"checkpoint",@"deleteAndReloadInterfaceBlock"]];
+    [self.rootControllerContexts addObject:contextDictionary];
 }
 
 - (IBAction)addCheckpointMenuItemTapped:(id)sender {
