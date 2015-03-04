@@ -138,6 +138,8 @@
 		4D32E9231AA0267000CFA79B /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D32E9221AA0267000CFA79B /* x.png */; };
 		4D32E9241AA0267000CFA79B /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D32E9221AA0267000CFA79B /* x.png */; };
 		4D5C952E1A99A6A000007C04 /* AddCheckpointInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C952D1A99A6A000007C04 /* AddCheckpointInterfaceController.m */; };
+		4D70970F1AA6BDE50062AB05 /* House.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA998B1A9E0C3100513530 /* House.png */; };
+		4D7097101AA6BDE80062AB05 /* House-Checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEC04731A9ED7990086A86C /* House-Checked.png */; };
 		4DB6059F1A92E93100AE185C /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6059E1A92E93100AE185C /* InterfaceController.m */; };
 		4DB605A21A92E93100AE185C /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605A11A92E93100AE185C /* NotificationController.m */; };
 		4DB605A51A92E93100AE185C /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605A41A92E93100AE185C /* GlanceController.m */; };
@@ -810,6 +812,7 @@
 			files = (
 				4D2324351AA03F6B00A15A9A /* check-x18.png in Resources */,
 				4D2324651AA03F7A00A15A9A /* x-question12.png in Resources */,
+				4D70970F1AA6BDE50062AB05 /* House.png in Resources */,
 				4D2323E31AA03F4800A15A9A /* question-check7.png in Resources */,
 				4D23242D1AA03F6B00A15A9A /* check-x14.png in Resources */,
 				4D2324391AA03F6B00A15A9A /* check-x20.png in Resources */,
@@ -866,6 +869,7 @@
 				4D2323DF1AA03F4800A15A9A /* question-check5.png in Resources */,
 				4D2324211AA03F6B00A15A9A /* check-x8.png in Resources */,
 				4D2323E71AA03F4800A15A9A /* question-check9.png in Resources */,
+				4D7097101AA6BDE80062AB05 /* House-Checked.png in Resources */,
 				4D2324231AA03F6B00A15A9A /* check-x9.png in Resources */,
 				4D2324551AA03F7A00A15A9A /* x-question4.png in Resources */,
 				4D2323FD1AA03F4800A15A9A /* question-check20.png in Resources */,

@@ -15,6 +15,9 @@
 NSString * const CheckpointTypeUnknown = @"unknown";
 NSString * const CheckpointTypeDoor = @"door";
 NSString * const CheckpointTypeLight = @"light";
+NSString * const CheckpointTypeWindow = @"window";
+NSString * const CheckpointTypeAppliance = @"appliance";
+NSString * const CheckpointTypeFamily = @"family";
 
 // Status constants
 NSString * const CheckpointStatusUnknown = @"unknown";
@@ -104,6 +107,9 @@ NSString * const CheckpointStatusNegative = @"negative";
         else if ([self.type isEqualToString:CheckpointTypeLight]) {
             statusString = @"Light Off";
         }
+        else if ([self.type isEqualToString:CheckpointTypeWindow]) {
+            statusString = @"Closed";
+        }
         else {
             statusString = @"Good";
         }
@@ -114,6 +120,9 @@ NSString * const CheckpointStatusNegative = @"negative";
         }
         else if ([self.type isEqualToString:CheckpointTypeLight]) {
             statusString = @"Light On";
+        }
+        else if ([self.type isEqualToString:CheckpointTypeWindow]) {
+            statusString = @"Open";
         }
         else {
             statusString = @"Bad";
@@ -158,7 +167,7 @@ NSString * const CheckpointStatusNegative = @"negative";
         return @"84-lightbulb";
     }
     
-    return nil;
+    return @"House";
 }
 
 + (NSString *)typeStringForCheckpointType:(NSString *)checkpointType {
@@ -167,6 +176,15 @@ NSString * const CheckpointStatusNegative = @"negative";
     }
     else if ([checkpointType isEqualToString:CheckpointTypeLight]) {
         return @"Light";
+    }
+    else if ([checkpointType isEqualToString:CheckpointTypeWindow]) {
+        return @"Window";
+    }
+    else if ([checkpointType isEqualToString:CheckpointTypeAppliance]) {
+        return @"Appliance";
+    }
+    else if ([checkpointType isEqualToString:CheckpointTypeFamily]) {
+        return @"Family or Pet";
     }
     
     return @"Other";
@@ -179,6 +197,18 @@ NSString * const CheckpointStatusNegative = @"negative";
     }
     else if ([checkpointType isEqualToString:CheckpointTypeLight]) {
         nameArray = @[@"Front Porch",@"Back Porch",@"Front Yard",@"Backyard",@"Downstairs",@"Upstairs"];
+    }
+    else if ([checkpointType isEqualToString:CheckpointTypeWindow]) {
+        nameArray = @[@"Front",@"Back",@"Bedroom",@"Downstairs",@"Upstairs"];
+    }
+    else if ([checkpointType isEqualToString:CheckpointTypeAppliance]) {
+        nameArray = @[@"Oven",@"Stove",@"Space Heater",@"Grill",@"Fireplace"];
+    }
+    else if ([checkpointType isEqualToString:CheckpointTypeFamily]) {
+        nameArray = @[@"Baby",@"Daughter",@"Son",@"Parent",@"Cat",@"Dog",@"Freetail Bat",@"Chinchilla"];
+    }
+    else {
+        nameArray = @[@"Security System",@"Alarm Clock",@"Flat Iron",@"Curling Iron"];
     }
     
     return nameArray;

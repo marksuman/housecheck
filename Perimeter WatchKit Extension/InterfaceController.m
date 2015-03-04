@@ -147,7 +147,7 @@
 }
 
 - (IBAction)addCheckpointMenuItemTapped:(id)sender {
-    [self presentControllerWithNames:@[@"AddCheckpoint",@"AddCheckpoint"] contexts:@[@{@"type":CheckpointTypeDoor},@{@"type":CheckpointTypeLight}]];
+    [self presentControllerWithNames:@[@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint"] contexts:@[@{@"type":CheckpointTypeDoor},@{@"type":CheckpointTypeLight},@{@"type":CheckpointTypeWindow},@{@"type":CheckpointTypeAppliance},@{@"type":CheckpointTypeFamily},@{@"type":CheckpointTypeUnknown}]];
 }
 
 - (void)reloadRootInterfaceControllers {
