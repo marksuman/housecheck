@@ -10,10 +10,10 @@
             <objects>
                 <controller identifier="Dashboard" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <group width="1" height="1" alignment="left" layout="vertical" id="tSU-b2-3vn">
+                        <group width="1" height="1" alignment="left" verticalAlignment="center" layout="vertical" id="tSU-b2-3vn">
                             <items>
-                                <imageView width="76" height="76" alignment="center" verticalAlignment="center" id="DGV-I5-v0C"/>
-                                <group width="1" height="50" alignment="center" verticalAlignment="bottom" layout="vertical" id="Z0E-82-jwh">
+                                <imageView width="104" height="104" alignment="center" verticalAlignment="center" id="DGV-I5-v0C"/>
+                                <group width="1" height="40" alignment="center" verticalAlignment="bottom" layout="vertical" id="Z0E-82-jwh">
                                     <items>
                                         <label width="128" alignment="center" verticalAlignment="center" text="1/4" textAlignment="center" id="whp-9f-a8A">
                                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>

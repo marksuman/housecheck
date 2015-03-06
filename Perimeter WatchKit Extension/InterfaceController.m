@@ -116,7 +116,7 @@
         NSString *summaryString = nil;
         NSInteger positiveCount = [checkpointManager countOfPositiveCheckpoints];
         if (positiveCount == checkpointManager.checkpoints.count) {
-            summaryImage = [UIImage imageNamed:@"House-Checked"];
+            summaryImage = [UIImage imageNamed:@"house16"];
             
             
             NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -126,7 +126,7 @@
             summaryString = [NSString stringWithFormat:@"Checked: %@",[dateFormatter stringFromDate:[NSDate date]]];
         }
         else {
-            summaryImage = [UIImage imageNamed:@"House"];
+            summaryImage = [UIImage imageNamed:@"house1"];
             summaryString = [NSString stringWithFormat:@"%ld/%ld",positiveCount,
                              checkpointManager.checkpoints.count];
         }
