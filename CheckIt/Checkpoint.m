@@ -161,13 +161,22 @@ NSString * const CheckpointStatusNegative = @"negative";
 #pragma mark - Interface Variants
 + (NSString *)imageNameForCheckpointType:(NSString *)checkpointType {
     if ([checkpointType isEqualToString:CheckpointTypeDoor]) {
-        return @"179-notepad";
+        return @"Door";
     }
     else if ([checkpointType isEqualToString:CheckpointTypeLight]) {
-        return @"84-lightbulb";
+        return @"Light";
+    }
+    else if ([checkpointType isEqualToString:CheckpointTypeWindow]) {
+        return @"Window";
+    }
+    else if ([checkpointType isEqualToString:CheckpointTypeAppliance]) {
+        return @"Appliance";
+    }
+    else if ([checkpointType isEqualToString:CheckpointTypeFamily]) {
+        return @"Family-Pet";
     }
     
-    return @"House";
+    return @"Other";
 }
 
 + (NSString *)typeStringForCheckpointType:(NSString *)checkpointType {
@@ -193,22 +202,22 @@ NSString * const CheckpointStatusNegative = @"negative";
 + (NSArray *)nameSuggestionsForCheckpointType:(NSString *)checkpointType {
     NSArray *nameArray = @[];
     if ([checkpointType isEqualToString:CheckpointTypeDoor]) {
-        nameArray = @[@"Front Door",@"Back Door",@"Garage Door",@"Side Door",@"Pet Door"];
+        nameArray = @[@"Front Door",@"Back Door",@"Garage Door",@"Side Door",@"Pet Door",@"Gate",@"Car"];
     }
     else if ([checkpointType isEqualToString:CheckpointTypeLight]) {
         nameArray = @[@"Front Porch",@"Back Porch",@"Front Yard",@"Backyard",@"Downstairs",@"Upstairs"];
     }
     else if ([checkpointType isEqualToString:CheckpointTypeWindow]) {
-        nameArray = @[@"Front",@"Back",@"Bedroom",@"Downstairs",@"Upstairs"];
+        nameArray = @[@"Front",@"Back",@"Bedroom",@"Downstairs",@"Upstairs",@"Basement"];
     }
     else if ([checkpointType isEqualToString:CheckpointTypeAppliance]) {
-        nameArray = @[@"Oven",@"Stove",@"Space Heater",@"Grill",@"Fireplace"];
+        nameArray = @[@"Oven",@"Stove",@"Space Heater",@"Grill",@"Fireplace",@"Coffee Maker"];
     }
     else if ([checkpointType isEqualToString:CheckpointTypeFamily]) {
         nameArray = @[@"Baby",@"Daughter",@"Son",@"Parent",@"Cat",@"Dog",@"Freetail Bat",@"Chinchilla"];
     }
     else {
-        nameArray = @[@"Security System",@"Alarm Clock",@"Flat Iron",@"Curling Iron"];
+        nameArray = @[@"Security System",@"Thermostat",@"Alarm Clock",@"Flat Iron",@"Curling Iron"];
     }
     
     return nameArray;

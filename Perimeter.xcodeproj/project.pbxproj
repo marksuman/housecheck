@@ -163,6 +163,18 @@
 		4DE854131A832137002CC5D4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DE854111A832137002CC5D4 /* LaunchScreen.xib */; };
 		4DE8541F1A832137002CC5D4 /* CheckItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE8541E1A832137002CC5D4 /* CheckItTests.m */; };
 		4DEC04741A9ED7990086A86C /* House-Checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEC04731A9ED7990086A86C /* House-Checked.png */; };
+		4DEDDC0F1AA9523E0033C8E8 /* Appliance@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEDDC091AA9523E0033C8E8 /* Appliance@2x.png */; };
+		4DEDDC101AA9523E0033C8E8 /* Appliance@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEDDC091AA9523E0033C8E8 /* Appliance@2x.png */; };
+		4DEDDC111AA9523E0033C8E8 /* Door@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEDDC0A1AA9523E0033C8E8 /* Door@2x.png */; };
+		4DEDDC121AA9523E0033C8E8 /* Door@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEDDC0A1AA9523E0033C8E8 /* Door@2x.png */; };
+		4DEDDC131AA9523E0033C8E8 /* Family-Pet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEDDC0B1AA9523E0033C8E8 /* Family-Pet@2x.png */; };
+		4DEDDC141AA9523E0033C8E8 /* Family-Pet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEDDC0B1AA9523E0033C8E8 /* Family-Pet@2x.png */; };
+		4DEDDC151AA9523E0033C8E8 /* Light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEDDC0C1AA9523E0033C8E8 /* Light@2x.png */; };
+		4DEDDC161AA9523E0033C8E8 /* Light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEDDC0C1AA9523E0033C8E8 /* Light@2x.png */; };
+		4DEDDC171AA9523E0033C8E8 /* Other@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEDDC0D1AA9523E0033C8E8 /* Other@2x.png */; };
+		4DEDDC181AA9523E0033C8E8 /* Other@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEDDC0D1AA9523E0033C8E8 /* Other@2x.png */; };
+		4DEDDC191AA9523E0033C8E8 /* Window@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEDDC0E1AA9523E0033C8E8 /* Window@2x.png */; };
+		4DEDDC1A1AA9523E0033C8E8 /* Window@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEDDC0E1AA9523E0033C8E8 /* Window@2x.png */; };
 		4DFA998C1A9E0C3100513530 /* House.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA998B1A9E0C3100513530 /* House.png */; };
 /* End PBXBuildFile section */
 
@@ -314,6 +326,12 @@
 		4DEC04731A9ED7990086A86C /* House-Checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "House-Checked.png"; sourceTree = "<group>"; };
 		4DEC04751A9F53F10086A86C /* Perimeter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Perimeter.entitlements; sourceTree = SOURCE_ROOT; };
 		4DEC04761A9F549F0086A86C /* Perimeter WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Perimeter WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		4DEDDC091AA9523E0033C8E8 /* Appliance@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Appliance@2x.png"; sourceTree = "<group>"; };
+		4DEDDC0A1AA9523E0033C8E8 /* Door@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Door@2x.png"; sourceTree = "<group>"; };
+		4DEDDC0B1AA9523E0033C8E8 /* Family-Pet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Family-Pet@2x.png"; sourceTree = "<group>"; };
+		4DEDDC0C1AA9523E0033C8E8 /* Light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Light@2x.png"; sourceTree = "<group>"; };
+		4DEDDC0D1AA9523E0033C8E8 /* Other@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Other@2x.png"; sourceTree = "<group>"; };
+		4DEDDC0E1AA9523E0033C8E8 /* Window@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Window@2x.png"; sourceTree = "<group>"; };
 		4DFA998B1A9E0C3100513530 /* House.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = House.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -435,6 +453,12 @@
 				4D2E6F851A962A0A00E3867B /* circle-x.png */,
 				4DFA998B1A9E0C3100513530 /* House.png */,
 				4DEC04731A9ED7990086A86C /* House-Checked.png */,
+				4DEDDC091AA9523E0033C8E8 /* Appliance@2x.png */,
+				4DEDDC0A1AA9523E0033C8E8 /* Door@2x.png */,
+				4DEDDC0B1AA9523E0033C8E8 /* Family-Pet@2x.png */,
+				4DEDDC0C1AA9523E0033C8E8 /* Light@2x.png */,
+				4DEDDC0D1AA9523E0033C8E8 /* Other@2x.png */,
+				4DEDDC0E1AA9523E0033C8E8 /* Window@2x.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -737,11 +761,14 @@
 				4DEC04741A9ED7990086A86C /* House-Checked.png in Resources */,
 				4D2E6F791A96266200E3867B /* 19-circle-check@2x.png in Resources */,
 				4D23246A1AA03F7A00A15A9A /* x-question15.png in Resources */,
+				4DEDDC191AA9523E0033C8E8 /* Window@2x.png in Resources */,
 				4D23246C1AA03F7A00A15A9A /* x-question16.png in Resources */,
 				4D2324661AA03F7A00A15A9A /* x-question13.png in Resources */,
+				4DEDDC171AA9523E0033C8E8 /* Other@2x.png in Resources */,
 				4D2324501AA03F7A00A15A9A /* x-question2.png in Resources */,
 				4D2324681AA03F7A00A15A9A /* x-question14.png in Resources */,
 				4D2324361AA03F6B00A15A9A /* check-x19.png in Resources */,
+				4DEDDC131AA9523E0033C8E8 /* Family-Pet@2x.png in Resources */,
 				4DB605AB1A92E93100AE185C /* Perimeter WatchKit App.app in Resources */,
 				4D2324641AA03F7A00A15A9A /* x-question12.png in Resources */,
 				4D23246E1AA03F7A00A15A9A /* x-question17.png in Resources */,
@@ -760,6 +787,7 @@
 				4D2323F01AA03F4800A15A9A /* question-check14.png in Resources */,
 				4D23242C1AA03F6B00A15A9A /* check-x14.png in Resources */,
 				4DB605A71A92E93100AE185C /* Images.xcassets in Resources */,
+				4DEDDC111AA9523E0033C8E8 /* Door@2x.png in Resources */,
 				4D23241A1AA03F6B00A15A9A /* check-x5.png in Resources */,
 				4D2323EC1AA03F4800A15A9A /* question-check12.png in Resources */,
 				4D2323E81AA03F4800A15A9A /* question-check10.png in Resources */,
@@ -776,6 +804,7 @@
 				4D2324141AA03F6B00A15A9A /* check-x2.png in Resources */,
 				4D2324201AA03F6B00A15A9A /* check-x8.png in Resources */,
 				4D2323FC1AA03F4800A15A9A /* question-check20.png in Resources */,
+				4DEDDC151AA9523E0033C8E8 /* Light@2x.png in Resources */,
 				4D2324701AA03F7A00A15A9A /* x-question18.png in Resources */,
 				4D23244E1AA03F7A00A15A9A /* x-question1.png in Resources */,
 				4D2324621AA03F7A00A15A9A /* x-question11.png in Resources */,
@@ -798,6 +827,7 @@
 				4D23245E1AA03F7A00A15A9A /* x-question9.png in Resources */,
 				4D2324321AA03F6B00A15A9A /* check-x17.png in Resources */,
 				4D2323E21AA03F4800A15A9A /* question-check7.png in Resources */,
+				4DEDDC0F1AA9523E0033C8E8 /* Appliance@2x.png in Resources */,
 				4D2323E61AA03F4800A15A9A /* question-check9.png in Resources */,
 				4D2324541AA03F7A00A15A9A /* x-question4.png in Resources */,
 				4D2323EE1AA03F4800A15A9A /* question-check13.png in Resources */,
@@ -813,6 +843,7 @@
 				4D2324351AA03F6B00A15A9A /* check-x18.png in Resources */,
 				4D2324651AA03F7A00A15A9A /* x-question12.png in Resources */,
 				4D70970F1AA6BDE50062AB05 /* House.png in Resources */,
+				4DEDDC181AA9523E0033C8E8 /* Other@2x.png in Resources */,
 				4D2323E31AA03F4800A15A9A /* question-check7.png in Resources */,
 				4D23242D1AA03F6B00A15A9A /* check-x14.png in Resources */,
 				4D2324391AA03F6B00A15A9A /* check-x20.png in Resources */,
@@ -820,6 +851,7 @@
 				4D2324761AA0430300A15A9A /* 84-lightbulb@2x.png in Resources */,
 				4D2323E91AA03F4800A15A9A /* question-check10.png in Resources */,
 				4D2323F71AA03F4800A15A9A /* question-check17.png in Resources */,
+				4DEDDC1A1AA9523E0033C8E8 /* Window@2x.png in Resources */,
 				4D2323D91AA03F4800A15A9A /* question-check2.png in Resources */,
 				4D2324251AA03F6B00A15A9A /* check-x10.png in Resources */,
 				4D2324771AA0430300A15A9A /* 179-notepad@2x.png in Resources */,
@@ -836,7 +868,9 @@
 				4D32E9241AA0267000CFA79B /* x.png in Resources */,
 				4D2323D71AA03F4800A15A9A /* question-check1.png in Resources */,
 				4D2324151AA03F6B00A15A9A /* check-x2.png in Resources */,
+				4DEDDC141AA9523E0033C8E8 /* Family-Pet@2x.png in Resources */,
 				4D23241B1AA03F6B00A15A9A /* check-x5.png in Resources */,
+				4DEDDC161AA9523E0033C8E8 /* Light@2x.png in Resources */,
 				4D2324511AA03F7A00A15A9A /* x-question2.png in Resources */,
 				4D2323FB1AA03F4800A15A9A /* question-check19.png in Resources */,
 				4D2324711AA03F7A00A15A9A /* x-question18.png in Resources */,
@@ -848,6 +882,7 @@
 				4D23242B1AA03F6B00A15A9A /* check-x13.png in Resources */,
 				4D2323E11AA03F4800A15A9A /* question-check6.png in Resources */,
 				4D2324691AA03F7A00A15A9A /* x-question14.png in Resources */,
+				4DEDDC121AA9523E0033C8E8 /* Door@2x.png in Resources */,
 				4D2323DD1AA03F4800A15A9A /* question-check4.png in Resources */,
 				4D2324371AA03F6B00A15A9A /* check-x19.png in Resources */,
 				4D2324271AA03F6B00A15A9A /* check-x11.png in Resources */,
@@ -876,6 +911,7 @@
 				4D23241D1AA03F6B00A15A9A /* check-x6.png in Resources */,
 				4D2324291AA03F6B00A15A9A /* check-x12.png in Resources */,
 				4D2323EF1AA03F4800A15A9A /* question-check13.png in Resources */,
+				4DEDDC101AA9523E0033C8E8 /* Appliance@2x.png in Resources */,
 				4DB605B51A92E93100AE185C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

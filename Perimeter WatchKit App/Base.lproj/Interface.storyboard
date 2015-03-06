@@ -107,9 +107,9 @@
                         <button alignment="left" id="Ncp-hN-dZE">
                             <group key="contentGroup" width="134" height="151" alignment="left" layout="vertical" id="qIp-6W-SU4">
                                 <items>
-                                    <group width="136" height="112" alignment="center" verticalAlignment="center" layout="vertical" id="c9p-rt-O7c">
+                                    <group width="136" alignment="center" verticalAlignment="center" layout="vertical" id="c9p-rt-O7c">
                                         <items>
-                                            <imageView width="56" height="56" alignment="center" verticalAlignment="center" id="YRd-nb-1fw"/>
+                                            <imageView width="100" height="100" alignment="center" verticalAlignment="center" id="YRd-nb-1fw"/>
                                             <label alignment="center" verticalAlignment="bottom" text="Label" id="pp9-kC-ctQ">
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </label>
@@ -118,7 +118,7 @@
                                         <variation key="device=watch38mm">
                                             <edgeInsets key="margins" left="4" right="4" top="0.0" bottom="0.0"/>
                                         </variation>
-                                        <variation key="device=watch42mm" height="93" width="151"/>
+                                        <variation key="device=watch42mm" width="151"/>
                                     </group>
                                 </items>
                                 <variation key="device=watch42mm" height="174" width="156"/>
