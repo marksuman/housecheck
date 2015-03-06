@@ -12,10 +12,17 @@
                     <items>
                         <group width="1" height="1" alignment="left" verticalAlignment="center" layout="vertical" id="tSU-b2-3vn">
                             <items>
-                                <imageView width="104" height="104" alignment="center" verticalAlignment="center" id="DGV-I5-v0C"/>
+                                <group width="104" height="104" alignment="center" verticalAlignment="center" backgroundImage="house1.png" layout="vertical" id="QZj-EJ-6pg">
+                                    <items>
+                                        <group width="5" height="43" alignment="center" id="dzs-Bm-vF9"/>
+                                        <label width="50" height="30" alignment="center" verticalAlignment="center" text="99/99" textAlignment="center" id="wch-dl-7Dd">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                    </items>
+                                </group>
                                 <group width="1" height="40" alignment="center" verticalAlignment="bottom" layout="vertical" id="Z0E-82-jwh">
                                     <items>
-                                        <label width="128" alignment="center" verticalAlignment="center" text="1/4" textAlignment="center" id="whp-9f-a8A">
+                                        <label width="128" alignment="center" verticalAlignment="center" text="Checked: 12:00 AM" textAlignment="center" id="whp-9f-a8A">
                                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                         </label>
                                     </items>
@@ -33,8 +40,9 @@
                         </items>
                     </menu>
                     <connections>
-                        <outlet property="summaryImage" destination="DGV-I5-v0C" id="SEr-Q4-i7R"/>
-                        <outlet property="summaryLabel" destination="whp-9f-a8A" id="Ev1-nd-h1f"/>
+                        <outlet property="summaryGroup" destination="QZj-EJ-6pg" id="nw5-T5-uUW"/>
+                        <outlet property="summaryLabel" destination="wch-dl-7Dd" id="9cj-gB-qzI"/>
+                        <outlet property="timestampLabel" destination="whp-9f-a8A" id="8uF-QP-973"/>
                         <segue destination="6yD-HR-YAN" kind="relationship" relationship="nextPage" id="v9G-Ov-E8m"/>
                     </connections>
                 </controller>

@@ -12,8 +12,10 @@
 
 @interface InterfaceController()
 
-@property (nonatomic, weak) IBOutlet WKInterfaceImage *summaryImage;
+//@property (nonatomic, weak) IBOutlet WKInterfaceImage *summaryImage;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *summaryLabel;
+@property (nonatomic, weak) IBOutlet WKInterfaceLabel *timestampLabel;
+@property (nonatomic, weak) IBOutlet WKInterfaceGroup *summaryGroup;
 @property (nonatomic, strong) NSMutableArray *rootControllerNames;
 
 // todo: fix this bug when there are no checkpoints at launch due to adding a nil array to itself and getting garbage
@@ -114,25 +116,36 @@
         
         UIImage *summaryImage = nil;
         NSString *summaryString = nil;
+        NSString *timestampString = nil;
+        
         NSInteger positiveCount = [checkpointManager countOfPositiveCheckpoints];
-        if (positiveCount == checkpointManager.checkpoints.count) {
-            summaryImage = [UIImage imageNamed:@"house16"];
-            
-            
-            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-            dateFormatter.dateStyle = NSDateFormatterNoStyle;
-            dateFormatter.timeStyle = NSDateFormatterShortStyle;
-#warning This date should be changed to show the timestamp of when the checkpoints were completed
-            summaryString = [NSString stringWithFormat:@"Checked: %@",[dateFormatter stringFromDate:[NSDate date]]];
+        
+        if (checkpointManager.checkpoints.count > 0) {
+            if (positiveCount == checkpointManager.checkpoints.count) {
+                summaryImage = [UIImage imageNamed:@"house16"];
+                
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                dateFormatter.dateStyle = NSDateFormatterNoStyle;
+                dateFormatter.timeStyle = NSDateFormatterShortStyle;
+    #warning This date should be changed to show the timestamp of when the checkpoints were completed
+                timestampString = [NSString stringWithFormat:@"Checked: %@",[dateFormatter stringFromDate:[NSDate date]]];
+            }
+            else if (checkpointManager.checkpoints.count > 0) {
+                summaryImage = [UIImage imageNamed:@"house1"];
+                summaryString = [NSString stringWithFormat:@"%ld/%ld",positiveCount,
+                                 checkpointManager.checkpoints.count];
+    //            timestampString = @"Checked: Incomplete";
+            }
         }
         else {
+            // There are no checkpoints. Set it to first-run state
             summaryImage = [UIImage imageNamed:@"house1"];
-            summaryString = [NSString stringWithFormat:@"%ld/%ld",positiveCount,
-                             checkpointManager.checkpoints.count];
+            timestampString = @"Press to Start";
         }
         
-        [self.summaryImage setImage:summaryImage];
+        [self.summaryGroup setBackgroundImage:summaryImage];
         [self.summaryLabel setText:summaryString];
+        [self.timestampLabel setText:timestampString];
     }
 }
 
