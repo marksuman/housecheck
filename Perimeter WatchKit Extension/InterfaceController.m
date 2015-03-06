@@ -121,16 +121,16 @@
         NSInteger positiveCount = [checkpointManager countOfPositiveCheckpoints];
         
         if (checkpointManager.checkpoints.count > 0) {
-            if (positiveCount == checkpointManager.checkpoints.count) {
+            if ([checkpointManager isAllChecked]) {
                 summaryImage = [UIImage imageNamed:@"house16"];
                 
                 NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
                 dateFormatter.dateStyle = NSDateFormatterNoStyle;
                 dateFormatter.timeStyle = NSDateFormatterShortStyle;
     #warning This date should be changed to show the timestamp of when the checkpoints were completed
-                timestampString = [NSString stringWithFormat:@"Checked: %@",[dateFormatter stringFromDate:[NSDate date]]];
+                timestampString = [NSString stringWithFormat:@"Checked: %@",[dateFormatter stringFromDate:[[CheckpointManager defaultManager] checkedDate]]];
             }
-            else if (checkpointManager.checkpoints.count > 0) {
+            else {
                 summaryImage = [UIImage imageNamed:@"house1"];
                 summaryString = [NSString stringWithFormat:@"%ld/%ld",positiveCount,
                                  checkpointManager.checkpoints.count];

@@ -77,7 +77,7 @@ static CheckpointManager *defaultManager;
     return 36000.0;
     
     // Test value
-//    return 10.0;
+//    return 30.0;
 }
 
 - (NSDictionary *)dataDictionary {
@@ -110,12 +110,42 @@ static CheckpointManager *defaultManager;
 
 #pragma mark - Queries
 
+- (BOOL)isAllChecked {
+    BOOL allChecked = NO;
+    if (self.checkpoints.count > 0 && self.checkpoints.count == [self countOfPositiveCheckpoints]) {
+        allChecked = YES;
+    }
+    return allChecked;
+}
+
 - (NSInteger)countOfPositiveCheckpoints {
     NSInteger count = 0;
     for (Checkpoint *checkpoint in self.checkpoints) {
         count += checkpoint.isStatusPositive ? 1 : 0;
     }
     return count;
+}
+
+- (NSDate *)checkedDate {
+    NSDate *checkedDate = nil;
+    
+    if ([self isAllChecked]) {
+        for (Checkpoint *checkpoint in self.checkpoints) {
+            NSDate *date = checkpoint.lastStatusDate;
+            
+            if (checkedDate == nil) {
+                checkedDate = date;
+            }
+            if ([date compare:checkedDate] == NSOrderedDescending)
+            {
+                checkedDate = date;
+            }
+            
+            date = nil;
+        }
+    }
+    
+    return checkedDate;
 }
 
 @end

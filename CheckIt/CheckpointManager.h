@@ -24,6 +24,8 @@
 
 
 // Queries
+- (BOOL)isAllChecked;
 - (NSInteger)countOfPositiveCheckpoints;
+- (NSDate *)checkedDate;
 
 @end
