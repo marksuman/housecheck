@@ -202,7 +202,7 @@ NSString * const CheckpointStatusNegative = @"negative";
 + (NSArray *)nameSuggestionsForCheckpointType:(NSString *)checkpointType {
     NSArray *nameArray = @[];
     if ([checkpointType isEqualToString:CheckpointTypeDoor]) {
-        nameArray = @[@"Front Door",@"Back Door",@"Garage Door",@"Side Door",@"Pet Door",@"Gate",@"Car"];
+        nameArray = @[@"Front Door",@"Back Door",@"Garage Door",@"Side Door",@"Pet Door",@"Gate"];
     }
     else if ([checkpointType isEqualToString:CheckpointTypeLight]) {
         nameArray = @[@"Front Porch",@"Back Porch",@"Front Yard",@"Backyard",@"Downstairs",@"Upstairs"];
@@ -214,7 +214,7 @@ NSString * const CheckpointStatusNegative = @"negative";
         nameArray = @[@"Oven",@"Stove",@"Space Heater",@"Grill",@"Fireplace",@"Coffee Maker"];
     }
     else if ([checkpointType isEqualToString:CheckpointTypeFamily]) {
-        nameArray = @[@"Baby",@"Daughter",@"Son",@"Parent",@"Cat",@"Dog",@"Freetail Bat",@"Chinchilla"];
+        nameArray = @[@"Baby",@"Daughter",@"Son",@"Parent",@"Cat",@"Dog",@"Chinchilla"];
     }
     else {
         nameArray = @[@"Security System",@"Thermostat",@"Alarm Clock",@"Flat Iron",@"Curling Iron"];
