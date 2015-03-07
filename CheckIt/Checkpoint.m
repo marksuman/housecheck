@@ -110,6 +110,9 @@ NSString * const CheckpointStatusNegative = @"negative";
         else if ([self.type isEqualToString:CheckpointTypeWindow]) {
             statusString = @"Closed";
         }
+        else if ([self.type isEqualToString:CheckpointTypeAppliance]) {
+            statusString = @"Off";
+        }
         else {
             statusString = @"Good";
         }
@@ -123,6 +126,9 @@ NSString * const CheckpointStatusNegative = @"negative";
         }
         else if ([self.type isEqualToString:CheckpointTypeWindow]) {
             statusString = @"Open";
+        }
+        else if ([self.type isEqualToString:CheckpointTypeAppliance]) {
+            statusString = @"On";
         }
         else {
             statusString = @"Bad";
