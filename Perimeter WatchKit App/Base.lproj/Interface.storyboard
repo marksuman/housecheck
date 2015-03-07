@@ -109,6 +109,17 @@
             </objects>
             <point key="canvasLocation" x="401" y="238"/>
         </scene>
+        <!--Radar-->
+        <scene sceneID="xBA-0P-pPI">
+            <objects>
+                <controller identifier="Radar" title="Radar" id="iF0-5q-bMe">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="This page intentionally left blank due to rdar://19695492." textAlignment="center" numberOfLines="4" id="OpL-jT-siT"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="564" y="238"/>
+        </scene>
         <!--AddCheckpoint-->
         <scene sceneID="vrE-rd-PTV">
             <objects>

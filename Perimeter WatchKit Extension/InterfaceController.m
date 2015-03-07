@@ -73,6 +73,13 @@
     for (NSInteger i=0; i < self.checkpointRootControllerContexts.count; i++) {
         [names addObject:@"Checkpoint"];
     }
+    
+    // Due to a bug in iOS 8.2 Beta 5, we need to add a dummy page if there are no checkpoint pages
+    // See https://devforums.apple.com/message/1098680#1098680
+    // and see rdar://19695492
+    if (names.count < 2) {
+        [names addObject:@"Radar"];
+    }
     return names;
 }
 
