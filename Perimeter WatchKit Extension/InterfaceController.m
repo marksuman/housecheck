@@ -16,12 +16,9 @@
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *summaryLabel;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *timestampLabel;
 @property (nonatomic, weak) IBOutlet WKInterfaceGroup *summaryGroup;
-@property (nonatomic, strong) NSMutableArray *rootControllerNames;
 
-// todo: fix this bug when there are no checkpoints at launch due to adding a nil array to itself and getting garbage
-@property (nonatomic, strong) NSMutableArray *rootControllerContexts;
-//@property (nonatomic, strong) NSMutableDictionary *dashboardRootControllerContext;
-//@property (nonatomic, strong) NSMutableArray *checkpointRootControllerContexts;
+@property (nonatomic, strong) id dashboardContext;
+@property (nonatomic, strong) NSMutableArray *checkpointRootControllerContexts;
 
 @end
 
@@ -36,26 +33,24 @@
         // We reloaded the order of the pages already and this is just being displayed for reals now
         // Go ahead and set it up
         
-        self.rootControllerNames = [context objectForKey:@"rootControllerNames"];
-        self.rootControllerContexts = [context objectForKey:@"rootControllerContexts"];
+        self.dashboardContext = context;
+        self.checkpointRootControllerContexts = [context objectForKey:@"checkpointRootControllerContexts"];
         
         [self setTitle:@"HouseCheck"];
         [self updateInterfaceElements];
     }
     else {
-        self.rootControllerNames = [NSMutableArray array];
-        self.rootControllerContexts = [NSMutableArray array];
+        self.checkpointRootControllerContexts = [NSMutableArray array];
         
-        // Add the Dashboard controller
-        [self.rootControllerNames addObject:@"Dashboard"];
-        [self.rootControllerContexts addObject:@{@"skipReload":[NSNumber numberWithBool:YES],@"rootControllerNames":self.rootControllerNames,@"rootControllerContexts":self.rootControllerContexts}];
+        // Set the dashboardContext so it is available when we reload the interface controllers
+        self.dashboardContext = @{@"skipReload":[NSNumber numberWithBool:YES],@"checkpointRootControllerContexts":self.checkpointRootControllerContexts};
         
         for (Checkpoint *checkpoint in [[CheckpointManager defaultManager] checkpoints]) {
-                // Add a Checkpoint interface with the index appended to it
+                // Add a Checkpoint interface for each checkpoint
             [self addInterfaceForCheckpoint:checkpoint];
         }
         // This is the first run. We want to set up the correct order of the pages
-        [WKInterfaceController reloadRootControllersWithNames:self.rootControllerNames contexts:self.rootControllerContexts];
+        [self reloadRootInterfaceControllers];
     }
 }
 
@@ -71,18 +66,35 @@
     [super didDeactivate];
 }
 
+- (NSArray *)rootControllerNamesArray {
+    // Build the names array. Add a Checkpoint interface identifier for each checkpoint
+    NSMutableArray *names = [NSMutableArray array];
+    [names addObject:@"Dashboard"];
+    for (NSInteger i=0; i < self.checkpointRootControllerContexts.count; i++) {
+        [names addObject:@"Checkpoint"];
+    }
+    return names;
+}
+
+- (NSArray *)rootControllerContextsArray {
+    // Build the contexts array. Insert the dashboard context first, then add one for each checkpoint
+    NSMutableArray *contexts = [NSMutableArray array];
+    [contexts addObject:self.dashboardContext];
+    [contexts addObjectsFromArray:self.checkpointRootControllerContexts];
+    return contexts;
+}
+
 - (void)updateInterfaceElements {
     CheckpointManager *checkpointManager = [CheckpointManager defaultManager];
     
     // Check if there are more checkpoints than there are checkpoint interfaces. If so, add new interfaces for the checkpoints.
-    // Subtract 1 because the first context is for the Dashboard, which throws off the count here.
     BOOL shouldReloadInterfaceControllers = NO;
-    if (self.rootControllerContexts.count - 1 < checkpointManager.checkpoints.count) {
+    if (self.checkpointRootControllerContexts.count < checkpointManager.checkpoints.count) {
         for (Checkpoint *checkpoint in checkpointManager.checkpoints) {
             // Build a temporary array of the checkpoints that created the interface controllers
-            NSMutableArray *rootControllerCheckpoints = [NSMutableArray arrayWithCapacity:self.rootControllerContexts.count -1];
-            for (NSInteger i=1; i<self.rootControllerContexts.count; i++ ) {
-                NSMutableDictionary *context = [self.rootControllerContexts objectAtIndex:i];
+            NSMutableArray *rootControllerCheckpoints = [NSMutableArray arrayWithCapacity:self.checkpointRootControllerContexts.count];
+            for (NSInteger i=0; i<self.checkpointRootControllerContexts.count; i++ ) {
+                NSMutableDictionary *context = [self.checkpointRootControllerContexts objectAtIndex:i];
                 [rootControllerCheckpoints addObject:[context objectForKey:@"checkpoint"]];
                 
                 // Clear out any stale becomeCurrent flags
@@ -127,14 +139,12 @@
                 NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
                 dateFormatter.dateStyle = NSDateFormatterNoStyle;
                 dateFormatter.timeStyle = NSDateFormatterShortStyle;
-    #warning This date should be changed to show the timestamp of when the checkpoints were completed
                 timestampString = [NSString stringWithFormat:@"Checked: %@",[dateFormatter stringFromDate:[[CheckpointManager defaultManager] checkedDate]]];
             }
             else {
                 summaryImage = [UIImage imageNamed:@"house1"];
                 summaryString = [NSString stringWithFormat:@"%ld/%ld",positiveCount,
                                  checkpointManager.checkpoints.count];
-    //            timestampString = @"Checked: Incomplete";
             }
         }
         else {
@@ -150,13 +160,12 @@
 }
 
 - (void)addInterfaceForCheckpoint:(Checkpoint *)checkpoint {
-    [self.rootControllerNames addObject:[NSString stringWithFormat:@"Checkpoint"]];
     void (^deleteAndReloadInterfaceBlock)() = ^() {
         [self deleteInterfaceForCheckpoint:checkpoint];
         [self reloadRootInterfaceControllers];
     };
     NSMutableDictionary *contextDictionary = [NSMutableDictionary dictionaryWithObjects:@[checkpoint,deleteAndReloadInterfaceBlock] forKeys:@[@"checkpoint",@"deleteAndReloadInterfaceBlock"]];
-    [self.rootControllerContexts addObject:contextDictionary];
+    [self.checkpointRootControllerContexts addObject:contextDictionary];
 }
 
 - (IBAction)addCheckpointMenuItemTapped:(id)sender {
@@ -164,29 +173,20 @@
 }
 
 - (void)reloadRootInterfaceControllers {
-    [WKInterfaceController reloadRootControllersWithNames:self.rootControllerNames contexts:self.rootControllerContexts];
+    [WKInterfaceController reloadRootControllersWithNames:[self rootControllerNamesArray] contexts:[self rootControllerContextsArray]];
 }
 
 - (void)deleteInterfaceForCheckpoint:(Checkpoint *)checkpoint {
     // Find the CheckpointInterfaceController with this checkpoint
-    // Using that index, remove the interface controller name
+    // Remove the interface controller name
     // and the interface controller context from the arrays
     
-    // We can use 0 as an index because that is the dashboard index
-    NSInteger deletionIndex = 0;
-    
-    for (NSInteger i=1; i<self.rootControllerContexts.count; i++ ) {
-        NSMutableDictionary *context = [self.rootControllerContexts objectAtIndex:i];
+    for (NSInteger i=0; i<self.checkpointRootControllerContexts.count; i++ ) {
+        NSMutableDictionary *context = [self.checkpointRootControllerContexts objectAtIndex:i];
         if (checkpoint == [context objectForKey:@"checkpoint"]) {
-            deletionIndex = i;
+            [self.checkpointRootControllerContexts removeObjectAtIndex:i];
             break;
         }
-    }
-    
-    // Delete that index from the arrays
-    if (deletionIndex > 0) {
-        [self.rootControllerNames removeObjectAtIndex:deletionIndex];
-        [self.rootControllerContexts removeObjectAtIndex:deletionIndex];
     }
 }
 
