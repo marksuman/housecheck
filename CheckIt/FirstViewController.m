@@ -52,16 +52,16 @@
     
     switch (row) {
         case 0:
-            nameString = @"Front Door";
+            nameString = @"Seriously, run the watch app";
             break;
         case 1:
-            nameString = @"Garage Interior Door";
+            nameString = @"Nothing to see here yet";
             break;
         case 2:
-            nameString = @"Back Door";
+            nameString = @"Please run the watch app";
             break;
         case 3:
-            nameString = @"Downstairs Lights";
+            nameString = @"Thanks";
             break;
             
         default:
