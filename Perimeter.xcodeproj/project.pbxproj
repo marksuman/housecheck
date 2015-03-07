@@ -340,7 +340,7 @@
 		4DCFD5A61A98DF3B003A768B /* libFlurry_6.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_6.2.0.a; path = External/libFlurry_6.2.0.a; sourceTree = "<group>"; };
 		4DCFD5AA1A98E8CF003A768B /* CheckpointManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckpointManager.h; sourceTree = "<group>"; };
 		4DCFD5AB1A98E8CF003A768B /* CheckpointManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckpointManager.m; sourceTree = "<group>"; };
-		4DE853FC1A832137002CC5D4 /* Perimeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Perimeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DE853FC1A832137002CC5D4 /* HouseCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HouseCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE854001A832137002CC5D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DE854011A832137002CC5D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4DE854031A832137002CC5D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -615,7 +615,7 @@
 		4DE853FD1A832137002CC5D4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4DE853FC1A832137002CC5D4 /* Perimeter.app */,
+				4DE853FC1A832137002CC5D4 /* HouseCheck.app */,
 				4DE854181A832137002CC5D4 /* PerimeterTests.xctest */,
 				4DB605981A92E93100AE185C /* Perimeter WatchKit Extension.appex */,
 				4DB605AA1A92E93100AE185C /* Perimeter WatchKit App.app */,
@@ -729,9 +729,9 @@
 			productReference = 4DB605AA1A92E93100AE185C /* Perimeter WatchKit App.app */;
 			productType = "com.apple.product-type.application.watchapp";
 		};
-		4DE853FB1A832137002CC5D4 /* Perimeter */ = {
+		4DE853FB1A832137002CC5D4 /* HouseCheck */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4DE854221A832137002CC5D4 /* Build configuration list for PBXNativeTarget "Perimeter" */;
+			buildConfigurationList = 4DE854221A832137002CC5D4 /* Build configuration list for PBXNativeTarget "HouseCheck" */;
 			buildPhases = (
 				4DE853F81A832137002CC5D4 /* Sources */,
 				4DE853F91A832137002CC5D4 /* Frameworks */,
@@ -743,9 +743,9 @@
 			dependencies = (
 				4DB605B71A92E93100AE185C /* PBXTargetDependency */,
 			);
-			name = Perimeter;
+			name = HouseCheck;
 			productName = CheckIt;
-			productReference = 4DE853FC1A832137002CC5D4 /* Perimeter.app */;
+			productReference = 4DE853FC1A832137002CC5D4 /* HouseCheck.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4DE854171A832137002CC5D4 /* PerimeterTests */ = {
@@ -815,7 +815,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4DE853FB1A832137002CC5D4 /* Perimeter */,
+				4DE853FB1A832137002CC5D4 /* HouseCheck */,
 				4DE854171A832137002CC5D4 /* PerimeterTests */,
 				4DB605971A92E93100AE185C /* Perimeter WatchKit Extension */,
 				4DB605A91A92E93100AE185C /* Perimeter WatchKit App */,
@@ -1090,7 +1090,7 @@
 		};
 		4DE8541A1A832137002CC5D4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4DE853FB1A832137002CC5D4 /* Perimeter */;
+			target = 4DE853FB1A832137002CC5D4 /* HouseCheck */;
 			targetProxy = 4DE854191A832137002CC5D4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1322,7 +1322,7 @@
 				INFOPLIST_FILE = CheckItTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = PerimeterTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CheckIt.app/CheckIt";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HouseCheck.app/HouseCheck";
 			};
 			name = Debug;
 		};
@@ -1337,7 +1337,7 @@
 				INFOPLIST_FILE = CheckItTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = PerimeterTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CheckIt.app/CheckIt";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HouseCheck.app/HouseCheck";
 			};
 			name = Release;
 		};
@@ -1371,7 +1371,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4DE854221A832137002CC5D4 /* Build configuration list for PBXNativeTarget "Perimeter" */ = {
+		4DE854221A832137002CC5D4 /* Build configuration list for PBXNativeTarget "HouseCheck" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4DE854231A832137002CC5D4 /* Debug */,
