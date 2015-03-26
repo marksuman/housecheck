@@ -168,19 +168,22 @@ NSString * const CheckpointStatusNegative = @"negative";
 #pragma mark - Interface Variants
 + (NSString *)imageNameForCheckpointType:(NSString *)checkpointType {
     if ([checkpointType isEqualToString:CheckpointTypeDoor]) {
-        return @"Door";
+        return @"add-door";
     }
     else if ([checkpointType isEqualToString:CheckpointTypeLight]) {
-        return @"Light";
+        return @"add-light";
     }
     else if ([checkpointType isEqualToString:CheckpointTypeWindow]) {
-        return @"Window";
+        return @"add-window";
     }
     else if ([checkpointType isEqualToString:CheckpointTypeAppliance]) {
-        return @"Appliance";
+        return @"add-appliance";
     }
     else if ([checkpointType isEqualToString:CheckpointTypeFamily]) {
-        return @"Family-Pet";
+        return @"add-family";
+    }
+    else if ([checkpointType isEqualToString:CheckpointTypePet]) {
+        return @"add-pet1";
     }
     
     return @"Other";
@@ -200,7 +203,10 @@ NSString * const CheckpointStatusNegative = @"negative";
         return @"Appliance";
     }
     else if ([checkpointType isEqualToString:CheckpointTypeFamily]) {
-        return @"Family or Pet";
+        return @"Family";
+    }
+    else if ([checkpointType isEqualToString:CheckpointTypePet]) {
+        return @"Pet";
     }
     
     return @"Other";
@@ -221,7 +227,10 @@ NSString * const CheckpointStatusNegative = @"negative";
         nameArray = @[@"Oven",@"Stove",@"Space Heater",@"Grill",@"Fireplace",@"Coffee Maker"];
     }
     else if ([checkpointType isEqualToString:CheckpointTypeFamily]) {
-        nameArray = @[@"Baby",@"Daughter",@"Son",@"Parent",@"Cat",@"Dog",@"Chinchilla"];
+        nameArray = @[@"Baby",@"Daughter",@"Son",@"Parent"];
+    }
+    else if ([checkpointType isEqualToString:CheckpointTypePet]) {
+        nameArray = @[@"Cat",@"Dog",@"Hamster",@"Free-tailed Bat",@"Chinchilla"];
     }
     else {
         nameArray = @[@"Security System",@"Thermostat",@"Alarm Clock",@"Flat Iron",@"Curling Iron"];
