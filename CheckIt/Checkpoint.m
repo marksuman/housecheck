@@ -18,6 +18,7 @@ NSString * const CheckpointTypeLight = @"light";
 NSString * const CheckpointTypeWindow = @"window";
 NSString * const CheckpointTypeAppliance = @"appliance";
 NSString * const CheckpointTypeFamily = @"family";
+NSString * const CheckpointTypePet = @"pet";
 
 // Status constants
 NSString * const CheckpointStatusUnknown = @"unknown";

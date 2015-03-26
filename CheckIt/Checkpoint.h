@@ -27,6 +27,7 @@ extern NSString * const CheckpointTypeLight;
 extern NSString * const CheckpointTypeWindow;
 extern NSString * const CheckpointTypeAppliance;
 extern NSString * const CheckpointTypeFamily;
+extern NSString * const CheckpointTypePet;
 
 // Status constants
 extern NSString * const CheckpointStatusUnknown;
