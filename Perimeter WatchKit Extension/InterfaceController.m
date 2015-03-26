@@ -78,7 +78,7 @@
     // See https://devforums.apple.com/message/1098680#1098680
     // and see rdar://19695492
     if (names.count < 2) {
-        [names addObject:@"Radar"];
+//        [names addObject:@"Radar"];
     }
     return names;
 }
