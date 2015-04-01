@@ -155,11 +155,12 @@
                     <items>
                         <label alignment="left" text="HouseCheck" id="jMP-gy-W0r"/>
                         <label alignment="left" text="99/99" id="uvv-HS-JSZ"/>
-                        <group alignment="left" backgroundImage="house1.png" contentMode="center" id="uCw-4Q-Ouw"/>
+                        <group alignment="left" backgroundImage="house1.png" contentMode="scaleAspectFit" id="uCw-4Q-Ouw"/>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                     <connections>
                         <outlet property="bottomGroup" destination="uCw-4Q-Ouw" id="kO8-8I-RR0"/>
+                        <outlet property="firstLabel" destination="jMP-gy-W0r" id="aJW-ct-xFG"/>
                         <outlet property="secondLabel" destination="uvv-HS-JSZ" id="BbK-bp-UOK"/>
                     </connections>
                 </glanceController>

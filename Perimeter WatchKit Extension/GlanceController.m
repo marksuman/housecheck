@@ -12,6 +12,7 @@
 @interface GlanceController()
 
 @property (nonatomic, weak) IBOutlet WKInterfaceGroup *bottomGroup;
+@property (nonatomic, weak) IBOutlet WKInterfaceLabel *firstLabel;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *secondLabel;
 
 @end
@@ -24,6 +25,7 @@
 
     // Configure interface objects here.
     
+    // Doing this causes the checkpoints to be loaded
     [CheckpointManager defaultManager];
 }
 
@@ -34,34 +36,38 @@
     CheckpointManager *checkpointManager = [CheckpointManager defaultManager];
     
     UIImage *summaryImage = nil;
-    NSString *summaryString = nil;
-    NSString *timestampString = nil;
+    NSString *firstString = nil;
+    NSString *secondString = nil;
     
     NSInteger positiveCount = [checkpointManager countOfPositiveCheckpoints];
     
     if (checkpointManager.checkpoints.count > 0) {
         if ([checkpointManager isAllChecked]) {
-            summaryImage = [UIImage imageNamed:@"house16"];
+            summaryImage = [UIImage imageNamed:@"house-status-100"];
             
             NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
             dateFormatter.dateStyle = NSDateFormatterNoStyle;
             dateFormatter.timeStyle = NSDateFormatterShortStyle;
-            timestampString = [NSString stringWithFormat:@"Checked: %@",[dateFormatter stringFromDate:[[CheckpointManager defaultManager] checkedDate]]];
+            firstString = @"Checked:";
+            secondString = [dateFormatter stringFromDate:[[CheckpointManager defaultManager] checkedDate]];
         }
         else {
-            summaryImage = [UIImage imageNamed:@"house1"];
-            summaryString = [NSString stringWithFormat:@"%ld/%ld",positiveCount,
+            summaryImage = [UIImage imageNamed:@"house-status-0"];
+            secondString = [NSString stringWithFormat:@"%ld/%ld",positiveCount,
                              checkpointManager.checkpoints.count];
+            firstString = @"House Status";
         }
     }
     else {
         // There are no checkpoints. Set it to first-run state
-        summaryImage = [UIImage imageNamed:@"house1"];
-        timestampString = @"Press to Start";
+        summaryImage = [UIImage imageNamed:@"house-status-0"];
+        firstString = @"House Status";
+        secondString = @"Tap to get started";
     }
     
     [self.bottomGroup setBackgroundImage:summaryImage];
-    [self.secondLabel setText:summaryString];
+    [self.firstLabel setText:firstString];
+    [self.secondLabel setText:secondString];
 //    [self.timestampLabel setText:timestampString];
 }
 
