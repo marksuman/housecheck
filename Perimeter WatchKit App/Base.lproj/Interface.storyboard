@@ -59,7 +59,7 @@
                                 <items>
                                     <group width="1" height="114" alignment="left" contentMode="bottom" id="VEd-Et-vAH" userLabel="Images">
                                         <items>
-                                            <imageView width="34" height="36" alignment="left" contentMode="center" id="Bnc-1C-xA3" userLabel="type"/>
+                                            <imageView width="38" height="36" alignment="left" contentMode="center" id="Bnc-1C-xA3" userLabel="type"/>
                                         </items>
                                         <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                         <variation key="device=watch38mm">

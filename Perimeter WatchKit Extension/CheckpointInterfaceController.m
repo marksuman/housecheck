@@ -58,7 +58,6 @@
 
 - (void)updateInterfaceElements {
     [self.nameLabel setText:self.checkpoint.name];
-    NSLog(@"%@",[NSString stringWithFormat:@"white-%@",[Checkpoint imageRootForCheckpointType:self.checkpoint.type]]);
     [self.typeImage setImageNamed:[NSString stringWithFormat:@"white-%@",[Checkpoint imageRootForCheckpointType:self.checkpoint.type]]];
     [self.imagesGroup setBackgroundImageNamed:[self statusImageNameForCheckpoint:self.checkpoint]];
 //    [self.statusImage setImage:[UIImage animatedImageNamed:[self statusImageNameForCheckpoint:self.checkpoint] duration:0.5]];
