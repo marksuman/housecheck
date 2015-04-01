@@ -186,7 +186,7 @@ NSString * const CheckpointStatusNegative = @"negative";
         return @"add-pet1";
     }
     
-    return @"Other";
+    return @"add-other";
 }
 
 + (NSString *)typeStringForCheckpointType:(NSString *)checkpointType {
