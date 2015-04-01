@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D10AC4E1ACC7FA30083393D /* house-status-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC451ACC7FA30083393D /* house-status-0@2x.png */; };
+		4D10AC4F1ACC7FA30083393D /* house-status-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC451ACC7FA30083393D /* house-status-0@2x.png */; };
+		4D10AC501ACC7FA30083393D /* house-status-13@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC461ACC7FA30083393D /* house-status-13@2x.png */; };
+		4D10AC511ACC7FA30083393D /* house-status-13@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC461ACC7FA30083393D /* house-status-13@2x.png */; };
+		4D10AC521ACC7FA30083393D /* house-status-25@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC471ACC7FA30083393D /* house-status-25@2x.png */; };
+		4D10AC531ACC7FA30083393D /* house-status-25@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC471ACC7FA30083393D /* house-status-25@2x.png */; };
+		4D10AC541ACC7FA30083393D /* house-status-38@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC481ACC7FA30083393D /* house-status-38@2x.png */; };
+		4D10AC551ACC7FA30083393D /* house-status-38@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC481ACC7FA30083393D /* house-status-38@2x.png */; };
+		4D10AC561ACC7FA30083393D /* house-status-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC491ACC7FA30083393D /* house-status-50@2x.png */; };
+		4D10AC571ACC7FA30083393D /* house-status-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC491ACC7FA30083393D /* house-status-50@2x.png */; };
+		4D10AC581ACC7FA30083393D /* house-status-63@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC4A1ACC7FA30083393D /* house-status-63@2x.png */; };
+		4D10AC591ACC7FA30083393D /* house-status-63@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC4A1ACC7FA30083393D /* house-status-63@2x.png */; };
+		4D10AC5A1ACC7FA30083393D /* house-status-75@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC4B1ACC7FA30083393D /* house-status-75@2x.png */; };
+		4D10AC5B1ACC7FA30083393D /* house-status-75@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC4B1ACC7FA30083393D /* house-status-75@2x.png */; };
+		4D10AC5C1ACC7FA30083393D /* house-status-88@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC4C1ACC7FA30083393D /* house-status-88@2x.png */; };
+		4D10AC5D1ACC7FA30083393D /* house-status-88@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC4C1ACC7FA30083393D /* house-status-88@2x.png */; };
+		4D10AC5E1ACC7FA30083393D /* house-status-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC4D1ACC7FA30083393D /* house-status-100@2x.png */; };
+		4D10AC5F1ACC7FA30083393D /* house-status-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC4D1ACC7FA30083393D /* house-status-100@2x.png */; };
 		4D2323D61AA03F4800A15A9A /* question-check1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D2323C21AA03F4800A15A9A /* question-check1.png */; };
 		4D2323D71AA03F4800A15A9A /* question-check1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D2323C21AA03F4800A15A9A /* question-check1.png */; };
 		4D2323D81AA03F4800A15A9A /* question-check2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D2323C31AA03F4800A15A9A /* question-check2.png */; };
@@ -291,6 +309,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D10AC451ACC7FA30083393D /* house-status-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house-status-0@2x.png"; sourceTree = "<group>"; };
+		4D10AC461ACC7FA30083393D /* house-status-13@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house-status-13@2x.png"; sourceTree = "<group>"; };
+		4D10AC471ACC7FA30083393D /* house-status-25@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house-status-25@2x.png"; sourceTree = "<group>"; };
+		4D10AC481ACC7FA30083393D /* house-status-38@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house-status-38@2x.png"; sourceTree = "<group>"; };
+		4D10AC491ACC7FA30083393D /* house-status-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house-status-50@2x.png"; sourceTree = "<group>"; };
+		4D10AC4A1ACC7FA30083393D /* house-status-63@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house-status-63@2x.png"; sourceTree = "<group>"; };
+		4D10AC4B1ACC7FA30083393D /* house-status-75@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house-status-75@2x.png"; sourceTree = "<group>"; };
+		4D10AC4C1ACC7FA30083393D /* house-status-88@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house-status-88@2x.png"; sourceTree = "<group>"; };
+		4D10AC4D1ACC7FA30083393D /* house-status-100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house-status-100@2x.png"; sourceTree = "<group>"; };
 		4D2323C21AA03F4800A15A9A /* question-check1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "question-check1.png"; sourceTree = "<group>"; };
 		4D2323C31AA03F4800A15A9A /* question-check2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "question-check2.png"; sourceTree = "<group>"; };
 		4D2323C41AA03F4800A15A9A /* question-check3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "question-check3.png"; sourceTree = "<group>"; };
@@ -578,6 +605,15 @@
 				4DEDDC0C1AA9523E0033C8E8 /* Light@2x.png */,
 				4DEDDC0D1AA9523E0033C8E8 /* Other@2x.png */,
 				4DEDDC0E1AA9523E0033C8E8 /* Window@2x.png */,
+				4D10AC451ACC7FA30083393D /* house-status-0@2x.png */,
+				4D10AC461ACC7FA30083393D /* house-status-13@2x.png */,
+				4D10AC471ACC7FA30083393D /* house-status-25@2x.png */,
+				4D10AC481ACC7FA30083393D /* house-status-38@2x.png */,
+				4D10AC491ACC7FA30083393D /* house-status-50@2x.png */,
+				4D10AC4A1ACC7FA30083393D /* house-status-63@2x.png */,
+				4D10AC4B1ACC7FA30083393D /* house-status-75@2x.png */,
+				4D10AC4C1ACC7FA30083393D /* house-status-88@2x.png */,
+				4D10AC4D1ACC7FA30083393D /* house-status-100@2x.png */,
 				4D3BF82A1ACB904000BA9678 /* state-check@2x.png */,
 				4D3BF82B1ACB904000BA9678 /* state-question@2x.png */,
 				4D3BF82C1ACB904000BA9678 /* state-x@2x.png */,
@@ -916,12 +952,15 @@
 				4D23245C1AA03F7A00A15A9A /* x-question8.png in Resources */,
 				4DEDDC301AAA50410033C8E8 /* house3@2x.png in Resources */,
 				4D2323F21AA03F4800A15A9A /* question-check15.png in Resources */,
+				4D10AC521ACC7FA30083393D /* house-status-25@2x.png in Resources */,
 				4DEC04741A9ED7990086A86C /* House-Checked.png in Resources */,
 				4D2E6F791A96266200E3867B /* 19-circle-check@2x.png in Resources */,
 				4D3BF8451ACB90A200BA9678 /* white-family@2x.png in Resources */,
 				4DEDDC341AAA50410033C8E8 /* house5@2x.png in Resources */,
+				4D10AC561ACC7FA30083393D /* house-status-50@2x.png in Resources */,
 				4DDF74F71AC445100014F860 /* add-family@2x.png in Resources */,
 				4D23246A1AA03F7A00A15A9A /* x-question15.png in Resources */,
+				4D10AC4E1ACC7FA30083393D /* house-status-0@2x.png in Resources */,
 				4DEDDC191AA9523E0033C8E8 /* Window@2x.png in Resources */,
 				4D23246C1AA03F7A00A15A9A /* x-question16.png in Resources */,
 				4D2324661AA03F7A00A15A9A /* x-question13.png in Resources */,
@@ -965,6 +1004,8 @@
 				4DEDDC111AA9523E0033C8E8 /* Door@2x.png in Resources */,
 				4D23241A1AA03F6B00A15A9A /* check-x5.png in Resources */,
 				4D2323EC1AA03F4800A15A9A /* question-check12.png in Resources */,
+				4D10AC541ACC7FA30083393D /* house-status-38@2x.png in Resources */,
+				4D10AC501ACC7FA30083393D /* house-status-13@2x.png in Resources */,
 				4D3BF82D1ACB904000BA9678 /* state-check@2x.png in Resources */,
 				4DEDDC3C1AAA50410033C8E8 /* house9@2x.png in Resources */,
 				4D2323E81AA03F4800A15A9A /* question-check10.png in Resources */,
@@ -978,12 +1019,14 @@
 				4D2324301AA03F6B00A15A9A /* check-x16.png in Resources */,
 				4DEDDC361AAA50410033C8E8 /* house6@2x.png in Resources */,
 				4D2324181AA03F6B00A15A9A /* check-x4.png in Resources */,
+				4D10AC581ACC7FA30083393D /* house-status-63@2x.png in Resources */,
 				4DDF74F91AC445100014F860 /* add-light@2x.png in Resources */,
 				4D2324561AA03F7A00A15A9A /* x-question5.png in Resources */,
 				4D2324521AA03F7A00A15A9A /* x-question3.png in Resources */,
 				4DEDDC2C1AAA50410033C8E8 /* house1@2x.png in Resources */,
 				4D2324261AA03F6B00A15A9A /* check-x11.png in Resources */,
 				4D2324241AA03F6B00A15A9A /* check-x10.png in Resources */,
+				4D10AC5A1ACC7FA30083393D /* house-status-75@2x.png in Resources */,
 				4D3BF83F1ACB90A200BA9678 /* white-baby1@2x.png in Resources */,
 				4D2324141AA03F6B00A15A9A /* check-x2.png in Resources */,
 				4D2324201AA03F6B00A15A9A /* check-x8.png in Resources */,
@@ -1002,6 +1045,7 @@
 				4DDF74F31AC445100014F860 /* add-appliance@2x.png in Resources */,
 				4D2E6F741A95A13600E3867B /* 179-notepad@2x.png in Resources */,
 				4D3BF82F1ACB904000BA9678 /* state-question@2x.png in Resources */,
+				4D10AC5E1ACC7FA30083393D /* house-status-100@2x.png in Resources */,
 				4DDF74F51AC445100014F860 /* add-door@2x.png in Resources */,
 				4D2323D61AA03F4800A15A9A /* question-check1.png in Resources */,
 				4D2323DA1AA03F4800A15A9A /* question-check3.png in Resources */,
@@ -1015,6 +1059,7 @@
 				4D2324581AA03F7A00A15A9A /* x-question6.png in Resources */,
 				4D2324221AA03F6B00A15A9A /* check-x9.png in Resources */,
 				4D23245E1AA03F7A00A15A9A /* x-question9.png in Resources */,
+				4D10AC5C1ACC7FA30083393D /* house-status-88@2x.png in Resources */,
 				4D2324321AA03F6B00A15A9A /* check-x17.png in Resources */,
 				4D2323E21AA03F4800A15A9A /* question-check7.png in Resources */,
 				4DEDDC0F1AA9523E0033C8E8 /* Appliance@2x.png in Resources */,
@@ -1038,6 +1083,7 @@
 				4D2324651AA03F7A00A15A9A /* x-question12.png in Resources */,
 				4D70970F1AA6BDE50062AB05 /* House.png in Resources */,
 				4DEDDC431AAA50410033C8E8 /* house12@2x.png in Resources */,
+				4D10AC551ACC7FA30083393D /* house-status-38@2x.png in Resources */,
 				4DDF74FA1AC445100014F860 /* add-light@2x.png in Resources */,
 				4DEDDC181AA9523E0033C8E8 /* Other@2x.png in Resources */,
 				4D2323E31AA03F4800A15A9A /* question-check7.png in Resources */,
@@ -1046,6 +1092,7 @@
 				4DEDDC371AAA50410033C8E8 /* house6@2x.png in Resources */,
 				4D23242D1AA03F6B00A15A9A /* check-x14.png in Resources */,
 				4D2324391AA03F6B00A15A9A /* check-x20.png in Resources */,
+				4D10AC5D1ACC7FA30083393D /* house-status-88@2x.png in Resources */,
 				4D2324571AA03F7A00A15A9A /* x-question5.png in Resources */,
 				4D2324761AA0430300A15A9A /* 84-lightbulb@2x.png in Resources */,
 				4D2323E91AA03F4800A15A9A /* question-check10.png in Resources */,
@@ -1053,6 +1100,7 @@
 				4DEDDC1A1AA9523E0033C8E8 /* Window@2x.png in Resources */,
 				4D2323D91AA03F4800A15A9A /* question-check2.png in Resources */,
 				4DDF74F61AC445100014F860 /* add-door@2x.png in Resources */,
+				4D10AC5F1ACC7FA30083393D /* house-status-100@2x.png in Resources */,
 				4D2324251AA03F6B00A15A9A /* check-x10.png in Resources */,
 				4D2324771AA0430300A15A9A /* 179-notepad@2x.png in Resources */,
 				4D23244F1AA03F7A00A15A9A /* x-question1.png in Resources */,
@@ -1067,6 +1115,7 @@
 				4D3BF8401ACB90A200BA9678 /* white-baby1@2x.png in Resources */,
 				4D23246F1AA03F7A00A15A9A /* x-question17.png in Resources */,
 				4D2323F31AA03F4800A15A9A /* question-check15.png in Resources */,
+				4D10AC591ACC7FA30083393D /* house-status-63@2x.png in Resources */,
 				4D3BF8421ACB90A200BA9678 /* white-baby2@2x.png in Resources */,
 				4D3BF84A1ACB90A200BA9678 /* white-other@2x.png in Resources */,
 				4DDF75001AC445100014F860 /* add-pet2@2x.png in Resources */,
@@ -1112,6 +1161,7 @@
 				4D2324591AA03F7A00A15A9A /* x-question6.png in Resources */,
 				4DDF74FE1AC445100014F860 /* add-pet1@2x.png in Resources */,
 				4D23245D1AA03F7A00A15A9A /* x-question8.png in Resources */,
+				4D10AC531ACC7FA30083393D /* house-status-25@2x.png in Resources */,
 				4D2323F11AA03F4800A15A9A /* question-check14.png in Resources */,
 				4DDF74F41AC445100014F860 /* add-appliance@2x.png in Resources */,
 				4D2324531AA03F7A00A15A9A /* x-question3.png in Resources */,
@@ -1120,8 +1170,10 @@
 				4D2324191AA03F6B00A15A9A /* check-x4.png in Resources */,
 				4D2324311AA03F6B00A15A9A /* check-x16.png in Resources */,
 				4DEDDC3D1AAA50410033C8E8 /* house9@2x.png in Resources */,
+				4D10AC4F1ACC7FA30083393D /* house-status-0@2x.png in Resources */,
 				4D23245F1AA03F7A00A15A9A /* x-question9.png in Resources */,
 				4D2324731AA03F7A00A15A9A /* x-question19.png in Resources */,
+				4D10AC511ACC7FA30083393D /* house-status-13@2x.png in Resources */,
 				4D2323DB1AA03F4800A15A9A /* question-check3.png in Resources */,
 				4D2324751AA03F7A00A15A9A /* x-question20.png in Resources */,
 				4D3BF8501ACB90A200BA9678 /* white-window@2x.png in Resources */,
@@ -1130,6 +1182,7 @@
 				4DEDDC4B1AAA50410033C8E8 /* house16@2x.png in Resources */,
 				4D2324211AA03F6B00A15A9A /* check-x8.png in Resources */,
 				4D3BF84E1ACB90A200BA9678 /* white-pet2@2x.png in Resources */,
+				4D10AC5B1ACC7FA30083393D /* house-status-75@2x.png in Resources */,
 				4D2323E71AA03F4800A15A9A /* question-check9.png in Resources */,
 				4DEDDC391AAA50410033C8E8 /* house7@2x.png in Resources */,
 				4DDF74FC1AC445100014F860 /* add-other@2x.png in Resources */,
@@ -1144,6 +1197,7 @@
 				4D2323EF1AA03F4800A15A9A /* question-check13.png in Resources */,
 				4DEDDC101AA9523E0033C8E8 /* Appliance@2x.png in Resources */,
 				4DB605B51A92E93100AE185C /* Images.xcassets in Resources */,
+				4D10AC571ACC7FA30083393D /* house-status-50@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
