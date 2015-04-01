@@ -61,8 +61,8 @@
     else {
         // There are no checkpoints. Set it to first-run state
         summaryImage = [UIImage imageNamed:@"house-status-0"];
-        firstString = @"House Status";
-        secondString = @"Tap to get started";
+        firstString = @"HouseCheck";
+        secondString = @"Tap to set up";
     }
     
     [self.bottomGroup setBackgroundImage:summaryImage];
