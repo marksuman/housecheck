@@ -25,7 +25,7 @@
     
     // Configure interface objects here.
     self.type = [context objectForKey:@"type"];
-    [self.typeImage setImage:[UIImage imageNamed:[Checkpoint imageNameForCheckpointType:self.type]]];
+    [self.typeImage setImageNamed:[NSString stringWithFormat:@"add-%@",[Checkpoint imageRootForCheckpointType:self.type]]];
     [self.typeLabel setText:[Checkpoint typeStringForCheckpointType:self.type]];
 }
 

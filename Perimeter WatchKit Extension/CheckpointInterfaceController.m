@@ -57,8 +57,9 @@
 
 - (void)updateInterfaceElements {
     [self.nameLabel setText:self.checkpoint.name];
-    [self.typeImage setImageNamed:[Checkpoint imageNameForCheckpointType:self.checkpoint.type]];
-    [self.statusImage setImage:[UIImage animatedImageNamed:[self statusImageNameForCheckpoint:self.checkpoint] duration:0.5]];
+    [self.typeImage setImageNamed:[NSString stringWithFormat:@"white-%@",[Checkpoint imageRootForCheckpointType:self.checkpoint.type]]];
+    [self.statusImage setImageNamed:[self statusImageNameForCheckpoint:self.checkpoint]];
+//    [self.statusImage setImage:[UIImage animatedImageNamed:[self statusImageNameForCheckpoint:self.checkpoint] duration:0.5]];
 //    [self.statusImage setImage:[UIImage animatedImageNamed:@"check-to-x000" duration:0.5]];
     [self.statusLabel setText:self.checkpoint.statusString];
 }
@@ -119,19 +120,19 @@
 - (NSString *)positiveStatusImageNameForCheckpoint:(Checkpoint *)checkpoint {
     // If we want, we could customize the positive image based on checkpoint type
     // For now we'll just show a default
-    return @"check-x";
+    return @"state-check";
 }
 
 - (NSString *)negativeStatusImageNameForCheckpoint:(Checkpoint *)checkpoint {
     // If we want, we could customize the negative image based on checkpoint type
     // For now we'll just show a default
-    return @"x-question";
+    return @"state-x";
 }
 
 - (NSString *)unknownStatusImageNameForCheckpoint:(Checkpoint *)checkpoint {
     // If we want, we could customize the unknown image based on checkpoint type
     // For now we'll just show a default
-    return @"question-check";
+    return @"state-question";
 }
 
 @end
