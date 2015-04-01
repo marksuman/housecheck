@@ -41,6 +41,8 @@
     
     NSInteger positiveCount = [checkpointManager countOfPositiveCheckpoints];
     
+    NSString *userActivityAction = @"default";
+    
     if (checkpointManager.checkpoints.count > 0) {
         if ([checkpointManager isAllChecked]) {
             summaryImage = [UIImage imageNamed:@"house-status-100"];
@@ -60,6 +62,7 @@
     }
     else {
         // There are no checkpoints. Set it to first-run state
+        userActivityAction = @"setup";
         summaryImage = [UIImage imageNamed:@"house-status-0"];
         firstString = @"HouseCheck";
         secondString = @"Tap to set up";
@@ -69,6 +72,8 @@
     [self.firstLabel setText:firstString];
     [self.secondLabel setText:secondString];
 //    [self.timestampLabel setText:timestampString];
+    
+    [self updateUserActivity:[NSString stringWithFormat:@"com.marksuman.Perimeter.%@",userActivityAction] userInfo:@{@"action":userActivityAction} webpageURL:nil];
 }
 
 - (void)didDeactivate {

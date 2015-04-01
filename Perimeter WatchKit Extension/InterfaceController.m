@@ -66,6 +66,14 @@
     [super didDeactivate];
 }
 
+- (void)handleUserActivity:(NSDictionary *)userInfo {
+    NSString *userActivityAction = [userInfo objectForKey:@"action"];
+    if ([userActivityAction isEqualToString:@"setup"]) {
+        // Take them to the Add Checkpoint screen
+        
+    }
+}
+
 - (NSArray *)rootControllerNamesArray {
     // Build the names array. Add a Checkpoint interface identifier for each checkpoint
     NSMutableArray *names = [NSMutableArray array];
