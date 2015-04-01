@@ -141,7 +141,7 @@
         
         if (checkpointManager.checkpoints.count > 0) {
             if ([checkpointManager isAllChecked]) {
-                summaryImage = [UIImage imageNamed:@"house16"];
+                summaryImage = [UIImage imageNamed:@"house-status-100"];
                 
                 NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
                 dateFormatter.dateStyle = NSDateFormatterNoStyle;
@@ -149,14 +149,14 @@
                 timestampString = [NSString stringWithFormat:@"Checked: %@",[dateFormatter stringFromDate:[[CheckpointManager defaultManager] checkedDate]]];
             }
             else {
-                summaryImage = [UIImage imageNamed:@"house1"];
+                summaryImage = [UIImage imageNamed:@"house-status-0"];
                 summaryString = [NSString stringWithFormat:@"%ld/%ld",positiveCount,
                                  checkpointManager.checkpoints.count];
             }
         }
         else {
             // There are no checkpoints. Set it to first-run state
-            summaryImage = [UIImage imageNamed:@"house1"];
+            summaryImage = [UIImage imageNamed:@"house-status-0"];
             timestampString = @"Press to Start";
         }
         
