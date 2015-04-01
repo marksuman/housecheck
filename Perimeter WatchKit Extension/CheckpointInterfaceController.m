@@ -15,6 +15,7 @@
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *nameLabel;
 @property (nonatomic, weak) IBOutlet WKInterfaceImage *statusImage;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *statusLabel;
+@property (nonatomic, weak) IBOutlet WKInterfaceGroup *imagesGroup;
 @property (nonatomic) BOOL becomeCurrent;
 @property (nonatomic, copy) void (^deleteAndReloadInterfaceBlock)();
 
@@ -57,8 +58,9 @@
 
 - (void)updateInterfaceElements {
     [self.nameLabel setText:self.checkpoint.name];
+    NSLog(@"%@",[NSString stringWithFormat:@"white-%@",[Checkpoint imageRootForCheckpointType:self.checkpoint.type]]);
     [self.typeImage setImageNamed:[NSString stringWithFormat:@"white-%@",[Checkpoint imageRootForCheckpointType:self.checkpoint.type]]];
-    [self.statusImage setImageNamed:[self statusImageNameForCheckpoint:self.checkpoint]];
+    [self.imagesGroup setBackgroundImageNamed:[self statusImageNameForCheckpoint:self.checkpoint]];
 //    [self.statusImage setImage:[UIImage animatedImageNamed:[self statusImageNameForCheckpoint:self.checkpoint] duration:0.5]];
 //    [self.statusImage setImage:[UIImage animatedImageNamed:@"check-to-x000" duration:0.5]];
     [self.statusLabel setText:self.checkpoint.statusString];

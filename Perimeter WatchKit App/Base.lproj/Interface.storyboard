@@ -55,30 +55,22 @@
                 <controller identifier="Checkpoint" id="6yD-HR-YAN" customClass="CheckpointInterfaceController">
                     <items>
                         <button alignment="left" id="47E-W6-kcz">
-                            <group key="contentGroup" width="134" height="151" alignment="left" layout="vertical" id="hkz-xT-z6a">
+                            <group key="contentGroup" width="1" height="1" alignment="left" layout="vertical" id="hkz-xT-z6a">
                                 <items>
-                                    <label width="55" height="34.5" alignment="center" text="Label" textAlignment="center" id="6CL-LS-a5N">
-                                        <variation key="device=watch38mm" width="135"/>
-                                        <variation key="device=watch42mm" height="34.5" width="151"/>
-                                    </label>
-                                    <group width="136" height="76" alignment="center" verticalAlignment="center" id="VEd-Et-vAH">
+                                    <group width="1" height="114" alignment="left" contentMode="bottom" id="VEd-Et-vAH" userLabel="Images">
                                         <items>
-                                            <imageView width="66" height="66" alignment="left" verticalAlignment="center" id="y6u-LJ-VkC">
-                                                <variation key="device=watch42mm" height="80" width="80"/>
-                                            </imageView>
-                                            <imageView width="38" height="38" alignment="right" verticalAlignment="center" id="Bnc-1C-xA3"/>
+                                            <imageView width="34" height="36" alignment="left" contentMode="center" id="Bnc-1C-xA3" userLabel="type"/>
                                         </items>
-                                        <edgeInsets key="margins" left="10" right="15" top="0.0" bottom="0.0"/>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                         <variation key="device=watch38mm">
-                                            <edgeInsets key="margins" left="4" right="4" top="0.0" bottom="0.0"/>
+                                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                         </variation>
-                                        <variation key="device=watch42mm" height="88" width="151"/>
+                                        <variation key="device=watch42mm" height="122"/>
                                     </group>
-                                    <label width="136" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="8tT-Cb-ERi">
-                                        <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                    <label width="1" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="8tT-Cb-ERi">
+                                        <fontDescription key="font" type="system" pointSize="16"/>
                                     </label>
                                 </items>
-                                <variation key="device=watch42mm" height="174" width="156"/>
                             </group>
                             <connections>
                                 <action selector="buttonAction:" destination="6yD-HR-YAN" id="Ozj-sJ-9pW"/>
@@ -100,10 +92,9 @@
                         </items>
                     </menu>
                     <connections>
-                        <outlet property="nameLabel" destination="6CL-LS-a5N" id="SfC-K8-Qmo"/>
-                        <outlet property="statusImage" destination="Bnc-1C-xA3" id="lM4-tQ-Wtj"/>
-                        <outlet property="statusLabel" destination="8tT-Cb-ERi" id="Aae-HU-xiz"/>
-                        <outlet property="typeImage" destination="y6u-LJ-VkC" id="9Em-j7-CZQ"/>
+                        <outlet property="imagesGroup" destination="VEd-Et-vAH" id="6B8-dV-ofL"/>
+                        <outlet property="nameLabel" destination="8tT-Cb-ERi" id="hNi-jU-9zB"/>
+                        <outlet property="typeImage" destination="Bnc-1C-xA3" id="WQi-Dk-CwI"/>
                     </connections>
                 </controller>
             </objects>
