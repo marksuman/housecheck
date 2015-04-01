@@ -70,7 +70,7 @@
     NSString *userActivityAction = [userInfo objectForKey:@"action"];
     if ([userActivityAction isEqualToString:@"setup"]) {
         // Take them to the Add Checkpoint screen
-        
+        [self displayAddCheckpointScreensSetup:YES];
     }
 }
 
@@ -184,7 +184,7 @@
 }
 
 - (IBAction)addCheckpointMenuItemTapped:(id)sender {
-    [self presentControllerWithNames:@[@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint"] contexts:@[@{@"type":CheckpointTypeDoor},@{@"type":CheckpointTypeLight},@{@"type":CheckpointTypeWindow},@{@"type":CheckpointTypeAppliance},@{@"type":CheckpointTypeFamily},@{@"type":CheckpointTypePet},@{@"type":CheckpointTypeUnknown}]];
+    [self displayAddCheckpointScreensSetup:NO];
 }
 
 - (void)reloadRootInterfaceControllers {
@@ -202,6 +202,15 @@
             [self.checkpointRootControllerContexts removeObjectAtIndex:i];
             break;
         }
+    }
+}
+
+- (void)displayAddCheckpointScreensSetup:(BOOL)setup {
+    if (setup) {
+        [self presentControllerWithNames:@[@"Setup",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint"] contexts:@[@{@"type":@"setup"},@{@"type":CheckpointTypeDoor},@{@"type":CheckpointTypeLight},@{@"type":CheckpointTypeWindow},@{@"type":CheckpointTypeAppliance},@{@"type":CheckpointTypeFamily},@{@"type":CheckpointTypePet},@{@"type":CheckpointTypeUnknown}]];
+    }
+    else {
+        [self presentControllerWithNames:@[@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint"] contexts:@[@{@"type":CheckpointTypeDoor},@{@"type":CheckpointTypeLight},@{@"type":CheckpointTypeWindow},@{@"type":CheckpointTypeAppliance},@{@"type":CheckpointTypeFamily},@{@"type":CheckpointTypePet},@{@"type":CheckpointTypeUnknown}]];
     }
 }
 
