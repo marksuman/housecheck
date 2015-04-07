@@ -181,6 +181,8 @@
 		4D3BF84E1ACB90A200BA9678 /* white-pet2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3BF83B1ACB90A200BA9678 /* white-pet2@2x.png */; };
 		4D3BF84F1ACB90A200BA9678 /* white-window@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3BF83C1ACB90A200BA9678 /* white-window@2x.png */; };
 		4D3BF8501ACB90A200BA9678 /* white-window@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3BF83C1ACB90A200BA9678 /* white-window@2x.png */; };
+		4D5AAA851AD36B16000B8A1E /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5AAA841AD36B16000B8A1E /* DashboardViewController.m */; };
+		4D5AAA8D1AD37D09000B8A1E /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5AAA8C1AD37D09000B8A1E /* ContainerViewController.m */; };
 		4D5C952E1A99A6A000007C04 /* AddCheckpointInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C952D1A99A6A000007C04 /* AddCheckpointInterfaceController.m */; };
 		4D70970F1AA6BDE50062AB05 /* House.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFA998B1A9E0C3100513530 /* House.png */; };
 		4D7097101AA6BDE80062AB05 /* House-Checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEC04731A9ED7990086A86C /* House-Checked.png */; };
@@ -398,6 +400,10 @@
 		4D3BF83A1ACB90A200BA9678 /* white-pet1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-pet1@2x.png"; sourceTree = "<group>"; };
 		4D3BF83B1ACB90A200BA9678 /* white-pet2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-pet2@2x.png"; sourceTree = "<group>"; };
 		4D3BF83C1ACB90A200BA9678 /* white-window@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-window@2x.png"; sourceTree = "<group>"; };
+		4D5AAA831AD36B16000B8A1E /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
+		4D5AAA841AD36B16000B8A1E /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
+		4D5AAA8B1AD37D09000B8A1E /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
+		4D5AAA8C1AD37D09000B8A1E /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
 		4D5C952C1A99A6A000007C04 /* AddCheckpointInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCheckpointInterfaceController.h; sourceTree = "<group>"; };
 		4D5C952D1A99A6A000007C04 /* AddCheckpointInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCheckpointInterfaceController.m; sourceTree = "<group>"; };
 		4DB605981A92E93100AE185C /* Perimeter WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Perimeter WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -646,6 +652,13 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		4D5AAA861AD36F38000B8A1E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		4DB605991A92E93100AE185C /* Perimeter WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -746,6 +759,7 @@
 		4DE853FE1A832137002CC5D4 /* Perimeter */ = {
 			isa = PBXGroup;
 			children = (
+				4D5AAA861AD36F38000B8A1E /* Assets */,
 				4DEC04751A9F53F10086A86C /* Perimeter.entitlements */,
 				4DB605C01A92EF7E00AE185C /* Model */,
 				4DE854031A832137002CC5D4 /* AppDelegate.h */,
@@ -758,6 +772,10 @@
 				4DE8540F1A832137002CC5D4 /* Images.xcassets */,
 				4DE854111A832137002CC5D4 /* LaunchScreen.xib */,
 				4DE853FF1A832137002CC5D4 /* Supporting Files */,
+				4D5AAA831AD36B16000B8A1E /* DashboardViewController.h */,
+				4D5AAA841AD36B16000B8A1E /* DashboardViewController.m */,
+				4D5AAA8B1AD37D09000B8A1E /* ContainerViewController.h */,
+				4D5AAA8C1AD37D09000B8A1E /* ContainerViewController.m */,
 			);
 			name = Perimeter;
 			path = CheckIt;
@@ -1242,8 +1260,10 @@
 				4DE8540B1A832137002CC5D4 /* SecondViewController.m in Sources */,
 				4DE854051A832137002CC5D4 /* AppDelegate.m in Sources */,
 				4DB605C71A93874100AE185C /* Checkpoint.m in Sources */,
+				4D5AAA851AD36B16000B8A1E /* DashboardViewController.m in Sources */,
 				4DCFD5AC1A98E8CF003A768B /* CheckpointManager.m in Sources */,
 				4DE854081A832137002CC5D4 /* FirstViewController.m in Sources */,
+				4D5AAA8D1AD37D09000B8A1E /* ContainerViewController.m in Sources */,
 				4DE854021A832137002CC5D4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
