@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CheckpointsViewController : UIViewController
+@interface CheckpointsViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property (nonatomic, strong) UICollectionView *collectionView;
 
 @end

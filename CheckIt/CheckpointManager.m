@@ -31,6 +31,7 @@ static CheckpointManager *defaultManager;
 }
 
 - (NSURL *)dataURL {
+//    NSLog(@"%@",[[[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.com.marksuman.Perimeter"] URLByAppendingPathComponent:@"checkpointData.plist"]);
     return [[[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.com.marksuman.Perimeter"] URLByAppendingPathComponent:@"checkpointData.plist"];
 }
 
