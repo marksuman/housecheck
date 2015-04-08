@@ -12,6 +12,8 @@
 
 @interface CheckpointsViewController ()
 
+@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
+
 @end
 
 @implementation CheckpointsViewController
@@ -28,6 +30,10 @@ static NSString * const reuseIdentifier = @"CheckpointCell";
 //    [self.collectionView registerClass:[CheckpointCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+    self.automaticallyAdjustsScrollViewInsets = YES;
+//    self.scrollView.contentInset = UIEdgeInsetsMake(64.0,0.0,44.0,0.0);
+    
+    [self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -77,6 +83,29 @@ static NSString * const reuseIdentifier = @"CheckpointCell";
     return @"state-question";
 }
 
+- (UIColor *)colorForCheckpointType:(Checkpoint *)checkpoint {
+    if ([checkpoint.type isEqualToString:CheckpointTypeDoor]) {
+        return [UIColor colorWithRed:92.0f/255.0f green:221.0f/255.0f blue:67.0f/255.0f alpha:1.0f];
+    }
+    else if ([checkpoint.type isEqualToString:CheckpointTypeLight]) {
+        return [UIColor colorWithRed:0.0f/255.0f green:199.0f/255.0f blue:255.0f/255.0f alpha:1.0f];
+    }
+    else if ([checkpoint.type isEqualToString:CheckpointTypeWindow]) {
+        return [UIColor colorWithRed:236.0f/255.0f green:0.0f/255.0f blue:140.0f/255.0f alpha:1.0f];
+    }
+    else if ([checkpoint.type isEqualToString:CheckpointTypeAppliance]) {
+        return [UIColor colorWithRed:255.0f/255.0f green:101.0f/255.0f blue:41.0f/255.0f alpha:1.0f];
+    }
+    else if ([checkpoint.type isEqualToString:CheckpointTypeFamily]) {
+        [UIColor colorWithRed:203.0f/255.0f green:39.0f/255.0f blue:255.0f/255.0f alpha:1.0f];
+    }
+    else if ([checkpoint.type isEqualToString:CheckpointTypePet]) {
+        [UIColor colorWithRed:203.0f/255.0f green:39.0f/255.0f blue:255.0f/255.0f alpha:1.0f];
+    }
+    
+    return [UIColor colorWithRed:237.0f/255.0f green:28.0f/255.0f blue:36.0f/255.0f alpha:1.0f];
+}
+
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -99,7 +128,8 @@ static NSString * const reuseIdentifier = @"CheckpointCell";
     cell.typeImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"white-%@",[Checkpoint imageRootForCheckpointType:checkpoint.type]]];
     cell.statusImageView.image = [UIImage imageNamed:[self statusImageNameForCheckpoint:checkpoint]];
     
-    cell.layer.cornerRadius = 5.0f;
+    cell.backgroundColor = [self colorForCheckpointType:checkpoint];
+    cell.layer.cornerRadius = 10.0f;
     
     return cell;
 }
