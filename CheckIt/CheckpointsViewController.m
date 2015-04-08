@@ -127,6 +127,9 @@ static NSString * const reuseIdentifier = @"CheckpointCell";
     cell.nameLabel.text = checkpoint.name;
     cell.typeImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"white-%@",[Checkpoint imageRootForCheckpointType:checkpoint.type]]];
     cell.statusImageView.image = [UIImage imageNamed:[self statusImageNameForCheckpoint:checkpoint]];
+    cell.statusImageView.layer.borderColor = [[UIColor colorWithRed:180.0f/255.0f green:180.0f/255.0f blue:180.0f/255.0f alpha:0.5f] CGColor];
+    cell.statusImageView.layer.borderWidth = 1.0f;
+    cell.statusImageView.layer.cornerRadius = 40.0f;
     
     cell.backgroundColor = [self colorForCheckpointType:checkpoint];
     cell.layer.cornerRadius = 10.0f;
@@ -135,6 +138,18 @@ static NSString * const reuseIdentifier = @"CheckpointCell";
 }
 
 #pragma mark <UICollectionViewDelegate>
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSArray *checkpoints = [[CheckpointManager defaultManager] checkpoints];
+    
+    Checkpoint *checkpoint = [checkpoints objectAtIndex:[indexPath row]];
+    [checkpoint toggleStatus];
+    
+    CheckpointCollectionViewCell *cell = (CheckpointCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    cell.statusImageView.image = [UIImage imageNamed:[self statusImageNameForCheckpoint:checkpoint]];
+    
+    [[CheckpointManager defaultManager] save];
+}
 
 /*
  // Uncomment this method to specify if the specified item should be highlighted during tracking
