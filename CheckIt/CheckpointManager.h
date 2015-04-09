@@ -27,5 +27,6 @@
 - (BOOL)isAllChecked;
 - (NSInteger)countOfPositiveCheckpoints;
 - (NSDate *)checkedDate;
+- (NSInteger)percentageComplete;
 
 @end

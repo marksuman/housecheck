@@ -149,7 +149,6 @@
         
         if (checkpointManager.checkpoints.count > 0) {
             if ([checkpointManager isAllChecked]) {
-                summaryImage = [UIImage imageNamed:@"house-status-100"];
                 
                 NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
                 dateFormatter.dateStyle = NSDateFormatterNoStyle;
@@ -157,16 +156,17 @@
                 timestampString = [NSString stringWithFormat:@"Checked: %@",[dateFormatter stringFromDate:[[CheckpointManager defaultManager] checkedDate]]];
             }
             else {
-                summaryImage = [UIImage imageNamed:@"house-status-0"];
                 summaryString = [NSString stringWithFormat:@"%ld/%ld",positiveCount,
                                  checkpointManager.checkpoints.count];
             }
         }
         else {
             // There are no checkpoints. Set it to first-run state
-            summaryImage = [UIImage imageNamed:@"house-status-0"];
             timestampString = @"Press to Start";
         }
+        
+        NSString *houseStatusImageName = [self houseImageNameForPercentage:[[CheckpointManager defaultManager] percentageComplete]];
+        summaryImage = [UIImage imageNamed:houseStatusImageName];
         
         [self.summaryGroup setBackgroundImage:summaryImage];
         [self.summaryLabel setText:summaryString];
@@ -212,6 +212,39 @@
     else {
         [self presentControllerWithNames:@[@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint",@"AddCheckpoint"] contexts:@[@{@"type":CheckpointTypeDoor},@{@"type":CheckpointTypeLight},@{@"type":CheckpointTypeWindow},@{@"type":CheckpointTypeAppliance},@{@"type":CheckpointTypeFamily},@{@"type":CheckpointTypePet},@{@"type":CheckpointTypeUnknown}]];
     }
+}
+
+- (NSString *)houseImageNameForPercentage:(NSInteger)percentage {
+    NSString *imageNameSuffix = @"0";
+    if (percentage > 94	 && percentage <= 100) {
+        imageNameSuffix = @"100";
+    }
+    else if (percentage > 81 && percentage <= 94) {
+        imageNameSuffix = @"88";
+    }
+    else if (percentage > 69 && percentage <= 81) {
+        imageNameSuffix = @"75";
+    }
+    else if (percentage > 56 && percentage <= 69) {
+        imageNameSuffix = @"63";
+    }
+    else if (percentage > 44 && percentage <= 56) {
+        imageNameSuffix = @"50";
+    }
+    else if (percentage > 31 && percentage <= 44) {
+        imageNameSuffix = @"38";
+    }
+    else if (percentage > 18 && percentage <= 31) {
+        imageNameSuffix = @"25";
+    }
+    else if (percentage > 0 && percentage <= 18) {
+        imageNameSuffix = @"13";
+    }
+    else {
+        imageNameSuffix = @"0";
+    }
+    
+    return [NSString stringWithFormat:@"house-status-%@",imageNameSuffix];
 }
 
 @end

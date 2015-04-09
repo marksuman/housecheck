@@ -149,4 +149,14 @@ static CheckpointManager *defaultManager;
     return checkedDate;
 }
 
+- (NSInteger)percentageComplete {
+    NSInteger positiveCount = [self countOfPositiveCheckpoints];
+    NSInteger totalCount = self.checkpoints.count;
+    NSInteger percentRounded = 0;
+    if (totalCount > 0) {
+        percentRounded = lroundf(((float)positiveCount/(float)totalCount)*100);
+    }
+    return percentRounded;
+}
+
 @end
