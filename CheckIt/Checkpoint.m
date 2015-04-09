@@ -233,7 +233,7 @@ NSString * const CheckpointStatusNegative = @"negative";
         nameArray = @[@"Cat",@"Dog",@"Hamster",@"Free-tailed Bat",@"Chinchilla"];
     }
     else {
-        nameArray = @[@"Security System",@"Thermostat",@"Alarm Clock",@"Flat Iron",@"Curling Iron"];
+        nameArray = @[@"Security System",@"Thermostat",@"Medication",@"Alarm Clock",@"Flat Iron",@"Curling Iron"];
     }
     
     return nameArray;

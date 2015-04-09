@@ -7,6 +7,7 @@
 //
 
 #import "WelcomeViewController.h"
+#import "Flurry.h"
 
 @interface WelcomeViewController ()
 
@@ -47,6 +48,8 @@
     
     CGRect frame = self.contentView.frame;
     self.scrollView.contentSize = frame.size;
+    
+    [Flurry logEvent:@"Welcome Screen"];
 }
 
 /*
