@@ -150,9 +150,10 @@
             <objects>
                 <controller identifier="Setup" id="jLy-xN-m9a">
                     <items>
-                        <label alignment="left" text="Swipe and pick" id="5gb-Ec-dBD"/>
-                        <label alignment="left" text="the things you" id="XFf-IP-9xw"/>
-                        <label alignment="left" text="want to check" id="pdh-pB-iRg"/>
+                        <label alignment="center" verticalAlignment="center" text="Swipe over and" id="5gb-Ec-dBD"/>
+                        <label alignment="center" verticalAlignment="center" text="pick the things" id="XFf-IP-9xw"/>
+                        <label alignment="center" verticalAlignment="center" text="you check" id="pdh-pB-iRg"/>
+                        <label alignment="center" verticalAlignment="center" text="everyday" id="R7B-LX-6WT"/>
                     </items>
                 </controller>
             </objects>
