@@ -4,6 +4,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SanFranciscoDisplay-Light.otf">
+            <string>SanFranciscoDisplay-Light</string>
+            <string>SanFranciscoDisplay-Light</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Container View Controller-->
         <scene sceneID="KI8-F4-yHK">
@@ -38,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="-705" y="-946"/>
         </scene>
-        <!--Item-->
+        <!--Dashboard View Controller-->
         <scene sceneID="eEE-Be-D65">
             <objects>
                 <viewController storyboardIdentifier="DashboardViewController" id="rOJ-CF-QI6" customClass="DashboardViewController" sceneMemberID="viewController">
@@ -53,23 +59,24 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house-status-big-0" translatesAutoresizingMaskIntoConstraints="NO" id="6Rm-sF-7en">
                                 <rect key="frame" x="171" y="171" width="259" height="257"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="FTS-Ep-4nA">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="HouseCheck" id="f1f-Sy-s6U"/>
-                                </items>
-                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HouseCheck" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyW-Fd-y4r">
+                                <rect key="frame" x="0.0" y="20" width="600" height="56"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="48"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="TyW-Fd-y4r" firstAttribute="leading" secondItem="uNc-Vb-yzk" secondAttribute="leading" id="5VW-DA-T3T"/>
+                            <constraint firstItem="6Rm-sF-7en" firstAttribute="top" secondItem="TyW-Fd-y4r" secondAttribute="bottom" constant="95" id="7zi-P5-jDB"/>
                             <constraint firstItem="6Rm-sF-7en" firstAttribute="centerX" secondItem="uNc-Vb-yzk" secondAttribute="centerX" id="8Kq-dw-Vb1"/>
-                            <constraint firstItem="FTS-Ep-4nA" firstAttribute="leading" secondItem="uNc-Vb-yzk" secondAttribute="leading" id="9Jf-7Q-Jwg"/>
-                            <constraint firstItem="FTS-Ep-4nA" firstAttribute="top" secondItem="z7u-Ur-bBw" secondAttribute="bottom" id="IzD-l8-2Zv"/>
-                            <constraint firstItem="FTS-Ep-4nA" firstAttribute="centerX" secondItem="6Rm-sF-7en" secondAttribute="centerX" id="WfC-fI-67T"/>
+                            <constraint firstItem="TyW-Fd-y4r" firstAttribute="centerX" secondItem="6Rm-sF-7en" secondAttribute="centerX" id="NsO-F5-3dF"/>
+                            <constraint firstItem="TyW-Fd-y4r" firstAttribute="top" secondItem="z7u-Ur-bBw" secondAttribute="bottom" id="iO2-wu-SqV"/>
                             <constraint firstItem="6Rm-sF-7en" firstAttribute="top" secondItem="z7u-Ur-bBw" secondAttribute="bottom" constant="151" id="xoP-1l-pUk"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="179-notepad.png" id="qtm-vs-6ET"/>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="qtm-vs-6ET"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="statusImage" destination="6Rm-sF-7en" id="4k9-0Q-2JY"/>
@@ -80,7 +87,7 @@
             </objects>
             <point key="canvasLocation" x="-608" y="-270"/>
         </scene>
-        <!--Item-->
+        <!--Checkpoints View Controller-->
         <scene sceneID="aR6-5i-7SZ">
             <objects>
                 <viewController storyboardIdentifier="CheckpointsViewController" id="ocD-iM-PfA" customClass="CheckpointsViewController" sceneMemberID="viewController">
@@ -92,8 +99,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kpj-ny-lgI">
-                                <rect key="frame" x="0.0" y="64" width="600" height="488"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kpj-ny-lgI">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="552"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="liY-Jy-JW2">
                                     <size key="itemSize" width="130" height="130"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -108,18 +115,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="white-door.png" translatesAutoresizingMaskIntoConstraints="NO" id="nui-rJ-oBa">
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white-door.png" translatesAutoresizingMaskIntoConstraints="NO" id="nui-rJ-oBa">
                                                     <rect key="frame" x="2" y="2" width="38" height="36"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="38" id="hlI-iD-Kbt"/>
-                                                        <constraint firstAttribute="height" constant="36" id="r7P-Uk-Zlp"/>
+                                                        <constraint firstAttribute="height" constant="36" id="kfL-zm-cah"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello there" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXJ-fR-g4A">
                                                     <rect key="frame" x="0.0" y="105" width="130" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="hrV-OP-xH3"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -131,15 +134,17 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="sXJ-fR-g4A" firstAttribute="bottom" secondItem="SUy-eh-7io" secondAttribute="bottomMargin" constant="4" id="8eg-Uv-2lS"/>
-                                            <constraint firstItem="YbZ-Ta-jbU" firstAttribute="centerY" secondItem="SUy-eh-7io" secondAttribute="centerY" id="Cig-4Z-fu3"/>
-                                            <constraint firstItem="sXJ-fR-g4A" firstAttribute="centerX" secondItem="YbZ-Ta-jbU" secondAttribute="centerX" id="NiD-Hh-0MP"/>
-                                            <constraint firstAttribute="trailing" secondItem="sXJ-fR-g4A" secondAttribute="trailing" id="Rta-Cn-rfO"/>
-                                            <constraint firstItem="sXJ-fR-g4A" firstAttribute="top" secondItem="YbZ-Ta-jbU" secondAttribute="bottom" id="XkA-2a-WL4"/>
-                                            <constraint firstItem="sXJ-fR-g4A" firstAttribute="leading" secondItem="SUy-eh-7io" secondAttribute="leading" id="ZjV-P0-ZwN"/>
-                                            <constraint firstItem="nui-rJ-oBa" firstAttribute="top" secondItem="SUy-eh-7io" secondAttribute="top" constant="4" id="efi-MT-p3Q"/>
-                                            <constraint firstItem="YbZ-Ta-jbU" firstAttribute="leading" secondItem="SUy-eh-7io" secondAttribute="leadingMargin" constant="17" id="pva-6h-1Ah"/>
-                                            <constraint firstItem="sXJ-fR-g4A" firstAttribute="leading" secondItem="nui-rJ-oBa" secondAttribute="leading" constant="-3" id="sU4-hx-HdZ"/>
+                                            <constraint firstItem="nui-rJ-oBa" firstAttribute="top" secondItem="SUy-eh-7io" secondAttribute="topMargin" constant="-6" id="3Ng-ux-Itb"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="nui-rJ-oBa" secondAttribute="trailing" constant="82" id="9Sb-2B-O8C"/>
+                                            <constraint firstItem="YbZ-Ta-jbU" firstAttribute="centerY" secondItem="SUy-eh-7io" secondAttribute="centerY" id="Ba1-Mz-U0B"/>
+                                            <constraint firstItem="nui-rJ-oBa" firstAttribute="leading" secondItem="SUy-eh-7io" secondAttribute="leadingMargin" constant="-6" id="JLf-ux-OlP"/>
+                                            <constraint firstItem="sXJ-fR-g4A" firstAttribute="top" secondItem="nui-rJ-oBa" secondAttribute="bottom" constant="67" id="S9G-54-P9s"/>
+                                            <constraint firstItem="sXJ-fR-g4A" firstAttribute="leading" secondItem="SUy-eh-7io" secondAttribute="leading" id="dMP-Z6-771"/>
+                                            <constraint firstItem="YbZ-Ta-jbU" firstAttribute="centerX" secondItem="sXJ-fR-g4A" secondAttribute="centerX" id="e04-NG-0tX"/>
+                                            <constraint firstAttribute="trailing" secondItem="sXJ-fR-g4A" secondAttribute="trailing" id="nVd-fg-AwF"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="sXJ-fR-g4A" secondAttribute="bottom" constant="-4" id="ncM-Rb-oeX"/>
+                                            <constraint firstItem="YbZ-Ta-jbU" firstAttribute="leading" secondItem="SUy-eh-7io" secondAttribute="leadingMargin" constant="17" id="qre-y9-QyV"/>
+                                            <constraint firstItem="sXJ-fR-g4A" firstAttribute="top" secondItem="YbZ-Ta-jbU" secondAttribute="bottom" id="yKv-lh-OyS"/>
                                         </constraints>
                                         <size key="customSize" width="130" height="130"/>
                                         <connections>
@@ -154,29 +159,31 @@
                                     <outlet property="delegate" destination="ocD-iM-PfA" id="Nuc-Fx-pVC"/>
                                 </connections>
                             </collectionView>
-                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="lHP-KS-bCD">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Checkpoints" id="cy3-u6-ilv">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="3CD-rc-d4K">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checkpoints" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e20-6S-qRb">
+                                <rect key="frame" x="0.0" y="20" width="600" height="36"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="lHP-KS-bCD" secondAttribute="trailing" id="8Q8-IP-mRA"/>
-                            <constraint firstItem="lHP-KS-bCD" firstAttribute="top" secondItem="61i-A2-AnQ" secondAttribute="bottom" id="dJh-3H-Xoi"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Kpj-ny-lgI" secondAttribute="bottom" constant="48" id="etS-v2-dJc"/>
-                            <constraint firstItem="lHP-KS-bCD" firstAttribute="leading" secondItem="Cse-nP-NPI" secondAttribute="leading" id="qH1-o7-LNh"/>
-                            <constraint firstItem="Kpj-ny-lgI" firstAttribute="top" secondItem="lHP-KS-bCD" secondAttribute="bottom" id="t2B-oP-cI7"/>
-                            <constraint firstItem="Kpj-ny-lgI" firstAttribute="leading" secondItem="Cse-nP-NPI" secondAttribute="leadingMargin" id="udQ-U2-7tw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Kpj-ny-lgI" secondAttribute="trailing" id="w7T-PZ-0hx"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Kpj-ny-lgI" secondAttribute="bottom" constant="48" id="5np-BB-f6V"/>
+                            <constraint firstItem="e20-6S-qRb" firstAttribute="top" secondItem="61i-A2-AnQ" secondAttribute="bottom" id="A7I-jT-5Jg"/>
+                            <constraint firstItem="e20-6S-qRb" firstAttribute="leading" secondItem="Cse-nP-NPI" secondAttribute="leading" id="OAY-kp-Fiz"/>
+                            <constraint firstItem="e20-6S-qRb" firstAttribute="leading" secondItem="Kpj-ny-lgI" secondAttribute="leading" id="ShK-6Q-tXg"/>
+                            <constraint firstItem="e20-6S-qRb" firstAttribute="trailing" secondItem="Kpj-ny-lgI" secondAttribute="trailing" id="eWe-m1-8Fc"/>
+                            <constraint firstAttribute="trailing" secondItem="e20-6S-qRb" secondAttribute="trailing" id="qrg-la-Maf"/>
+                            <constraint firstItem="Kpj-ny-lgI" firstAttribute="top" secondItem="Cse-nP-NPI" secondAttribute="top" id="sgJ-tz-5so"/>
+                            <constraint firstItem="32H-HC-Pvb" firstAttribute="top" secondItem="e20-6S-qRb" secondAttribute="bottom" constant="497" id="vaV-Ff-Uv9"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="vaV-Ff-Uv9"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="19-circle-check.png" id="R5K-EG-IhJ"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="R5K-EG-IhJ"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="collectionView" destination="Kpj-ny-lgI" id="YA6-sG-GKW"/>
@@ -376,8 +383,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="179-notepad.png" width="22" height="28"/>
-        <image name="19-circle-check.png" width="28" height="28"/>
         <image name="house-status-big-0" width="259" height="257"/>
         <image name="second" width="30" height="30"/>
         <image name="state-question.png" width="94" height="94"/>
