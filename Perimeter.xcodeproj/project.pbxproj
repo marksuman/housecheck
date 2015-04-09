@@ -213,6 +213,7 @@
 		4DA69A981AD6B7CF00F6AD50 /* add-pet2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DDF74F11AC445100014F860 /* add-pet2@2x.png */; };
 		4DA69A991AD6B7CF00F6AD50 /* add-window@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DDF74F21AC445100014F860 /* add-window@2x.png */; };
 		4DA69A9D1AD6D8C900F6AD50 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA69A9C1AD6D8C900F6AD50 /* WelcomeViewController.m */; };
+		4DA69A9F1AD6F00600F6AD50 /* libFlurry_6.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA69A9E1AD6F00600F6AD50 /* libFlurry_6.3.0.a */; };
 		4DB6059F1A92E93100AE185C /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6059E1A92E93100AE185C /* InterfaceController.m */; };
 		4DB605A21A92E93100AE185C /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605A11A92E93100AE185C /* NotificationController.m */; };
 		4DB605A51A92E93100AE185C /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605A41A92E93100AE185C /* GlanceController.m */; };
@@ -224,7 +225,6 @@
 		4DB605C31A93860B00AE185C /* CheckpointInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605C21A93860B00AE185C /* CheckpointInterfaceController.m */; };
 		4DB605C71A93874100AE185C /* Checkpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605C61A93874100AE185C /* Checkpoint.m */; };
 		4DB605C81A93874100AE185C /* Checkpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605C61A93874100AE185C /* Checkpoint.m */; };
-		4DCFD5A71A98DF3B003A768B /* libFlurry_6.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCFD5A61A98DF3B003A768B /* libFlurry_6.2.0.a */; };
 		4DCFD5AC1A98E8CF003A768B /* CheckpointManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCFD5AB1A98E8CF003A768B /* CheckpointManager.m */; };
 		4DCFD5AD1A98E8CF003A768B /* CheckpointManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCFD5AB1A98E8CF003A768B /* CheckpointManager.m */; };
 		4DDF74F31AC445100014F860 /* add-appliance@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DDF74EB1AC445100014F860 /* add-appliance@2x.png */; };
@@ -442,6 +442,7 @@
 		4DA69A8E1AD6A5D900F6AD50 /* SanFranciscoDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SanFranciscoDisplay-Regular.otf"; path = "Assets/Fonts/SanFranciscoDisplay-Regular.otf"; sourceTree = "<group>"; };
 		4DA69A9B1AD6D8C900F6AD50 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		4DA69A9C1AD6D8C900F6AD50 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		4DA69A9E1AD6F00600F6AD50 /* libFlurry_6.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_6.3.0.a; path = External/libFlurry_6.3.0.a; sourceTree = "<group>"; };
 		4DB605981A92E93100AE185C /* Perimeter WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Perimeter WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB6059B1A92E93100AE185C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DB6059C1A92E93100AE185C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -461,7 +462,6 @@
 		4DB605C51A93874100AE185C /* Checkpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Checkpoint.h; sourceTree = "<group>"; };
 		4DB605C61A93874100AE185C /* Checkpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Checkpoint.m; sourceTree = "<group>"; };
 		4DCFD5A51A98DF3B003A768B /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Flurry.h; path = External/Flurry.h; sourceTree = "<group>"; };
-		4DCFD5A61A98DF3B003A768B /* libFlurry_6.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_6.2.0.a; path = External/libFlurry_6.2.0.a; sourceTree = "<group>"; };
 		4DCFD5AA1A98E8CF003A768B /* CheckpointManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckpointManager.h; sourceTree = "<group>"; };
 		4DCFD5AB1A98E8CF003A768B /* CheckpointManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckpointManager.m; sourceTree = "<group>"; };
 		4DDF74EB1AC445100014F860 /* add-appliance@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-appliance@2x.png"; sourceTree = "<group>"; };
@@ -527,7 +527,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DCFD5A71A98DF3B003A768B /* libFlurry_6.2.0.a in Frameworks */,
+				4DA69A9F1AD6F00600F6AD50 /* libFlurry_6.3.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,7 +775,7 @@
 			isa = PBXGroup;
 			children = (
 				4DCFD5A51A98DF3B003A768B /* Flurry.h */,
-				4DCFD5A61A98DF3B003A768B /* libFlurry_6.2.0.a */,
+				4DA69A9E1AD6F00600F6AD50 /* libFlurry_6.3.0.a */,
 			);
 			name = External;
 			sourceTree = "<group>";
