@@ -44,7 +44,7 @@
     //    self.presentedViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     
     WelcomeViewController *welcomeScreen = [self.storyboard instantiateViewControllerWithIdentifier:@"WelcomeScreen"];
-    [self presentViewController:welcomeScreen animated:YES completion:^{
+    [self presentViewController:welcomeScreen animated:NO completion:^{
         //
     }];
 }

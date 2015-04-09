@@ -18,6 +18,7 @@
             <string>SanFranciscoDisplay-Regular</string>
             <string>SanFranciscoDisplay-Regular</string>
             <string>SanFranciscoDisplay-Regular</string>
+            <string>SanFranciscoDisplay-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -75,6 +76,10 @@
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjs-66-5OQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -106,14 +111,14 @@
                         <viewControllerLayoutGuide type="bottom" id="D1Y-HA-Mrq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9Pa-lW-Ce9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="778"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mR8-CD-q6L">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="778"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcD-UM-AVW">
-                                        <rect key="frame" x="140" y="0.0" width="320" height="778"/>
+                                        <rect key="frame" x="140" y="0.0" width="320" height="800"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bezel-add-checkpoint" translatesAutoresizingMaskIntoConstraints="NO" id="8Ns-gZ-e3a">
                                                 <rect key="frame" x="165" y="138" width="150" height="172"/>
@@ -121,7 +126,7 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bezel-dashboard-empty" translatesAutoresizingMaskIntoConstraints="NO" id="bB5-8B-vFm">
                                                 <rect key="frame" x="5" y="138" width="150" height="172"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To get started, look at your wrist:" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGz-7g-wPY">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To use this app, look at your wrist:" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGz-7g-wPY">
                                                 <rect key="frame" x="53" y="74" width="154" height="60"/>
                                                 <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -184,12 +189,24 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="house-status-big-100" translatesAutoresizingMaskIntoConstraints="NO" id="8DO-GC-Ca5">
                                                 <rect key="frame" x="113" y="662" width="94" height="94"/>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="📱 iPhone version coming soon!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgB-7W-duX">
+                                                <rect key="frame" x="31" y="751" width="259" height="60"/>
+                                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="320" id="1h1-j1-U7X"/>
+                                            <constraint firstAttribute="height" constant="770" id="R08-Bw-MuL"/>
                                             <constraint firstAttribute="height" constant="778" id="hx0-FI-640"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="hx0-FI-640"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -231,7 +248,7 @@
                         </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="778"/>
+                    <size key="freeformSize" width="600" height="800"/>
                     <connections>
                         <outlet property="contentView" destination="qcD-UM-AVW" id="qMB-ke-oun"/>
                         <outlet property="scrollView" destination="mR8-CD-q6L" id="6eh-Eu-Ufm"/>
