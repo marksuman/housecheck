@@ -214,6 +214,7 @@
 		4DA69A991AD6B7CF00F6AD50 /* add-window@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DDF74F21AC445100014F860 /* add-window@2x.png */; };
 		4DA69A9D1AD6D8C900F6AD50 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA69A9C1AD6D8C900F6AD50 /* WelcomeViewController.m */; };
 		4DA69A9F1AD6F00600F6AD50 /* libFlurry_6.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA69A9E1AD6F00600F6AD50 /* libFlurry_6.3.0.a */; };
+		4DA69AA11AD6F16700F6AD50 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA69AA01AD6F16700F6AD50 /* SystemConfiguration.framework */; };
 		4DB6059F1A92E93100AE185C /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6059E1A92E93100AE185C /* InterfaceController.m */; };
 		4DB605A21A92E93100AE185C /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605A11A92E93100AE185C /* NotificationController.m */; };
 		4DB605A51A92E93100AE185C /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605A41A92E93100AE185C /* GlanceController.m */; };
@@ -443,6 +444,7 @@
 		4DA69A9B1AD6D8C900F6AD50 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		4DA69A9C1AD6D8C900F6AD50 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		4DA69A9E1AD6F00600F6AD50 /* libFlurry_6.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_6.3.0.a; path = External/libFlurry_6.3.0.a; sourceTree = "<group>"; };
+		4DA69AA01AD6F16700F6AD50 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4DB605981A92E93100AE185C /* Perimeter WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Perimeter WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB6059B1A92E93100AE185C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DB6059C1A92E93100AE185C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -527,6 +529,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA69AA11AD6F16700F6AD50 /* SystemConfiguration.framework in Frameworks */,
 				4DA69A9F1AD6F00600F6AD50 /* libFlurry_6.3.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -783,6 +786,7 @@
 		4DE853F31A832137002CC5D4 = {
 			isa = PBXGroup;
 			children = (
+				4DA69AA01AD6F16700F6AD50 /* SystemConfiguration.framework */,
 				4DE853FE1A832137002CC5D4 /* Perimeter */,
 				4DE8541B1A832137002CC5D4 /* PerimeterTests */,
 				4DB605991A92E93100AE185C /* Perimeter WatchKit Extension */,
