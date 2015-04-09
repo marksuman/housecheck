@@ -8,6 +8,7 @@
         <mutableArray key="SanFranciscoDisplay-Light.otf">
             <string>SanFranciscoDisplay-Light</string>
             <string>SanFranciscoDisplay-Light</string>
+            <string>SanFranciscoDisplay-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -86,6 +87,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zbg-R3-0sj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-608" y="-270"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PDE-Nd-aqE">
+            <objects>
+                <viewController id="Szd-kD-rRX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HLS-JH-bx7"/>
+                        <viewControllerLayoutGuide type="bottom" id="D1Y-HA-Mrq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Pa-lW-Ce9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to HouseCheck" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03O-Y7-YTx">
+                                <rect key="frame" x="0.0" y="20" width="600" height="36"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzA-Rq-xcP">
+                                <rect key="frame" x="279" y="80" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="03O-Y7-YTx" firstAttribute="top" secondItem="HLS-JH-bx7" secondAttribute="bottom" id="Kkv-6x-NgE"/>
+                            <constraint firstItem="D1Y-HA-Mrq" firstAttribute="top" secondItem="03O-Y7-YTx" secondAttribute="bottom" constant="524" id="PKG-bC-zcP"/>
+                            <constraint firstItem="03O-Y7-YTx" firstAttribute="leading" secondItem="9Pa-lW-Ce9" secondAttribute="leading" id="nEU-dH-d2o"/>
+                            <constraint firstAttribute="trailing" secondItem="03O-Y7-YTx" secondAttribute="trailing" id="woA-uf-WvR"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="PKG-bC-zcP"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y4y-da-gff" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="-276"/>
         </scene>
         <!--Checkpoints View Controller-->
         <scene sceneID="aR6-5i-7SZ">
@@ -306,7 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="385" y="-325"/>
+            <point key="canvasLocation" x="1322" y="-280"/>
         </scene>
         <!--History-->
         <scene sceneID="wg7-f3-ORb">
@@ -379,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZD-aT-hBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="371" y="357"/>
+            <point key="canvasLocation" x="649" y="493"/>
         </scene>
     </scenes>
     <resources>

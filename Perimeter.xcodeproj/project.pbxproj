@@ -204,6 +204,14 @@
 		4DA69A8F1AD6A5D900F6AD50 /* SanFranciscoDisplay-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DA69A8C1AD6A5D900F6AD50 /* SanFranciscoDisplay-Heavy.otf */; };
 		4DA69A901AD6A5D900F6AD50 /* SanFranciscoDisplay-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DA69A8D1AD6A5D900F6AD50 /* SanFranciscoDisplay-Light.otf */; };
 		4DA69A911AD6A5D900F6AD50 /* SanFranciscoDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DA69A8E1AD6A5D900F6AD50 /* SanFranciscoDisplay-Regular.otf */; };
+		4DA69A921AD6B7CF00F6AD50 /* add-appliance@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DDF74EB1AC445100014F860 /* add-appliance@2x.png */; };
+		4DA69A931AD6B7CF00F6AD50 /* add-door@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DDF74EC1AC445100014F860 /* add-door@2x.png */; };
+		4DA69A941AD6B7CF00F6AD50 /* add-family@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DDF74ED1AC445100014F860 /* add-family@2x.png */; };
+		4DA69A951AD6B7CF00F6AD50 /* add-light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DDF74EE1AC445100014F860 /* add-light@2x.png */; };
+		4DA69A961AD6B7CF00F6AD50 /* add-other@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DDF74EF1AC445100014F860 /* add-other@2x.png */; };
+		4DA69A971AD6B7CF00F6AD50 /* add-pet1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DDF74F01AC445100014F860 /* add-pet1@2x.png */; };
+		4DA69A981AD6B7CF00F6AD50 /* add-pet2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DDF74F11AC445100014F860 /* add-pet2@2x.png */; };
+		4DA69A991AD6B7CF00F6AD50 /* add-window@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DDF74F21AC445100014F860 /* add-window@2x.png */; };
 		4DB6059F1A92E93100AE185C /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6059E1A92E93100AE185C /* InterfaceController.m */; };
 		4DB605A21A92E93100AE185C /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605A11A92E93100AE185C /* NotificationController.m */; };
 		4DB605A51A92E93100AE185C /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605A41A92E93100AE185C /* GlanceController.m */; };
@@ -1265,17 +1273,25 @@
 			files = (
 				4D9ADDBD1AD54C81002AC3E0 /* white-family@2x.png in Resources */,
 				4D9ADDC51AD54D2C002AC3E0 /* state-x@2x.png in Resources */,
+				4DA69A931AD6B7CF00F6AD50 /* add-door@2x.png in Resources */,
 				4DE8540E1A832137002CC5D4 /* Main.storyboard in Resources */,
 				4DA69A8F1AD6A5D900F6AD50 /* SanFranciscoDisplay-Heavy.otf in Resources */,
+				4DA69A971AD6B7CF00F6AD50 /* add-pet1@2x.png in Resources */,
+				4DA69A991AD6B7CF00F6AD50 /* add-window@2x.png in Resources */,
+				4DA69A921AD6B7CF00F6AD50 /* add-appliance@2x.png in Resources */,
 				4DA69A911AD6A5D900F6AD50 /* SanFranciscoDisplay-Regular.otf in Resources */,
 				4D9ADDBA1AD54C81002AC3E0 /* white-baby1@2x.png in Resources */,
+				4DA69A981AD6B7CF00F6AD50 /* add-pet2@2x.png in Resources */,
 				4DE854131A832137002CC5D4 /* LaunchScreen.xib in Resources */,
 				4D9ADDC01AD54C81002AC3E0 /* white-pet1@2x.png in Resources */,
+				4DA69A941AD6B7CF00F6AD50 /* add-family@2x.png in Resources */,
 				4DA69A901AD6A5D900F6AD50 /* SanFranciscoDisplay-Light.otf in Resources */,
 				4D9ADDBB1AD54C81002AC3E0 /* white-baby2@2x.png in Resources */,
+				4DA69A961AD6B7CF00F6AD50 /* add-other@2x.png in Resources */,
 				4D9ADDBF1AD54C81002AC3E0 /* white-other@2x.png in Resources */,
 				4D9ADDC31AD54D2C002AC3E0 /* state-check@2x.png in Resources */,
 				4D9ADDBC1AD54C81002AC3E0 /* white-door@2x.png in Resources */,
+				4DA69A951AD6B7CF00F6AD50 /* add-light@2x.png in Resources */,
 				4D9ADDC41AD54D2C002AC3E0 /* state-question@2x.png in Resources */,
 				4D9ADDB91AD54C81002AC3E0 /* white-appliance@2x.png in Resources */,
 				4D9ADDC21AD54C81002AC3E0 /* white-window@2x.png in Resources */,
@@ -1551,6 +1567,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1569,6 +1586,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
