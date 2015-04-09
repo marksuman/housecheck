@@ -71,6 +71,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="179-notepad.png" id="qtm-vs-6ET"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="statusImage" destination="6Rm-sF-7en" id="4k9-0Q-2JY"/>
+                        <outlet property="view" destination="uNc-Vb-yzk" id="Ona-Qe-Tfx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zbg-R3-0sj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -88,7 +92,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kpj-ny-lgI">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kpj-ny-lgI">
                                 <rect key="frame" x="0.0" y="64" width="600" height="488"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="liY-Jy-JW2">
                                     <size key="itemSize" width="130" height="130"/>
@@ -104,7 +108,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white-door.png" translatesAutoresizingMaskIntoConstraints="NO" id="nui-rJ-oBa">
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="white-door.png" translatesAutoresizingMaskIntoConstraints="NO" id="nui-rJ-oBa">
                                                     <rect key="frame" x="2" y="2" width="38" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="38" id="hlI-iD-Kbt"/>

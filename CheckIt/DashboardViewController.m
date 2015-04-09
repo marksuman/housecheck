@@ -7,8 +7,11 @@
 //
 
 #import "DashboardViewController.h"
+#import "CheckpointManager.h"
 
 @interface DashboardViewController ()
+
+@property (nonatomic, weak) IBOutlet UIImageView *statusImage;
 
 @end
 
@@ -27,7 +30,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    
+    self.statusImage.image = [UIImage imageNamed:[self houseImageNameForPercentage:[[CheckpointManager defaultManager] percentageComplete]]];
 }
 
 /*
@@ -39,5 +42,38 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (NSString *)houseImageNameForPercentage:(NSInteger)percentage {
+    NSString *imageNameSuffix = @"0";
+    if (percentage > 94	 && percentage <= 100) {
+        imageNameSuffix = @"100";
+    }
+    else if (percentage > 81 && percentage <= 94) {
+        imageNameSuffix = @"88";
+    }
+    else if (percentage > 69 && percentage <= 81) {
+        imageNameSuffix = @"75";
+    }
+    else if (percentage > 56 && percentage <= 69) {
+        imageNameSuffix = @"63";
+    }
+    else if (percentage > 44 && percentage <= 56) {
+        imageNameSuffix = @"50";
+    }
+    else if (percentage > 31 && percentage <= 44) {
+        imageNameSuffix = @"38";
+    }
+    else if (percentage > 18 && percentage <= 31) {
+        imageNameSuffix = @"25";
+    }
+    else if (percentage > 0 && percentage <= 18) {
+        imageNameSuffix = @"13";
+    }
+    else {
+        imageNameSuffix = @"0";
+    }
+    
+    return [NSString stringWithFormat:@"house-status-big-%@",imageNameSuffix];
+}
 
 @end
