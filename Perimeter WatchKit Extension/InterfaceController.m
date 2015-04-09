@@ -143,7 +143,7 @@
         
         UIImage *summaryImage = nil;
         NSString *summaryString = nil;
-        NSString *timestampString = nil;
+        NSString *timestampString = @" ";
         
         NSInteger positiveCount = [checkpointManager countOfPositiveCheckpoints];
         
