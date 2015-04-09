@@ -130,7 +130,6 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" red="0.92549019610000005" green="0.12549019610000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="sXJ-fR-g4A" firstAttribute="bottom" secondItem="SUy-eh-7io" secondAttribute="bottomMargin" constant="4" id="8eg-Uv-2lS"/>
                                             <constraint firstItem="YbZ-Ta-jbU" firstAttribute="centerY" secondItem="SUy-eh-7io" secondAttribute="centerY" id="Cig-4Z-fu3"/>

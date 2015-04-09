@@ -83,27 +83,27 @@ static NSString * const reuseIdentifier = @"CheckpointCell";
     return @"state-question";
 }
 
-- (UIColor *)colorForCheckpointType:(Checkpoint *)checkpoint {
-    if ([checkpoint.type isEqualToString:CheckpointTypeDoor]) {
-        return [UIColor colorWithRed:92.0f/255.0f green:221.0f/255.0f blue:67.0f/255.0f alpha:1.0f];
+- (UIColor *)colorForCheckpointType:(NSString *)checkpointType {
+    if ([checkpointType isEqualToString:CheckpointTypeDoor]) {
+        return [UIColor colorWithRed:92.0f/255.0f green:221.0f/255.0f blue:67.0f/255.0f alpha:0.7f];
     }
-    else if ([checkpoint.type isEqualToString:CheckpointTypeLight]) {
-        return [UIColor colorWithRed:0.0f/255.0f green:199.0f/255.0f blue:255.0f/255.0f alpha:1.0f];
+    else if ([checkpointType isEqualToString:CheckpointTypeLight]) {
+        return [UIColor colorWithRed:0.0f/255.0f green:199.0f/255.0f blue:255.0f/255.0f alpha:0.8f];
     }
-    else if ([checkpoint.type isEqualToString:CheckpointTypeWindow]) {
-        return [UIColor colorWithRed:236.0f/255.0f green:0.0f/255.0f blue:140.0f/255.0f alpha:1.0f];
+    else if ([checkpointType isEqualToString:CheckpointTypeWindow]) {
+        return [UIColor colorWithRed:236.0f/255.0f green:0.0f/255.0f blue:140.0f/255.0f alpha:0.9f];
     }
-    else if ([checkpoint.type isEqualToString:CheckpointTypeAppliance]) {
+    else if ([checkpointType isEqualToString:CheckpointTypeAppliance]) {
         return [UIColor colorWithRed:255.0f/255.0f green:101.0f/255.0f blue:41.0f/255.0f alpha:1.0f];
     }
-    else if ([checkpoint.type isEqualToString:CheckpointTypeFamily]) {
-        [UIColor colorWithRed:203.0f/255.0f green:39.0f/255.0f blue:255.0f/255.0f alpha:1.0f];
+    else if ([checkpointType isEqualToString:CheckpointTypeFamily]) {
+        return [UIColor colorWithRed:203.0f/255.0f green:39.0f/255.0f blue:255.0f/255.0f alpha:0.7f];
     }
-    else if ([checkpoint.type isEqualToString:CheckpointTypePet]) {
-        [UIColor colorWithRed:203.0f/255.0f green:39.0f/255.0f blue:255.0f/255.0f alpha:1.0f];
+    else if ([checkpointType isEqualToString:CheckpointTypePet]) {
+        return [UIColor colorWithRed:203.0f/255.0f green:39.0f/255.0f blue:255.0f/255.0f alpha:1.0f];
     }
     
-    return [UIColor colorWithRed:237.0f/255.0f green:28.0f/255.0f blue:36.0f/255.0f alpha:1.0f];
+    return [UIColor colorWithRed:237.0f/255.0f green:28.0f/255.0f blue:36.0f/255.0f alpha:0.8f];
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -130,8 +130,10 @@ static NSString * const reuseIdentifier = @"CheckpointCell";
     cell.statusImageView.layer.borderColor = [[UIColor colorWithRed:180.0f/255.0f green:180.0f/255.0f blue:180.0f/255.0f alpha:0.5f] CGColor];
     cell.statusImageView.layer.borderWidth = 1.0f;
     cell.statusImageView.layer.cornerRadius = 40.0f;
-    
-    cell.backgroundColor = [self colorForCheckpointType:checkpoint];
+
+    cell.backgroundColor = [self colorForCheckpointType:checkpoint.type];
+//    cell.layer.borderColor = [[self colorForCheckpointType:checkpoint] CGColor];
+//    cell.layer.borderWidth = 4.0f;
     cell.layer.cornerRadius = 10.0f;
     
     return cell;
