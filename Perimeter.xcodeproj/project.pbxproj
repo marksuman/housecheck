@@ -212,6 +212,7 @@
 		4DA69A971AD6B7CF00F6AD50 /* add-pet1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DDF74F01AC445100014F860 /* add-pet1@2x.png */; };
 		4DA69A981AD6B7CF00F6AD50 /* add-pet2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DDF74F11AC445100014F860 /* add-pet2@2x.png */; };
 		4DA69A991AD6B7CF00F6AD50 /* add-window@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DDF74F21AC445100014F860 /* add-window@2x.png */; };
+		4DA69A9D1AD6D8C900F6AD50 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA69A9C1AD6D8C900F6AD50 /* WelcomeViewController.m */; };
 		4DB6059F1A92E93100AE185C /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6059E1A92E93100AE185C /* InterfaceController.m */; };
 		4DB605A21A92E93100AE185C /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605A11A92E93100AE185C /* NotificationController.m */; };
 		4DB605A51A92E93100AE185C /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605A41A92E93100AE185C /* GlanceController.m */; };
@@ -439,6 +440,8 @@
 		4DA69A8C1AD6A5D900F6AD50 /* SanFranciscoDisplay-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SanFranciscoDisplay-Heavy.otf"; path = "Assets/Fonts/SanFranciscoDisplay-Heavy.otf"; sourceTree = "<group>"; };
 		4DA69A8D1AD6A5D900F6AD50 /* SanFranciscoDisplay-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SanFranciscoDisplay-Light.otf"; path = "Assets/Fonts/SanFranciscoDisplay-Light.otf"; sourceTree = "<group>"; };
 		4DA69A8E1AD6A5D900F6AD50 /* SanFranciscoDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SanFranciscoDisplay-Regular.otf"; path = "Assets/Fonts/SanFranciscoDisplay-Regular.otf"; sourceTree = "<group>"; };
+		4DA69A9B1AD6D8C900F6AD50 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		4DA69A9C1AD6D8C900F6AD50 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		4DB605981A92E93100AE185C /* Perimeter WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Perimeter WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB6059B1A92E93100AE185C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DB6059C1A92E93100AE185C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -824,6 +827,8 @@
 				4D5AAA8C1AD37D09000B8A1E /* ContainerViewController.m */,
 				4D9ADDB61AD4D33E002AC3E0 /* CheckpointCollectionViewCell.h */,
 				4D9ADDB71AD4D33F002AC3E0 /* CheckpointCollectionViewCell.m */,
+				4DA69A9B1AD6D8C900F6AD50 /* WelcomeViewController.h */,
+				4DA69A9C1AD6D8C900F6AD50 /* WelcomeViewController.m */,
 			);
 			name = Perimeter;
 			path = CheckIt;
@@ -1335,6 +1340,7 @@
 				4D5AAA851AD36B16000B8A1E /* DashboardViewController.m in Sources */,
 				4DCFD5AC1A98E8CF003A768B /* CheckpointManager.m in Sources */,
 				4DE854081A832137002CC5D4 /* FirstViewController.m in Sources */,
+				4DA69A9D1AD6D8C900F6AD50 /* WelcomeViewController.m in Sources */,
 				4D5AAA8D1AD37D09000B8A1E /* ContainerViewController.m in Sources */,
 				4D5AAAC81AD3897E000B8A1E /* CheckpointsViewController.m in Sources */,
 				4D9ADDB81AD4D33F002AC3E0 /* CheckpointCollectionViewCell.m in Sources */,

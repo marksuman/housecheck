@@ -8,6 +8,7 @@
 
 #import "DashboardViewController.h"
 #import "CheckpointManager.h"
+#import "WelcomeViewController.h"
 
 @interface DashboardViewController ()
 
@@ -31,6 +32,21 @@
     [super viewWillAppear:animated];
     
     self.statusImage.image = [UIImage imageNamed:[self houseImageNameForPercentage:[[CheckpointManager defaultManager] percentageComplete]]];
+    
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    //    self.presentingViewController.providesPresentationContextTransitionStyle = YES;
+    //    self.presentingViewController.definesPresentationContext = YES;
+    //    self.presentedViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    
+    WelcomeViewController *welcomeScreen = [self.storyboard instantiateViewControllerWithIdentifier:@"WelcomeScreen"];
+    [self presentViewController:welcomeScreen animated:YES completion:^{
+        //
+    }];
 }
 
 /*

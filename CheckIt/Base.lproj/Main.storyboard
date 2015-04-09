@@ -9,6 +9,15 @@
             <string>SanFranciscoDisplay-Light</string>
             <string>SanFranciscoDisplay-Light</string>
             <string>SanFranciscoDisplay-Light</string>
+            <string>SanFranciscoDisplay-Light</string>
+            <string>SanFranciscoDisplay-Light</string>
+            <string>SanFranciscoDisplay-Light</string>
+        </mutableArray>
+        <mutableArray key="SanFranciscoDisplay-Regular.otf">
+            <string>SanFranciscoDisplay-Regular</string>
+            <string>SanFranciscoDisplay-Regular</string>
+            <string>SanFranciscoDisplay-Regular</string>
+            <string>SanFranciscoDisplay-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -88,44 +97,145 @@
             </objects>
             <point key="canvasLocation" x="-608" y="-270"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="PDE-Nd-aqE">
             <objects>
-                <viewController id="Szd-kD-rRX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeScreen" id="Szd-kD-rRX" customClass="WelcomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HLS-JH-bx7"/>
                         <viewControllerLayoutGuide type="bottom" id="D1Y-HA-Mrq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9Pa-lW-Ce9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="778"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to HouseCheck" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03O-Y7-YTx">
-                                <rect key="frame" x="0.0" y="20" width="600" height="36"/>
-                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzA-Rq-xcP">
-                                <rect key="frame" x="279" y="80" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mR8-CD-q6L">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="778"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcD-UM-AVW">
+                                        <rect key="frame" x="140" y="0.0" width="320" height="778"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bezel-add-checkpoint" translatesAutoresizingMaskIntoConstraints="NO" id="8Ns-gZ-e3a">
+                                                <rect key="frame" x="165" y="138" width="150" height="172"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bezel-dashboard-empty" translatesAutoresizingMaskIntoConstraints="NO" id="bB5-8B-vFm">
+                                                <rect key="frame" x="5" y="138" width="150" height="172"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To get started, look at your wrist:" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGz-7g-wPY">
+                                                <rect key="frame" x="53" y="74" width="154" height="60"/>
+                                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqM-kM-AIU">
+                                                <rect key="frame" x="8" y="78" width="26" height="52"/>
+                                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="48"/>
+                                                <color key="textColor" red="0.36078431370000003" green="0.86666666670000003" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to HouseCheck" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omq-ED-BdC">
+                                                <rect key="frame" x="0.0" y="28" width="320" height="36"/>
+                                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="29"/>
+                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick the things you check everyday:" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZu-rB-wTf">
+                                                <rect key="frame" x="53" y="318" width="201" height="60"/>
+                                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g44-Rt-AEm">
+                                                <rect key="frame" x="8" y="594" width="27" height="58"/>
+                                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="48"/>
+                                                <color key="textColor" red="0.36078431370000003" green="0.86666666670000003" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add-door" translatesAutoresizingMaskIntoConstraints="NO" id="dOS-es-rpU">
+                                                <rect key="frame" x="8" y="390" width="94" height="94"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpH-Rt-SeS">
+                                                <rect key="frame" x="8" y="318" width="26" height="58"/>
+                                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="48"/>
+                                                <color key="textColor" red="0.36078431370000003" green="0.86666666670000003" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add-window" translatesAutoresizingMaskIntoConstraints="NO" id="bxK-wM-Hzi">
+                                                <rect key="frame" x="218" y="390" width="94" height="94"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add-light" translatesAutoresizingMaskIntoConstraints="NO" id="v3z-vk-s4L">
+                                                <rect key="frame" x="115" y="390" width="94" height="94"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add-appliance" translatesAutoresizingMaskIntoConstraints="NO" id="42e-Fn-n4j">
+                                                <rect key="frame" x="8" y="492" width="94" height="94"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add-pet1" translatesAutoresizingMaskIntoConstraints="NO" id="Iqf-tn-kI0">
+                                                <rect key="frame" x="115" y="492" width="94" height="94"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add-other" translatesAutoresizingMaskIntoConstraints="NO" id="M23-vY-LuV">
+                                                <rect key="frame" x="217" y="492" width="94" height="94"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check your items, be safe, &amp; have peace of mind:" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuN-go-PN5">
+                                                <rect key="frame" x="53" y="594" width="234" height="60"/>
+                                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="house-status-big-100" translatesAutoresizingMaskIntoConstraints="NO" id="8DO-GC-Ca5">
+                                                <rect key="frame" x="113" y="662" width="94" height="94"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="1h1-j1-U7X"/>
+                                            <constraint firstAttribute="height" constant="778" id="hx0-FI-640"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qcD-UM-AVW" firstAttribute="centerX" secondItem="mR8-CD-q6L" secondAttribute="centerX" id="9D8-Bp-h65"/>
+                                    <constraint firstItem="qcD-UM-AVW" firstAttribute="centerY" secondItem="mR8-CD-q6L" secondAttribute="centerY" id="kfD-ia-BxL"/>
+                                    <constraint firstItem="qcD-UM-AVW" firstAttribute="top" secondItem="mR8-CD-q6L" secondAttribute="top" id="q3P-fn-oe6"/>
+                                    <constraint firstAttribute="centerX" secondItem="qcD-UM-AVW" secondAttribute="centerX" id="r3y-4y-its"/>
+                                    <constraint firstAttribute="bottom" secondItem="qcD-UM-AVW" secondAttribute="bottom" id="sVd-1M-3MR"/>
+                                    <constraint firstAttribute="trailing" secondItem="qcD-UM-AVW" secondAttribute="trailing" constant="140" id="y7L-Go-sLn"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9D8-Bp-h65"/>
+                                        <exclude reference="kfD-ia-BxL"/>
+                                        <exclude reference="q3P-fn-oe6"/>
+                                        <exclude reference="sVd-1M-3MR"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="03O-Y7-YTx" firstAttribute="top" secondItem="HLS-JH-bx7" secondAttribute="bottom" id="Kkv-6x-NgE"/>
-                            <constraint firstItem="D1Y-HA-Mrq" firstAttribute="top" secondItem="03O-Y7-YTx" secondAttribute="bottom" constant="524" id="PKG-bC-zcP"/>
-                            <constraint firstItem="03O-Y7-YTx" firstAttribute="leading" secondItem="9Pa-lW-Ce9" secondAttribute="leading" id="nEU-dH-d2o"/>
-                            <constraint firstAttribute="trailing" secondItem="03O-Y7-YTx" secondAttribute="trailing" id="woA-uf-WvR"/>
+                            <constraint firstItem="mR8-CD-q6L" firstAttribute="top" secondItem="9Pa-lW-Ce9" secondAttribute="topMargin" id="9LT-JX-3q5"/>
+                            <constraint firstItem="D1Y-HA-Mrq" firstAttribute="top" secondItem="mR8-CD-q6L" secondAttribute="bottom" id="ESO-Yc-LXu"/>
+                            <constraint firstAttribute="trailing" secondItem="mR8-CD-q6L" secondAttribute="trailing" id="J5b-Ic-GmJ"/>
+                            <constraint firstItem="mR8-CD-q6L" firstAttribute="leading" secondItem="9Pa-lW-Ce9" secondAttribute="leadingMargin" constant="-16" id="Vcm-wr-7ba"/>
+                            <constraint firstItem="mR8-CD-q6L" firstAttribute="bottom" secondItem="D1Y-HA-Mrq" secondAttribute="top" id="gNt-Vs-u9L"/>
+                            <constraint firstItem="mR8-CD-q6L" firstAttribute="top" secondItem="9Pa-lW-Ce9" secondAttribute="top" id="nhj-JP-NQl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mR8-CD-q6L" secondAttribute="trailing" constant="-16" id="rH1-Ic-2ZN"/>
+                            <constraint firstItem="mR8-CD-q6L" firstAttribute="leading" secondItem="9Pa-lW-Ce9" secondAttribute="leading" id="tfD-g9-Y7k"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="PKG-bC-zcP"/>
+                                <exclude reference="J5b-Ic-GmJ"/>
+                                <exclude reference="gNt-Vs-u9L"/>
+                                <exclude reference="nhj-JP-NQl"/>
+                                <exclude reference="tfD-g9-Y7k"/>
                             </mask>
                         </variation>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="778"/>
+                    <connections>
+                        <outlet property="contentView" destination="qcD-UM-AVW" id="qMB-ke-oun"/>
+                        <outlet property="scrollView" destination="mR8-CD-q6L" id="6eh-Eu-Ufm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4y-da-gff" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -377,6 +487,23 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="💢" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qwj-uE-79h">
+                                <rect key="frame" x="362" y="136" width="26" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="👆" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibD-ig-rLe">
+                                <rect key="frame" x="356" y="150" width="41" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Force Touch" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9y-Aw-05k">
+                                <rect key="frame" x="308" y="184" width="142" height="60"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="18"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -427,7 +554,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add-appliance" width="108" height="108"/>
+        <image name="add-door" width="108" height="108"/>
+        <image name="add-light" width="108" height="108"/>
+        <image name="add-other" width="108" height="108"/>
+        <image name="add-pet1" width="108" height="108"/>
+        <image name="add-window" width="108" height="108"/>
+        <image name="bezel-add-checkpoint" width="236" height="270"/>
+        <image name="bezel-dashboard-empty" width="236" height="270"/>
         <image name="house-status-big-0" width="259" height="257"/>
+        <image name="house-status-big-100" width="259" height="257"/>
         <image name="second" width="30" height="30"/>
         <image name="state-question.png" width="94" height="94"/>
         <image name="white-door.png" width="24" height="33"/>
