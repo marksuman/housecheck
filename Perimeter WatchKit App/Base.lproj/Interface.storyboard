@@ -12,12 +12,13 @@
                     <items>
                         <group width="1" height="1" alignment="left" verticalAlignment="center" layout="vertical" id="tSU-b2-3vn">
                             <items>
-                                <group width="124" height="123" alignment="center" verticalAlignment="center" backgroundImage="house-status-0.png" layout="vertical" id="QZj-EJ-6pg">
+                                <group width="124" height="123" alignment="center" verticalAlignment="center" backgroundImage="house-status-0.png" id="QZj-EJ-6pg">
                                     <items>
-                                        <group width="5" height="54" alignment="center" id="dzs-Bm-vF9"/>
-                                        <label width="50" height="30" alignment="center" verticalAlignment="center" text="99/99" textAlignment="center" id="wch-dl-7Dd">
+                                        <label width="50" height="30" alignment="right" verticalAlignment="bottom" text="99/99" textAlignment="right" id="wch-dl-7Dd">
+                                            <color key="textColor" red="0.36078431372549019" green="0.8666666666666667" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                         </label>
+                                        <group width="16" height="54" alignment="right" verticalAlignment="bottom" id="dzs-Bm-vF9"/>
                                     </items>
                                 </group>
                                 <label width="128" alignment="center" verticalAlignment="center" text="Checked: 12:00 AM" textAlignment="center" id="whp-9f-a8A">
@@ -200,5 +201,5 @@
             <point key="canvasLocation" x="553" y="1001"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="0.40000000000000002" green="0.73725490196078436" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <color key="tintColor" red="0.36078431372549019" green="0.8666666666666667" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
