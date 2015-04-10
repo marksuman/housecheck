@@ -150,6 +150,11 @@
         if (checkpointManager.checkpoints.count > 0) {
             if ([checkpointManager isAllChecked]) {
                 
+                if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"completionModalDisplayed"] boolValue] == NO) {
+                    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:@"completionModalDisplayed"];
+                    [self presentControllerWithName:@"CompletionModal" context:nil];
+                }
+            
                 NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
                 dateFormatter.dateStyle = NSDateFormatterNoStyle;
                 dateFormatter.timeStyle = NSDateFormatterShortStyle;
