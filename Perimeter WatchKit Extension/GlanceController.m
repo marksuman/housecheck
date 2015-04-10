@@ -55,8 +55,8 @@
         }
         else {
             summaryImage = [UIImage imageNamed:@"house-status-0"];
-            secondString = [NSString stringWithFormat:@"%ld/%ld",positiveCount,
-                             checkpointManager.checkpoints.count];
+            secondString = [NSString stringWithFormat:@"%ld/%ld",(long)positiveCount,
+                             (unsigned long)checkpointManager.checkpoints.count];
             firstString = @"House Status";
         }
     }

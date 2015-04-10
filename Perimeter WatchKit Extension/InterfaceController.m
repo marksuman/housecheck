@@ -161,8 +161,8 @@
                 timestampString = [NSString stringWithFormat:@"Checked: %@",[dateFormatter stringFromDate:[[CheckpointManager defaultManager] checkedDate]]];
             }
             else {
-                summaryString = [NSString stringWithFormat:@"%ld/%ld",positiveCount,
-                                 checkpointManager.checkpoints.count];
+                summaryString = [NSString stringWithFormat:@"%ld/%ld",(long)positiveCount,
+                                 (unsigned long)checkpointManager.checkpoints.count];
             }
         }
         else {
