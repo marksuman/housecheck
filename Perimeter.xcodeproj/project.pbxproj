@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D013C0B1AD7782000741675 /* CompletionModalInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D013C0A1AD7782000741675 /* CompletionModalInterfaceController.m */; };
 		4D10AC4E1ACC7FA30083393D /* house-status-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC451ACC7FA30083393D /* house-status-0@2x.png */; };
 		4D10AC4F1ACC7FA30083393D /* house-status-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC451ACC7FA30083393D /* house-status-0@2x.png */; };
 		4D10AC501ACC7FA30083393D /* house-status-13@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D10AC461ACC7FA30083393D /* house-status-13@2x.png */; };
@@ -339,6 +340,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D013C091AD7782000741675 /* CompletionModalInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletionModalInterfaceController.h; sourceTree = "<group>"; };
+		4D013C0A1AD7782000741675 /* CompletionModalInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletionModalInterfaceController.m; sourceTree = "<group>"; };
 		4D10AC451ACC7FA30083393D /* house-status-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house-status-0@2x.png"; sourceTree = "<group>"; };
 		4D10AC461ACC7FA30083393D /* house-status-13@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house-status-13@2x.png"; sourceTree = "<group>"; };
 		4D10AC471ACC7FA30083393D /* house-status-25@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house-status-25@2x.png"; sourceTree = "<group>"; };
@@ -720,6 +723,8 @@
 				4DB605C21A93860B00AE185C /* CheckpointInterfaceController.m */,
 				4D5C952C1A99A6A000007C04 /* AddCheckpointInterfaceController.h */,
 				4D5C952D1A99A6A000007C04 /* AddCheckpointInterfaceController.m */,
+				4D013C091AD7782000741675 /* CompletionModalInterfaceController.h */,
+				4D013C0A1AD7782000741675 /* CompletionModalInterfaceController.m */,
 				4DB605A01A92E93100AE185C /* NotificationController.h */,
 				4DB605A11A92E93100AE185C /* NotificationController.m */,
 				4DB605A31A92E93100AE185C /* GlanceController.h */,
@@ -1327,6 +1332,7 @@
 				4DB605A21A92E93100AE185C /* NotificationController.m in Sources */,
 				4D5C952E1A99A6A000007C04 /* AddCheckpointInterfaceController.m in Sources */,
 				4DB6059F1A92E93100AE185C /* InterfaceController.m in Sources */,
+				4D013C0B1AD7782000741675 /* CompletionModalInterfaceController.m in Sources */,
 				4DB605C81A93874100AE185C /* Checkpoint.m in Sources */,
 				4DCFD5AD1A98E8CF003A768B /* CheckpointManager.m in Sources */,
 				4DB605A51A92E93100AE185C /* GlanceController.m in Sources */,

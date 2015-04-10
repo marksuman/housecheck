@@ -4,6 +4,18 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SanFranciscoDisplay-Heavy.otf">
+            <string>SanFranciscoDisplay-Heavy</string>
+        </mutableArray>
+        <mutableArray key="SanFranciscoDisplay-Regular.otf">
+            <string>SanFranciscoDisplay-Regular</string>
+            <string>SanFranciscoDisplay-Regular</string>
+            <string>SanFranciscoDisplay-Regular</string>
+            <string>SanFranciscoDisplay-Regular</string>
+            <string>SanFranciscoDisplay-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Dashboard-->
         <scene sceneID="aou-V4-d1y">
@@ -107,6 +119,35 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="564" y="238"/>
+        </scene>
+        <!--CompletionModal-->
+        <scene sceneID="cpd-1k-dHa">
+            <objects>
+                <controller identifier="CompletionModal" id="9eJ-nU-0nn" customClass="CompletionModalInterfaceController">
+                    <items>
+                        <label alignment="left" text="Way to go! 100%!" id="Vpb-U7-XCs">
+                            <fontDescription key="font" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="16"/>
+                        </label>
+                        <label alignment="left" text="You're all set for today." id="yjd-sk-NZT">
+                            <fontDescription key="font" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="12"/>
+                        </label>
+                        <label alignment="left" text="Your checkpoints will" id="cHT-iE-j1D">
+                            <fontDescription key="font" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="12"/>
+                        </label>
+                        <label alignment="left" text="automatically uncheck" id="hbi-vO-eQz">
+                            <fontDescription key="font" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="12"/>
+                        </label>
+                        <label width="1" alignment="left" text="in 10 hours" textAlignment="center" id="REt-3I-SXc">
+                            <color key="textColor" red="0.36078431370000003" green="0.86666666670000003" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" name="SanFranciscoDisplay-Heavy" family="San Francisco Display" pointSize="18"/>
+                        </label>
+                        <label alignment="left" text="to be ready for next time!" id="JI6-9s-pyF">
+                            <fontDescription key="font" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="12"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="724" y="238"/>
         </scene>
         <!--AddCheckpoint-->
         <scene sceneID="vrE-rd-PTV">
