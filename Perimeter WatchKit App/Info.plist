@@ -28,7 +28,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.marksuman.CheckIt</string>
+	<string>com.marksuman.Perimeter</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
