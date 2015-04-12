@@ -120,12 +120,6 @@
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qcD-UM-AVW">
                                         <rect key="frame" x="140" y="0.0" width="320" height="800"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bezel-add-checkpoint" translatesAutoresizingMaskIntoConstraints="NO" id="8Ns-gZ-e3a">
-                                                <rect key="frame" x="165" y="138" width="150" height="172"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bezel-dashboard-empty" translatesAutoresizingMaskIntoConstraints="NO" id="bB5-8B-vFm">
-                                                <rect key="frame" x="5" y="138" width="150" height="172"/>
-                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To use this app, look at your wrist:" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGz-7g-wPY">
                                                 <rect key="frame" x="53" y="74" width="154" height="60"/>
                                                 <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="20"/>
@@ -195,6 +189,12 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bezel-add-checkpoint" translatesAutoresizingMaskIntoConstraints="NO" id="8Ns-gZ-e3a">
+                                                <rect key="frame" x="173" y="150" width="115" height="135"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bezel-dashboard-empty" translatesAutoresizingMaskIntoConstraints="NO" id="bB5-8B-vFm">
+                                                <rect key="frame" x="32" y="150" width="115" height="135"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -577,8 +577,8 @@
         <image name="add-other" width="108" height="108"/>
         <image name="add-pet1" width="108" height="108"/>
         <image name="add-window" width="108" height="108"/>
-        <image name="bezel-add-checkpoint" width="236" height="270"/>
-        <image name="bezel-dashboard-empty" width="236" height="270"/>
+        <image name="bezel-add-checkpoint" width="115" height="135"/>
+        <image name="bezel-dashboard-empty" width="115" height="135"/>
         <image name="house-status-big-0" width="259" height="257"/>
         <image name="house-status-big-100" width="259" height="257"/>
         <image name="second" width="30" height="30"/>
