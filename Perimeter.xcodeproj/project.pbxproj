@@ -220,10 +220,10 @@
 		4DB605A21A92E93100AE185C /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605A11A92E93100AE185C /* NotificationController.m */; };
 		4DB605A51A92E93100AE185C /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605A41A92E93100AE185C /* GlanceController.m */; };
 		4DB605A71A92E93100AE185C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB605A61A92E93100AE185C /* Images.xcassets */; };
-		4DB605AB1A92E93100AE185C /* Perimeter WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 4DB605AA1A92E93100AE185C /* Perimeter WatchKit App.app */; };
+		4DB605AB1A92E93100AE185C /* HouseCheck.app in Resources */ = {isa = PBXBuildFile; fileRef = 4DB605AA1A92E93100AE185C /* HouseCheck.app */; };
 		4DB605B31A92E93100AE185C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB605B11A92E93100AE185C /* Interface.storyboard */; };
 		4DB605B51A92E93100AE185C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB605B41A92E93100AE185C /* Images.xcassets */; };
-		4DB605B81A92E93100AE185C /* Perimeter WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4DB605981A92E93100AE185C /* Perimeter WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4DB605B81A92E93100AE185C /* HouseCheck.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4DB605981A92E93100AE185C /* HouseCheck.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4DB605C31A93860B00AE185C /* CheckpointInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605C21A93860B00AE185C /* CheckpointInterfaceController.m */; };
 		4DB605C71A93874100AE185C /* Checkpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605C61A93874100AE185C /* Checkpoint.m */; };
 		4DB605C81A93874100AE185C /* Checkpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB605C61A93874100AE185C /* Checkpoint.m */; };
@@ -332,7 +332,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				4DB605B81A92E93100AE185C /* Perimeter WatchKit Extension.appex in Embed App Extensions */,
+				4DB605B81A92E93100AE185C /* HouseCheck.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,7 +448,7 @@
 		4DA69A9C1AD6D8C900F6AD50 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		4DA69A9E1AD6F00600F6AD50 /* libFlurry_6.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_6.3.0.a; path = External/libFlurry_6.3.0.a; sourceTree = "<group>"; };
 		4DA69AA01AD6F16700F6AD50 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		4DB605981A92E93100AE185C /* Perimeter WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Perimeter WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DB605981A92E93100AE185C /* HouseCheck.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HouseCheck.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB6059B1A92E93100AE185C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DB6059C1A92E93100AE185C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		4DB6059D1A92E93100AE185C /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
@@ -458,7 +458,7 @@
 		4DB605A31A92E93100AE185C /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
 		4DB605A41A92E93100AE185C /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
 		4DB605A61A92E93100AE185C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4DB605AA1A92E93100AE185C /* Perimeter WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Perimeter WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DB605AA1A92E93100AE185C /* HouseCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HouseCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB605B01A92E93100AE185C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DB605B21A92E93100AE185C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		4DB605B41A92E93100AE185C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -477,7 +477,7 @@
 		4DDF74F01AC445100014F860 /* add-pet1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-pet1@2x.png"; sourceTree = "<group>"; };
 		4DDF74F11AC445100014F860 /* add-pet2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-pet2@2x.png"; sourceTree = "<group>"; };
 		4DDF74F21AC445100014F860 /* add-window@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-window@2x.png"; sourceTree = "<group>"; };
-		4DE853FC1A832137002CC5D4 /* HouseCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HouseCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DE853FC1A832137002CC5D4 /* HouseCheck iOS app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HouseCheck iOS app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE854001A832137002CC5D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DE854011A832137002CC5D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4DE854031A832137002CC5D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -804,10 +804,10 @@
 		4DE853FD1A832137002CC5D4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4DE853FC1A832137002CC5D4 /* HouseCheck.app */,
+				4DE853FC1A832137002CC5D4 /* HouseCheck iOS app.app */,
 				4DE854181A832137002CC5D4 /* PerimeterTests.xctest */,
-				4DB605981A92E93100AE185C /* Perimeter WatchKit Extension.appex */,
-				4DB605AA1A92E93100AE185C /* Perimeter WatchKit App.app */,
+				4DB605981A92E93100AE185C /* HouseCheck.appex */,
+				4DB605AA1A92E93100AE185C /* HouseCheck.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -911,12 +911,12 @@
 			);
 			name = "Perimeter WatchKit Extension";
 			productName = "Perimeter WatchKit Extension";
-			productReference = 4DB605981A92E93100AE185C /* Perimeter WatchKit Extension.appex */;
+			productReference = 4DB605981A92E93100AE185C /* HouseCheck.appex */;
 			productType = "com.apple.product-type.watchkit-extension";
 		};
-		4DB605A91A92E93100AE185C /* Perimeter WatchKit App */ = {
+		4DB605A91A92E93100AE185C /* HouseCheck */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4DB605BD1A92E93100AE185C /* Build configuration list for PBXNativeTarget "Perimeter WatchKit App" */;
+			buildConfigurationList = 4DB605BD1A92E93100AE185C /* Build configuration list for PBXNativeTarget "HouseCheck" */;
 			buildPhases = (
 				4DB605A81A92E93100AE185C /* Resources */,
 			);
@@ -924,14 +924,14 @@
 			);
 			dependencies = (
 			);
-			name = "Perimeter WatchKit App";
+			name = HouseCheck;
 			productName = "Perimeter WatchKit App";
-			productReference = 4DB605AA1A92E93100AE185C /* Perimeter WatchKit App.app */;
+			productReference = 4DB605AA1A92E93100AE185C /* HouseCheck.app */;
 			productType = "com.apple.product-type.application.watchapp";
 		};
-		4DE853FB1A832137002CC5D4 /* HouseCheck */ = {
+		4DE853FB1A832137002CC5D4 /* HouseCheck iOS app */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4DE854221A832137002CC5D4 /* Build configuration list for PBXNativeTarget "HouseCheck" */;
+			buildConfigurationList = 4DE854221A832137002CC5D4 /* Build configuration list for PBXNativeTarget "HouseCheck iOS app" */;
 			buildPhases = (
 				4DE853F81A832137002CC5D4 /* Sources */,
 				4DE853F91A832137002CC5D4 /* Frameworks */,
@@ -943,9 +943,9 @@
 			dependencies = (
 				4DB605B71A92E93100AE185C /* PBXTargetDependency */,
 			);
-			name = HouseCheck;
+			name = "HouseCheck iOS app";
 			productName = CheckIt;
-			productReference = 4DE853FC1A832137002CC5D4 /* HouseCheck.app */;
+			productReference = 4DE853FC1A832137002CC5D4 /* HouseCheck iOS app.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4DE854171A832137002CC5D4 /* PerimeterTests */ = {
@@ -1016,10 +1016,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4DE853FB1A832137002CC5D4 /* HouseCheck */,
+				4DE853FB1A832137002CC5D4 /* HouseCheck iOS app */,
 				4DE854171A832137002CC5D4 /* PerimeterTests */,
 				4DB605971A92E93100AE185C /* Perimeter WatchKit Extension */,
-				4DB605A91A92E93100AE185C /* Perimeter WatchKit App */,
+				4DB605A91A92E93100AE185C /* HouseCheck */,
 			);
 		};
 /* End PBXProject section */
@@ -1053,7 +1053,7 @@
 				4DEDDC3A1AAA50410033C8E8 /* house8@2x.png in Resources */,
 				4DEDDC131AA9523E0033C8E8 /* Family-Pet@2x.png in Resources */,
 				4DEDDC421AAA50410033C8E8 /* house12@2x.png in Resources */,
-				4DB605AB1A92E93100AE185C /* Perimeter WatchKit App.app in Resources */,
+				4DB605AB1A92E93100AE185C /* HouseCheck.app in Resources */,
 				4D3BF8431ACB90A200BA9678 /* white-door@2x.png in Resources */,
 				4D2324641AA03F7A00A15A9A /* x-question12.png in Resources */,
 				4D3BF84F1ACB90A200BA9678 /* white-window@2x.png in Resources */,
@@ -1371,7 +1371,7 @@
 /* Begin PBXTargetDependency section */
 		4DB605AD1A92E93100AE185C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4DB605A91A92E93100AE185C /* Perimeter WatchKit App */;
+			target = 4DB605A91A92E93100AE185C /* HouseCheck */;
 			targetProxy = 4DB605AC1A92E93100AE185C /* PBXContainerItemProxy */;
 		};
 		4DB605B71A92E93100AE185C /* PBXTargetDependency */ = {
@@ -1381,7 +1381,7 @@
 		};
 		4DE8541A1A832137002CC5D4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4DE853FB1A832137002CC5D4 /* HouseCheck */;
+			target = 4DE853FB1A832137002CC5D4 /* HouseCheck iOS app */;
 			targetProxy = 4DE854191A832137002CC5D4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1430,7 +1430,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/External",
 				);
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = HouseCheck;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
@@ -1448,7 +1448,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/External",
 				);
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = HouseCheck;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
@@ -1643,7 +1643,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4DB605BD1A92E93100AE185C /* Build configuration list for PBXNativeTarget "Perimeter WatchKit App" */ = {
+		4DB605BD1A92E93100AE185C /* Build configuration list for PBXNativeTarget "HouseCheck" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4DB605BB1A92E93100AE185C /* Debug */,
@@ -1670,7 +1670,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4DE854221A832137002CC5D4 /* Build configuration list for PBXNativeTarget "HouseCheck" */ = {
+		4DE854221A832137002CC5D4 /* Build configuration list for PBXNativeTarget "HouseCheck iOS app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4DE854231A832137002CC5D4 /* Debug */,
