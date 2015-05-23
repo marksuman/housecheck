@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="odC-G8-3cI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="odC-G8-3cI">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -76,10 +76,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fjs-66-5OQ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -286,37 +282,21 @@
                                             <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white-door.png" translatesAutoresizingMaskIntoConstraints="NO" id="nui-rJ-oBa">
-                                                    <rect key="frame" x="2" y="2" width="38" height="36"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="36" id="kfL-zm-cah"/>
-                                                    </constraints>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white-collection-door" translatesAutoresizingMaskIntoConstraints="NO" id="nui-rJ-oBa">
+                                                    <rect key="frame" x="35" y="25" width="62" height="58"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello there" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXJ-fR-g4A">
-                                                    <rect key="frame" x="0.0" y="105" width="130" height="21"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="state-question.png" translatesAutoresizingMaskIntoConstraints="NO" id="YbZ-Ta-jbU">
+                                                    <rect key="frame" x="48" y="86" width="36" height="36"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello there" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXJ-fR-g4A">
+                                                    <rect key="frame" x="0.0" y="3" width="130" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="state-question.png" translatesAutoresizingMaskIntoConstraints="NO" id="YbZ-Ta-jbU">
-                                                    <rect key="frame" x="25" y="25" width="80" height="80"/>
-                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <constraints>
-                                            <constraint firstItem="nui-rJ-oBa" firstAttribute="top" secondItem="SUy-eh-7io" secondAttribute="topMargin" constant="-6" id="3Ng-ux-Itb"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="nui-rJ-oBa" secondAttribute="trailing" constant="82" id="9Sb-2B-O8C"/>
-                                            <constraint firstItem="YbZ-Ta-jbU" firstAttribute="centerY" secondItem="SUy-eh-7io" secondAttribute="centerY" id="Ba1-Mz-U0B"/>
-                                            <constraint firstItem="nui-rJ-oBa" firstAttribute="leading" secondItem="SUy-eh-7io" secondAttribute="leadingMargin" constant="-6" id="JLf-ux-OlP"/>
-                                            <constraint firstItem="sXJ-fR-g4A" firstAttribute="top" secondItem="nui-rJ-oBa" secondAttribute="bottom" constant="67" id="S9G-54-P9s"/>
-                                            <constraint firstItem="sXJ-fR-g4A" firstAttribute="leading" secondItem="SUy-eh-7io" secondAttribute="leading" id="dMP-Z6-771"/>
-                                            <constraint firstItem="YbZ-Ta-jbU" firstAttribute="centerX" secondItem="sXJ-fR-g4A" secondAttribute="centerX" id="e04-NG-0tX"/>
-                                            <constraint firstAttribute="trailing" secondItem="sXJ-fR-g4A" secondAttribute="trailing" id="nVd-fg-AwF"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="sXJ-fR-g4A" secondAttribute="bottom" constant="-4" id="ncM-Rb-oeX"/>
-                                            <constraint firstItem="YbZ-Ta-jbU" firstAttribute="leading" secondItem="SUy-eh-7io" secondAttribute="leadingMargin" constant="17" id="qre-y9-QyV"/>
-                                            <constraint firstItem="sXJ-fR-g4A" firstAttribute="top" secondItem="YbZ-Ta-jbU" secondAttribute="bottom" id="yKv-lh-OyS"/>
-                                        </constraints>
                                         <size key="customSize" width="130" height="130"/>
                                         <connections>
                                             <outlet property="nameLabel" destination="sXJ-fR-g4A" id="sdn-tO-l7v"/>
@@ -363,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bg8-xd-GWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-608" y="478"/>
+            <point key="canvasLocation" x="-599" y="504"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Kjc-hn-S2T">
@@ -583,6 +563,6 @@
         <image name="house-status-big-100" width="259" height="257"/>
         <image name="second" width="30" height="30"/>
         <image name="state-question.png" width="94" height="94"/>
-        <image name="white-door.png" width="24" height="33"/>
+        <image name="white-collection-door" width="38" height="54"/>
     </resources>
 </document>
