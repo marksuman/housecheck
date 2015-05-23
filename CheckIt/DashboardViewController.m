@@ -31,7 +31,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.statusImage.image = [UIImage imageNamed:[self houseImageNameForPercentage:[[CheckpointManager defaultManager] percentageComplete]]];
+    NSString *imageName = [self houseImageNameForPercentage:[[CheckpointManager defaultManager] percentageComplete]];
+    UIImage *houseImage = [UIImage imageNamed:imageName];
+    self.statusImage.image = houseImage;
     
 
 }
@@ -43,10 +45,10 @@
     //    self.presentingViewController.definesPresentationContext = YES;
     //    self.presentedViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     
-    WelcomeViewController *welcomeScreen = [self.storyboard instantiateViewControllerWithIdentifier:@"WelcomeScreen"];
-    [self presentViewController:welcomeScreen animated:NO completion:^{
-        //
-    }];
+//    WelcomeViewController *welcomeScreen = [self.storyboard instantiateViewControllerWithIdentifier:@"WelcomeScreen"];
+//    [self presentViewController:welcomeScreen animated:NO completion:^{
+//        //
+//    }];
 }
 
 /*
