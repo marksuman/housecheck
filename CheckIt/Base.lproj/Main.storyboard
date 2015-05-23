@@ -254,10 +254,10 @@
             </objects>
             <point key="canvasLocation" x="73" y="-276"/>
         </scene>
-        <!--Checkpoints View Controller-->
+        <!--Checkpoints-->
         <scene sceneID="aR6-5i-7SZ">
             <objects>
-                <viewController storyboardIdentifier="CheckpointsViewController" id="ocD-iM-PfA" customClass="CheckpointsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CheckpointsViewController" title="Checkpoints" id="ocD-iM-PfA" customClass="CheckpointsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="61i-A2-AnQ"/>
                         <viewControllerLayoutGuide type="bottom" id="32H-HC-Pvb"/>
@@ -282,18 +282,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white-collection-door" translatesAutoresizingMaskIntoConstraints="NO" id="nui-rJ-oBa">
-                                                    <rect key="frame" x="35" y="25" width="62" height="58"/>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="state-question.png" translatesAutoresizingMaskIntoConstraints="NO" id="YbZ-Ta-jbU">
-                                                    <rect key="frame" x="48" y="86" width="36" height="36"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello there" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXJ-fR-g4A">
-                                                    <rect key="frame" x="0.0" y="3" width="130" height="21"/>
+                                                    <rect key="frame" x="0.0" y="2" width="130" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white-collection-door" translatesAutoresizingMaskIntoConstraints="NO" id="nui-rJ-oBa">
+                                                    <rect key="frame" x="35" y="26" width="62" height="58"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="state-question.png" translatesAutoresizingMaskIntoConstraints="NO" id="YbZ-Ta-jbU">
+                                                    <rect key="frame" x="48" y="90" width="36" height="36"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>

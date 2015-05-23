@@ -129,11 +129,11 @@ static NSString * const reuseIdentifier = @"CheckpointCell";
     // Configure the cell
     Checkpoint *checkpoint = [checkpoints objectAtIndex:[indexPath row]];
     cell.nameLabel.text = checkpoint.name;
-    cell.typeImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"white-%@",[Checkpoint imageRootForCheckpointType:checkpoint.type]]];
+    cell.typeImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"white-collection-%@",[Checkpoint imageRootForCheckpointType:checkpoint.type]]];
     cell.statusImageView.image = [UIImage imageNamed:[self statusImageNameForCheckpoint:checkpoint]];
     cell.statusImageView.layer.borderColor = [[UIColor colorWithRed:180.0f/255.0f green:180.0f/255.0f blue:180.0f/255.0f alpha:0.5f] CGColor];
-    cell.statusImageView.layer.borderWidth = 2.0f;
-    cell.statusImageView.layer.cornerRadius = 40.0f;
+    cell.statusImageView.layer.borderWidth = 1.0f;
+    cell.statusImageView.layer.cornerRadius = 18.0f;
 
     cell.backgroundColor = [self colorForCheckpointType:checkpoint.type];
 //    cell.layer.borderColor = [[self colorForCheckpointType:checkpoint] CGColor];
