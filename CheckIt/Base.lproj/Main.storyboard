@@ -294,6 +294,15 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="state-question.png" translatesAutoresizingMaskIntoConstraints="NO" id="YbZ-Ta-jbU">
                                                     <rect key="frame" x="48" y="90" width="36" height="36"/>
                                                 </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white-add" translatesAutoresizingMaskIntoConstraints="NO" id="WkC-9b-dsP">
+                                                    <rect key="frame" x="35" y="25" width="60" height="60"/>
+                                                </imageView>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Checkpoint" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxR-DM-V9K">
+                                                    <rect key="frame" x="0.0" y="92" width="130" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -302,6 +311,8 @@
                                             <outlet property="nameLabel" destination="sXJ-fR-g4A" id="sdn-tO-l7v"/>
                                             <outlet property="statusImageView" destination="YbZ-Ta-jbU" id="cbq-7h-fhc"/>
                                             <outlet property="typeImageView" destination="nui-rJ-oBa" id="wpG-v4-EcU"/>
+                                            <outlet property="whiteAddImageView" destination="WkC-9b-dsP" id="wDk-rz-Zsc"/>
+                                            <outlet property="whiteAddLabel" destination="rxR-DM-V9K" id="oSY-L3-X1R"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -563,6 +574,7 @@
         <image name="house-status-big-100" width="259" height="257"/>
         <image name="second" width="30" height="30"/>
         <image name="state-question.png" width="94" height="94"/>
+        <image name="white-add" width="64" height="64"/>
         <image name="white-collection-door" width="38" height="54"/>
     </resources>
 </document>

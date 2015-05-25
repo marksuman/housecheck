@@ -130,9 +130,11 @@ static NSString * const reuseIdentifier = @"CheckpointCell";
     if ([indexPath row] == checkpoints.count) {
         // We are at the last cell. This is the "Add a Checkpoint" cell.
         
-        cell.nameLabel.text = NSLocalizedString(@"Add a Checkpoint", nil);
+        cell.nameLabel.hidden = YES;
         cell.statusImageView.hidden = YES;
         cell.typeImageView.hidden = YES;
+        cell.whiteAddImageView.hidden = NO;
+        cell.whiteAddLabel.hidden = NO;
         return cell;
     }
     

@@ -13,5 +13,7 @@
 @property (nonatomic, weak) IBOutlet UIImageView *typeImageView;
 @property (nonatomic, weak) IBOutlet UIImageView *statusImageView;
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *whiteAddImageView;
+@property (nonatomic, weak) IBOutlet UILabel *whiteAddLabel;
 
 @end
