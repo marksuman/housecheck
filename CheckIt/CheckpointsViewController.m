@@ -118,7 +118,7 @@ static NSString * const reuseIdentifier = @"CheckpointCell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [[[CheckpointManager defaultManager] checkpoints] count];
+    return [[[CheckpointManager defaultManager] checkpoints] count] + 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -127,6 +127,15 @@ static NSString * const reuseIdentifier = @"CheckpointCell";
     NSArray *checkpoints = [[CheckpointManager defaultManager] checkpoints];
     
     // Configure the cell
+    if ([indexPath row] == checkpoints.count) {
+        // We are at the last cell. This is the "Add a Checkpoint" cell.
+        
+        cell.nameLabel.text = NSLocalizedString(@"Add a Checkpoint", nil);
+        cell.statusImageView.hidden = YES;
+        cell.typeImageView.hidden = YES;
+        return cell;
+    }
+    
     Checkpoint *checkpoint = [checkpoints objectAtIndex:[indexPath row]];
     cell.nameLabel.text = checkpoint.name;
     cell.typeImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"white-collection-%@",[Checkpoint imageRootForCheckpointType:checkpoint.type]]];
