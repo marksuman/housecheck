@@ -159,13 +159,19 @@ static NSString * const reuseIdentifier = @"CheckpointCell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSArray *checkpoints = [[CheckpointManager defaultManager] checkpoints];
     
-    Checkpoint *checkpoint = [checkpoints objectAtIndex:[indexPath row]];
-    [checkpoint toggleStatus];
-    
-    CheckpointCollectionViewCell *cell = (CheckpointCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    cell.statusImageView.image = [UIImage imageNamed:[self statusImageNameForCheckpoint:checkpoint]];
-    
-    [[CheckpointManager defaultManager] save];
+    if ([indexPath row] == checkpoints.count) {
+        // User tapped the New Checkpoint cell
+        NSLog(@"Display the new checkpoint interface");
+    }
+    else {
+        Checkpoint *checkpoint = [checkpoints objectAtIndex:[indexPath row]];
+        [checkpoint toggleStatus];
+        
+        CheckpointCollectionViewCell *cell = (CheckpointCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+        cell.statusImageView.image = [UIImage imageNamed:[self statusImageNameForCheckpoint:checkpoint]];
+        
+        [[CheckpointManager defaultManager] save];
+    }
 }
 
 /*
