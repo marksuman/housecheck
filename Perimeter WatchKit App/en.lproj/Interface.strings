@@ -1,0 +1,24 @@
+
+/* Class = "WKInterfaceLabel"; text = "Label"; ObjectID = "6CL-LS-a5N"; */
+"6CL-LS-a5N.text" = "Label";
+
+/* Class = "WKInterfaceLabel"; text = "Label"; ObjectID = "8tT-Cb-ERi"; */
+"8tT-Cb-ERi.text" = "Label";
+
+/* Class = "WKInterfaceMenuItem"; title = "Rename"; ObjectID = "SLn-Qa-SFb"; */
+"SLn-Qa-SFb.title" = "Rename";
+
+/* Class = "WKInterfaceLabel"; text = "Alert Label"; ObjectID = "XkS-y5-khE"; */
+"XkS-y5-khE.text" = "Alert Label";
+
+/* Class = "WKInterfaceMenuItem"; title = "Add a Checkpoint"; ObjectID = "byx-B2-vQs"; */
+"byx-B2-vQs.title" = "Add a Checkpoint";
+
+/* Class = "WKInterfaceMenuItem"; title = "Delete"; ObjectID = "eIh-Hi-Ia2"; */
+"eIh-Hi-Ia2.title" = "Delete";
+
+/* Class = "WKInterfaceLabel"; text = "Label"; ObjectID = "pp9-kC-ctQ"; */
+"pp9-kC-ctQ.text" = "Label";
+
+/* Class = "WKInterfaceLabel"; text = "1/4"; ObjectID = "whp-9f-a8A"; */
+"whp-9f-a8A.text" = "1/4";

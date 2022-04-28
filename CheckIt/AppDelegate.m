@@ -1,12 +1,13 @@
 //
 //  AppDelegate.m
-//  CheckIt
+//  Perimeter
 //
 //  Created by Mark Suman on 2/4/15.
 //  Copyright (c) 2015 Sub-Saharan. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "Flurry.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [Flurry startSession:@"PZR383S67WNCJ3YJSQGN"];
+    [Flurry setCrashReportingEnabled:YES];
+    
+    UIPageControl *pageControl = [UIPageControl appearance];
+    pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
+    pageControl.backgroundColor = [UIColor blackColor];
+    
     return YES;
 }
 

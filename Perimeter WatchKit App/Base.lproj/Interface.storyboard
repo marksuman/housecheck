@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="Dashboard" id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <group width="1" height="1" alignment="left" verticalAlignment="center" layout="vertical" id="tSU-b2-3vn">
+                            <items>
+                                <group width="124" height="123" alignment="center" verticalAlignment="center" backgroundImage="house-status-0.png" id="QZj-EJ-6pg">
+                                    <items>
+                                        <label width="50" height="30" alignment="right" verticalAlignment="bottom" text="99/99" textAlignment="right" id="wch-dl-7Dd">
+                                            <color key="textColor" red="0.36078431372549019" green="0.8666666666666667" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                        <group width="16" height="54" alignment="right" verticalAlignment="bottom" id="dzs-Bm-vF9"/>
+                                    </items>
+                                </group>
+                                <label width="128" alignment="center" verticalAlignment="center" text="Checked: 12:00 AM" textAlignment="center" id="whp-9f-a8A">
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <menu key="menu" id="ldx-uk-ZsN">
+                        <items>
+                            <menuItem title="Add a Checkpoint" icon="add" id="byx-B2-vQs">
+                                <connections>
+                                    <action selector="addCheckpointMenuItemTapped:" destination="AgC-eL-Hgc" id="iTp-hu-hf8"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="summaryGroup" destination="QZj-EJ-6pg" id="nw5-T5-uUW"/>
+                        <outlet property="summaryLabel" destination="wch-dl-7Dd" id="9cj-gB-qzI"/>
+                        <outlet property="timestampLabel" destination="whp-9f-a8A" id="8uF-QP-973"/>
+                        <segue destination="6yD-HR-YAN" kind="relationship" relationship="nextPage" id="v9G-Ov-E8m"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="238"/>
+        </scene>
+        <!--Checkpoint-->
+        <scene sceneID="INB-BC-qg4">
+            <objects>
+                <controller identifier="Checkpoint" id="6yD-HR-YAN" customClass="CheckpointInterfaceController">
+                    <items>
+                        <button alignment="left" id="47E-W6-kcz">
+                            <group key="contentGroup" width="1" height="1" alignment="left" layout="vertical" id="hkz-xT-z6a">
+                                <items>
+                                    <group width="1" height="114" alignment="left" backgroundImage="state-question.png" contentMode="bottom" id="VEd-Et-vAH" userLabel="Images">
+                                        <items>
+                                            <imageView width="38" height="36" alignment="left" image="white-door.png" contentMode="left" id="Bnc-1C-xA3" userLabel="type"/>
+                                        </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                        <variation key="device=watch38mm">
+                                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                        </variation>
+                                        <variation key="device=watch42mm" height="122"/>
+                                    </group>
+                                    <label width="1" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="8tT-Cb-ERi">
+                                        <fontDescription key="font" type="system" pointSize="16"/>
+                                    </label>
+                                </items>
+                            </group>
+                            <connections>
+                                <action selector="buttonAction:" destination="6yD-HR-YAN" id="Ozj-sJ-9pW"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <menu key="menu" id="fFr-ur-t9v">
+                        <items>
+                            <menuItem title="Rename" icon="info" id="SLn-Qa-SFb">
+                                <connections>
+                                    <action selector="renameMenuItemTapped:" destination="6yD-HR-YAN" id="hL7-PW-OSI"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Delete" icon="decline" id="eIh-Hi-Ia2">
+                                <connections>
+                                    <action selector="deleteMenuItemTapped:" destination="6yD-HR-YAN" id="hRH-5q-rOt"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="imagesGroup" destination="VEd-Et-vAH" id="6B8-dV-ofL"/>
+                        <outlet property="nameLabel" destination="8tT-Cb-ERi" id="hNi-jU-9zB"/>
+                        <outlet property="typeImage" destination="Bnc-1C-xA3" id="WQi-Dk-CwI"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="401" y="238"/>
+        </scene>
+        <!--Radar-->
+        <scene sceneID="xBA-0P-pPI">
+            <objects>
+                <controller identifier="Radar" title="Radar" id="iF0-5q-bMe">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="This page intentionally left blank due to rdar://19695492." textAlignment="center" numberOfLines="4" id="OpL-jT-siT"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="564" y="238"/>
+        </scene>
+        <!--CompletionModal-->
+        <scene sceneID="cpd-1k-dHa">
+            <objects>
+                <controller identifier="CompletionModal" id="9eJ-nU-0nn" customClass="CompletionModalInterfaceController">
+                    <items>
+                        <group width="1" height="10" alignment="left" id="MTJ-R1-BFZ"/>
+                        <label width="1" alignment="left" text="Way to go! 100%!" id="Vpb-U7-XCs">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
+                        <group width="1" alignment="left" layout="vertical" spacing="0.0" id="xFB-7y-9gG">
+                            <items>
+                                <label width="1" alignment="left" text="You're all set for today." id="yjd-sk-NZT">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                                <label width="1" alignment="left" text="Your checkpoints will" id="cHT-iE-j1D">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                                <label width="1" alignment="left" text="automatically uncheck" id="hbi-vO-eQz">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                            </items>
+                        </group>
+                        <label width="1" alignment="left" text="in 10 hours" textAlignment="center" id="REt-3I-SXc">
+                            <color key="textColor" red="0.36078431370000003" green="0.86666666670000003" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" weight="heavy" pointSize="18"/>
+                        </label>
+                        <label width="1" alignment="left" text="to be ready for next time!" id="JI6-9s-pyF">
+                            <fontDescription key="font" type="system" pointSize="11"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="724" y="231"/>
+        </scene>
+        <!--AddCheckpoint-->
+        <scene sceneID="vrE-rd-PTV">
+            <objects>
+                <controller identifier="AddCheckpoint" id="yLU-jj-cmN" customClass="AddCheckpointInterfaceController">
+                    <items>
+                        <button alignment="left" id="Ncp-hN-dZE">
+                            <group key="contentGroup" width="134" height="151" alignment="left" layout="vertical" id="qIp-6W-SU4">
+                                <items>
+                                    <group width="136" alignment="center" verticalAlignment="center" layout="vertical" id="c9p-rt-O7c">
+                                        <items>
+                                            <imageView width="110" height="110" alignment="center" verticalAlignment="center" image="add-door.png" id="YRd-nb-1fw"/>
+                                            <label alignment="center" verticalAlignment="bottom" text="Label" id="pp9-kC-ctQ">
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                        </items>
+                                        <edgeInsets key="margins" left="10" right="10" top="0.0" bottom="0.0"/>
+                                        <variation key="device=watch38mm">
+                                            <edgeInsets key="margins" left="4" right="4" top="0.0" bottom="0.0"/>
+                                        </variation>
+                                        <variation key="device=watch42mm" width="151"/>
+                                    </group>
+                                </items>
+                                <variation key="device=watch42mm" height="174" width="156"/>
+                            </group>
+                            <connections>
+                                <action selector="tappedInterface:" destination="yLU-jj-cmN" id="AyN-rd-9iL"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="typeImage" destination="YRd-nb-1fw" id="hrc-Rw-q4Y"/>
+                        <outlet property="typeLabel" destination="pp9-kC-ctQ" id="o66-Ch-nZW"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="459"/>
+        </scene>
+        <!--Setup-->
+        <scene sceneID="29S-X2-SVM">
+            <objects>
+                <controller identifier="Setup" id="jLy-xN-m9a">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="Swipe over and" id="5gb-Ec-dBD"/>
+                        <label alignment="center" verticalAlignment="center" text="pick the things" id="XFf-IP-9xw"/>
+                        <label alignment="center" verticalAlignment="center" text="you check" id="pdh-pB-iRg"/>
+                        <label alignment="center" verticalAlignment="center" text="everyday" id="R7B-LX-6WT"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="401" y="459"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" topTemplateType="body1Medium" id="0uZ-2p-rRc" customClass="GlanceController">
+                    <items>
+                        <label alignment="left" text="HouseCheck" id="jMP-gy-W0r"/>
+                        <label alignment="left" text="99/99" id="uvv-HS-JSZ"/>
+                        <group alignment="left" backgroundImage="house1.png" contentMode="scaleAspectFit" id="uCw-4Q-Ouw"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="bottomGroup" destination="uCw-4Q-Ouw" id="kO8-8I-RR0"/>
+                        <outlet property="firstLabel" destination="jMP-gy-W0r" id="aJW-ct-xFG"/>
+                        <outlet property="secondLabel" destination="uvv-HS-JSZ" id="BbK-bp-UOK"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="1001"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.36078431372549019" green="0.8666666666666667" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
